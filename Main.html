@@ -40,6 +40,22 @@
 
 </div>
     
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+    
+    <iframe frameborder="0"
+        scrolling="no"
+        id="chat_embed"
+        src="https://www.twitch.tv/embed/lukeskypacer83/chat"
+        height="500"
+        width="350"
+        align="right">
+</iframe>
+    
     <!-- Add a placeholder for the Twitch embed -->
     <div id="twitch-embed"></div>
 
@@ -59,20 +75,6 @@
         autoplay: false
       });
 
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
-    
-    <iframe frameborder="0"
-        scrolling="no"
-        id="chat_embed"
-        src="https://www.twitch.tv/embed/lukeskypacer83/chat"
-        height="500"
-        width="350"
-        align="right">
-</iframe>
     
     <h2 class=center> You can find me on these sites: </h2>
 <p> <a href=https://www.twitch.tv/sion_510n>Twitch </a></p>
