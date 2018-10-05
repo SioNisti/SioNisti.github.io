@@ -40,15 +40,12 @@
 
 </div>
     
-
-
-    
-    <iframe frameborder="0"
-        scrolling="no"
-        id="chat_embed"
-        src="https://www.twitch.tv/embed/lukeskypacer83/chat"
-        height="500"
-        width="350"
+    <iframe frameborder="<frameborder width>"
+        scrolling="<scrolling>"
+        id="<channel>"
+        src="<src url>"
+        height="<height>"
+        width="<width>"
         align="right">
 </iframe>
     
@@ -70,13 +67,13 @@
         layout: "video",
         autoplay: false
       });
-              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
         var player = embed.getPlayer();
         player.play();
       });
     </script>
 
-    
     <h2 class=center> You can find me on these sites: </h2>
 <p> <a href=https://www.twitch.tv/sion_510n>Twitch </a></p>
 <p> <a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA>YouTube </a></p>
