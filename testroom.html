@@ -34,8 +34,18 @@
 <h1> Test Room </h1>
 
 <div class=center>
+	
+let a = document.createElement('a')
+a.href = item.url
+a.download = item.url.split('nuuskapoeka.png').pop()
+a.click()
+	
 <button type="submit" onclick="window.open('nuuskapoeka.png')">Download!</button>
 <button class="btn"><i class="fa fa-download"></i>Download</button>
+	
+ <a href="nuuskapoeka.png" download="nuuskapoeka.png" onclick="this.href='nuuskapoka.png';">
+     <button>Download <i>File.doc</i> Now!</button>
+ </a>
 	
 	
 </body>
