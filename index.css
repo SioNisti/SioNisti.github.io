@@ -69,7 +69,7 @@ h2 {
 	font-size: 30px;
 }
 .btn {
-  background-color: #FDE7AE;
+  background-color: #ffffff;
   border: none;
   color: black;
   padding: 16px 32px;
@@ -80,6 +80,9 @@ h2 {
 }
 
 .btn:hover {
-  background-color: #3e8e41;
-  color: white;
+  background-color: #cecece;
+  color: black;
+}
+.bgOther {
+	background: #89E9FF;
 }
