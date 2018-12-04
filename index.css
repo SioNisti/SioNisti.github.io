@@ -83,6 +83,6 @@ h2 {
   background-color: #cecece;
   color: black;
 }
-.bgOther {
-	background: #89E9FF;
+a:hover {
+    background-color: yellow;
 }
