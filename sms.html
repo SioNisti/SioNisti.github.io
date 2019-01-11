@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> Super Mario Sunshine </title>
+<style> 
+.column {
+    float: left;
+    width: 33.33%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="SO.ico" />
+<link rel="stylesheet" href="index.css">
+</head>
+<body bgcolor="#66ffff">
+<h1> Super Mario Sunshine </h1>
+<div class=center>
+<button id="myButton" class="arial btn" >Back</button>
+<button id="myButton3" class="arial btn" >Rules</button>
+<button id="myButton4" class="arial btn" >Submit Run</button>
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "selectgame.html";
+    };
+    document.getElementById("myButton3").onclick = function () {
+        location.href = "smsrules.html";
+    };
+     document.getElementById("myButton4").onclick = function () {
+        location.href = "";
+    };
+</script>
+<div class="row margin"> <h2 class="verdana center"> Yellow Toad OoB </h2>
+<div class=column> <strong class=big>Console</strong>
+<div class=column> <strong class=big>EMU</strong>
+<div class=column> <strong class=big>Nintendont</strong>
+</div>
+</div>
+<br>
+<br>
+<br>
+</body>
