@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> Ao Oni </title>
+<style> 
+.column {
+    float: left;
+    width: 33.33%;
+}
+	.column2 {
+	float:left;
+	width: 50%;
+}
+	
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="SO.ico" />
+<link rel="stylesheet" href="index.css">
+</head>
+	
+<body bgcolor="#66ffff">
+	
+<h1> Ao Oni </h1>
+<div class=center>
+<button id="myButton1" class="arial btn" >Back</button>
+<button id="myButton2" class="arial btn" >Rules</button>
+<button id="myButton3" class="arial btn" >Submit Run</button>
+	
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "selectgame.html";
+    };
+    document.getElementById("myButton2").onclick = function () {
+        location.href = "ootrules.html";
+    };
+    document.getElementById("myButton3").onclick = function () {
+        location.href = "https://docs.google.com/forms/d/e/1FAIpQLSevM3CMdBHPTEMpQT5dvniG4PigDs2GKFTtB91uGdtfpQtC0A/viewform?usp=pp_url";
+    };
+</script>
+	
+<div class="row margin"> <h2 class="verdana center"> Die% </h2>
+
+<div class=center>
+<a href="">1st SioN 59.68</a>
+
+</div>
+	
+</body>
+</html>
