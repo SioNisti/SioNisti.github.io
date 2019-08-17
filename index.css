@@ -166,7 +166,6 @@ a:hover {
 }
 th {
 	font-weight: bold;
-	white-space: nowrap;
 	font-family: 'Lato', Arial, sans-serif;
 }
 
@@ -190,7 +189,6 @@ tbody tr:hover {
 }
 
 .run-link {
-	color: #5a5e52;
 	text-transform: none;
 	text-decoration: underline;
 	font-family: 'Lato', Arial, sans-serif;
