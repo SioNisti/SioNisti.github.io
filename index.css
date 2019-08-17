@@ -164,3 +164,39 @@ a:hover {
 #globalnav UL A.here:visited {
 	color:#444;
 }
+th {
+	font-weight: bold;
+	white-space: nowrap;
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+th.full {
+	text-align: center;
+	letter-spacing: 0.5px;
+	border: 2px inset rgba( 255, 255, 255, .2);
+}
+
+td, th {
+	padding: 0.35em 1.5em;
+	text-align: center;
+}
+
+td {
+	color: #5a5e52;
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+    background-color: rgba(135, 196, 15, .15);
+}
+
+.run-link {
+	color: #5a5e52;
+	text-transform: none;
+	text-decoration: underline;
+	font-family: 'Lato', Arial, sans-serif;
+}
