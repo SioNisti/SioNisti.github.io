@@ -21,13 +21,27 @@
   width:100%;
   margin:0 auto;
 }
+.parallax { 
+  /* The image used */
+  background-image: url("bg1.png");
+
+  /* Set a specific height */
+  height: 1080px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
 
 <link rel="stylesheet" href="index.css">
 <link rel="icon" type="image/vnd.microsoft.icon"
      href="nuuskispää.ico" />
 </head>
-<body background="bg1.png">
+<body background="bg69.png">
+<div class="parallax"></div>
 <h1>Welcome to my site</h1>
 <div class=center>
 <button id="myButton" class="arial btn" >Speedrun Meme Categories</button>
