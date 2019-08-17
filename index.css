@@ -193,3 +193,10 @@ tbody tr:hover {
 	text-decoration: underline;
 	font-family: 'Lato', Arial, sans-serif;
 }
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
