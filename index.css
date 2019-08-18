@@ -86,11 +86,6 @@ h2 {
 a:hover {
     background-color:black;
 }
-a {
-    color: blue;
-    font-family:Arial;
-    text-align: center;
-}
 #globalnav {
 	position:relative;
 	float:left;
