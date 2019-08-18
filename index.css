@@ -84,7 +84,13 @@ h2 {
   color: black;
 }
 a:hover {
-    background-color: yellow;
+    background-color:black;
+}
+a {
+    color: blue;
+    font-family:Arial;
+    text-align: center;
+    font-size:25px;
 }
 #globalnav {
 	position:relative;
@@ -178,6 +184,7 @@ th.full {
 td, th, tr {
 	padding: 0.35em 1.5em;
 	text-align: center;
+	background: #ffffff;
 }
 
 td {
