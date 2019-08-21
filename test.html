@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> SioNisti </title>
+<style> 
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#headerPopup{
+  width:75%;
+  margin:0 auto;
+}
+#headerPopup iframe{
+  width:100%;
+  margin:0 auto;
+}
+.parallax { 
+  /* The image used */
+  background-image: url("bg1.png");
+  /* Set a specific height */
+  height: 1080px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+      color: white;
+}
+h2 {
+      color: white;
+}
+a {
+      color: white;
+}
+p {
+      color: white;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+body  {
+  background-image: url("bg0.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style>
+
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="nuuskispää.ico" />
+</head>
+<body background="bg0.png">
+
+
+
+<div class="col-auto" id="main">
+				<div class="maincontent"><script type="text/javascript">
+	var cats = {"15518":"Any","15519":"Glitchless1","20430":"All_Bushes1","20431":"All_Enemy_Kills1","20432":"1001"};
+
+	function getCategoryIDFromUrl(url) {
+		for (var id in cats) {
+			if (cats[id] === url) {
+				return id;
+			}
+		}
+	}
+
+	function getCategoryUrlFromID(id) {
+		return encodeURIComponent(cats[id]);
+	}
+
+	function leaderboardChange() {
+		$('#leaderboarddiv').html("\t\t<div class=\"loadingbox\"><div class=\"spinner center\"><i class=\"fas fa-circle-notch fa-spin\"><\/i><\/div><\/div>\n");
+
+		updateLeaderboard(true);
+	}
+
+	function leaderboardLoad() {
+		if (window.location.hash) {
+			var hash  = forgivingUrlDecode(window.location.hash.replace('#', ''));
+			var parts = hash.split(',');
+
+			if (parts.length > 0) {
+				$('#category').val(getCategoryIDFromUrl(parts[0]));
+			}
+		}
+
+		updateLeaderboard(false);
+	}
+
+	function updateLeaderboard(updateHash) {
+		var category = parseInt($('#category').val());
+
+		if (updateHash) {
+			window.location.replace('#' + getCategoryUrlFromID(category));
+		}
+
+		// Highlight the selected category.
+		activateCategory(category);
+
+		// Only show the variables relevant for the selected category.
+		switchVariables(category);
+
+		// Highlight the selected subcategory values.
+		activateValues();
+
+		// Get the actual leaderboard.
+		ajax_get($('#leaderboardform'), 'leaderboarddiv');
+
+		// Update the submit run button to link directly to the selected category.
+		if ($('#submitrun')) {
+			$('#submitrun').attr('href', '/linksbackyard/editrun#' + getCategoryUrlFromID(category));
+		}
+	}
+
+	function activateCategory(category) {
+		// Remove the active class from all elements in the category navigations.
+		$('.category').removeClass('active');
+		$('#miscellaneous').removeClass('active');
+
+		// Highlight the selected category.
+		$('#category' + category).addClass('active');
+		$('#category' + category).parent().parent().children("#miscellaneous").addClass('active');
+	}
+
+	function activateValues() {
+		// Remove the active class from all elements in the values navigation.
+		$('.valuesnav').find('.active').removeClass('active');
+
+		// Highlight the selected value for each subcategory variable.
+		$('input.variable').each(function() {
+			var varID = parseInt(this.id.replace('variable', ''));
+			$('#varnav' + varID).find('li#value' + this.value).toggleClass('active');
+		});
+	}
+
+	function switchVariables(category) {
+		// Hide/show the right variables based for the category.
+		// Note that this affects all variables, subcategory or not.
+		$('.variable').each(function() {
+			var catvalue = parseInt($(this).data('cat'));
+			$(this).toggle(catvalue === -1 || catvalue === category);
+		});
+	}
+
+	$(document).ready(function() {
+
+		$('.filteroption').click(function() {
+			$(this).parent().children().removeClass('active');
+			$(this).addClass('active');
+		});
+
+	});
+</script>
+
+<form id="leaderboardform" method="GET" action="/ajax_leaderboard.php">
+	<ul class="nav nav-tabs">
+									<a id="category15518" class="nav-item nav-link category active" href="javascript:;" onclick="$('#category').val(15518); leaderboardChange();">Any%</a>
+							<a id="category15519" class="nav-item nav-link category" href="javascript:;" onclick="$('#category').val(15519); leaderboardChange();">Glitchless</a>
+							<a id="category20430" class="nav-item nav-link category" href="javascript:;" onclick="$('#category').val(20430); leaderboardChange();">All Bushes</a>
+							<a id="category20431" class="nav-item nav-link category" href="javascript:;" onclick="$('#category').val(20431); leaderboardChange();">All Enemy Kills</a>
+							<a id="category20432" class="nav-item nav-link category" href="javascript:;" onclick="$('#category').val(20432); leaderboardChange();">100%</a>
+					
+			</ul>
+
+		
+	<div class="panel panel-tabbed">
+		<div class="row">
+			<div class="col mb-4p5">
+				
+				
+				<input type="hidden" name="game" value="linksbackyard">
+				<input type="hidden" name="verified" value="1">
+								<input type="hidden" name="category" id="category" value="15518">
+
+				
+								<input type="hidden" name="platform" id="platform">
+				
+				
+				
+									<input value="2" type="hidden" name="emulator" id="emulator">
+				
+				<input type="hidden" name="video" id="video">
+				<input type="hidden" name="obsolete" id="obsolete">
+			</div>
+			<div class="col right nobr mb-4p5">
+				<div class="dropdown">
+					<button type="button" class="btn btn-default dropdown-toggle mb-1" data-toggle="dropdown">
+						Filter <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
+
+						
+												<li class="dropdown-submenu">
+							<a class="dropdown-item dropdown-toggle" tabindex="-1" href="javascript:">Platforms</a>
+							<ul class="dropdown-menu">
+								<a href="javascript:" class="dropdown-item filteroption active" onclick="$('#platform').val(0);leaderboardChange();">Any platform</a>
+																<a href="javascript:" class="dropdown-item filteroption" onclick="$('#platform').val(54);leaderboardChange();">Web</a>
+															</ul>
+						</li>
+						
+						
+												<li class="dropdown-submenu">
+							<a class="dropdown-item dropdown-toggle" tabindex="-1" href="javascript:">Emulators</a>
+							<ul class="dropdown-menu">
+								<a href="javascript:" class="dropdown-item filteroption active" onclick="$('#emulator').val(2);leaderboardChange();">Shown</a>
+								<a href="javascript:" class="dropdown-item filteroption " onclick="$('#emulator').val(0);leaderboardChange();">Hidden</a>
+							</ul>
+						</li>
+						
+						<li class="dropdown-submenu">
+							<a class="dropdown-item dropdown-toggle" tabindex="-1" href="javascript:">Videos</a>
+							<ul class="dropdown-menu">
+								<a href="javascript:" class="dropdown-item filteroption active" onclick="$('#video').val(0);leaderboardChange();">With or without</a>
+								<a href="javascript:" class="dropdown-item filteroption" onclick="$('#video').val(1);leaderboardChange();">With only</a>
+							</ul>
+						</li>
+						<li class="dropdown-submenu">
+							<a class="dropdown-item dropdown-toggle" tabindex="-1" href="javascript:">Obsoleted runs</a>
+							<ul class="dropdown-menu">
+								<a href="javascript:" class="dropdown-item filteroption active" onclick="$('#obsolete').val(0);leaderboardChange();">Hidden</a>
+								<a href="javascript:" class="dropdown-item filteroption" onclick="$('#obsolete').val(1);leaderboardChange();">Shown</a>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#rules" data-toggle="modal" class="btn btn-default mb-1">View rules</a>
+				<a href="/linksbackyard/editrun#Any" class="btn btn-primary mb-1" id="submitrun">Submit run</a>
+
+			</div>
+		</div>
+
+		<div id="leaderboarddiv">
+<table class="reverse-padding-sides reverse-padding-bottom">
+	<tbody><tr class="hidden-xs"><th>Rank</th><th>Player</th><th>Time</th><th>Platform</th><th>Date</th><th colspan="3"></th></tr><tr class="cell0 linked" data-target="/linksbackyard/run/mrq4n82y" title="Very good :)"><td class="nobr center"><img class="trophy" src="/themes/Default/1st.png" alt="">1st</td><td class="center"><a class="link-username nobr nounderline" href="/user/Zudu"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light"><span style="color:#999999">Z</span><span style="color:#999999">u</span><span style="color:#999999">d</span><span style="color:#999999">u</span></span><span class="username-dark"><span style="color:#ffffff">Z</span><span style="color:#e7e7e7">u</span><span style="color:#cfcfcf">d</span><span style="color:#b8b8b8">u</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>22<small>s </small>165<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>22<small>s </small>165<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-07-31T12:00:00Z" title="31 Jul 2017, 15:00">31 Jul 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/pm3n4lwy" title="nice"><td class="nobr center"><img class="trophy" src="/themes/Default/2nd.png" alt="">2nd</td><td class="center"><a class="link-username nobr nounderline" href="/user/YaBoyBTrue"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #08AB6E">YaBoyBTrue</span><span class="username-dark" style="color: #09B876">YaBoyBTrue</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>22<small>s </small>500<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>22<small>s </small>500<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2015-10-17T10:00:00Z" title="17 Oct 2015, 13:00">17 Oct 2015</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/pyd0glxz" title="lol sorry about the audio
+
+Moderator Note: Re-Timed to 22.53 @ 30fps"><td class="nobr center"><img class="trophy" src="/themes/Default/3rd.png" alt="">3rd</td><td class="center"><a class="link-username nobr nounderline" href="/user/BlueCrystal004"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light"><span style="color:#e44141">B</span><span style="color:#d6474b">l</span><span style="color:#c94e55">u</span><span style="color:#bc555f">e</span><span style="color:#af5c69">C</span><span style="color:#a16374">r</span><span style="color:#946a7e">y</span><span style="color:#877188">s</span><span style="color:#7a7892">t</span><span style="color:#6c7f9d">a</span><span style="color:#5f86a7">l</span><span style="color:#528db1">0</span><span style="color:#4594bb">0</span><span style="color:#389bc6">4</span></span><span class="username-dark"><span style="color:#ee4444">B</span><span style="color:#e04d51">l</span><span style="color:#d3565e">u</span><span style="color:#c65f6b">e</span><span style="color:#b96878">C</span><span style="color:#ac7185">r</span><span style="color:#9f7a92">y</span><span style="color:#92849f">s</span><span style="color:#858dac">t</span><span style="color:#7896b9">a</span><span style="color:#6b9fc6">l</span><span style="color:#5ea8d3">0</span><span style="color:#51b1e0">0</span><span style="color:#44bbee">4</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>22<small>s </small>530<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>22<small>s </small>530<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2015-07-17T10:00:00Z" title="17 Jul 2015, 13:00">17 Jul 2015</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/kz5enxnz" title="why
+
+(Mod Comment: you put 2s instead of 22s. edited accordingly ~Goldphnx)"><td class="nobr center">4th</td><td class="center"><a class="link-username nobr nounderline" href="/user/LasagnaTheories"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #AE6CCD">LasagnaTheories</span><span class="username-dark" style="color: #C279E5">LasagnaTheories</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>22<small>s </small>690<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>22<small>s </small>690<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-05-23T12:00:00Z" title="23 May 2016, 15:00">23 May 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/pm3k80gy" title="fun"><td class="nobr center">5th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Afrogrunt"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Canada"><img class="flagicon" src="/images/flags/ca.png"></span><span class="username"><span class="username-light" style="color: #B4902E">Afrogrunt</span><span class="username-dark" style="color: #F0C03E">Afrogrunt</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>22<small>s </small>960<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>22<small>s </small>960<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-08-03T12:00:00Z" title="3 Aug 2016, 15:00">3 Aug 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/2yw6pgpm" title="dumb game"><td class="nobr center">6th</td><td class="center"><a class="link-username nobr nounderline" href="/user/kri"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #AE6CCD">kri</span><span class="username-dark" style="color: #C279E5">kri</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>23<small>s </small>110<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>23<small>s </small>110<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-03-14T11:00:00Z" title="14 Mar 2016, 13:00">14 Mar 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/mrq47d4y" title="ya cheeky cunt"><td class="nobr center">7th</td><td class="center"><a class="link-username nobr nounderline" href="/user/RebelWatt"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #6666EE">RebelWatt</span><span class="username-dark" style="color: #6666EE">RebelWatt</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>23<small>s </small>480<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>23<small>s </small>480<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-08-02T12:00:00Z" title="2 Aug 2017, 15:00">2 Aug 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/8y8r095m" title="THIS CATEGORY IS OVAH http://puu.sh/j1OuA/c5a03469df.png"><td class="nobr center">8th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Gold"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="England"><img class="flagicon" src="/images/flags/gb/eng.png"></span><span class="username"><span class="username-light"><span style="color:#b4902e">G</span><span style="color:#9a826e">o</span><span style="color:#8074ae">l</span><span style="color:#6666ee">d</span></span><span class="username-dark"><span style="color:#f0c03e">G</span><span style="color:#c2a278">o</span><span style="color:#9484b3">l</span><span style="color:#6666ee">d</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>23<small>s </small>850<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>23<small>s </small>850<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2015-07-16T10:00:00Z" title="16 Jul 2015, 13:00">16 Jul 2015</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/emkekgxm" title="lmao audio"><td class="nobr center">9th</td><td class="center"><a class="link-username nobr nounderline" href="/user/riley_got_pb"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #AE6CCD">riley_got_pb</span><span class="username-dark" style="color: #C279E5">riley_got_pb</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>23<small>s </small>880<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>23<small>s </small>880<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-01-17T11:00:00Z" title="17 Jan 2016, 13:00">17 Jan 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/jy9p3ekm" title="******Run Starts at 1:30 in video******
+
+Edit: sorry for resubmission, I went and looked at the en…"><td class="nobr center">10th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Silo_Simon"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #70A342">Silo_Simon</span><span class="username-dark" style="color: #8AC951">Silo_Simon</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>24<small>s</small></td><td class="nobr center hidden-sm-up">0<small>m </small>24<small>s</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-10-20T12:00:00Z" title="20 Oct 2016, 15:00">20 Oct 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/y8qrw85y" title="not a good game"><td class="nobr center">11th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Jinjenia"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Norway"><img class="flagicon" src="/images/flags/no.png"></span><span class="username"><span class="username-light"><span style="color:#c75c9f">J</span><span style="color:#c75d96">i</span><span style="color:#c75e8d">n</span><span style="color:#c75f84">j</span><span style="color:#c7607c">e</span><span style="color:#c76173">n</span><span style="color:#c7626a">i</span><span style="color:#c86462">a</span></span><span class="username-dark"><span style="color:#f772c5">J</span><span style="color:#f472b9">i</span><span style="color:#f272ad">n</span><span style="color:#f072a1">j</span><span style="color:#ed7395">e</span><span style="color:#eb7389">n</span><span style="color:#e9737d">i</span><span style="color:#e77471">a</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>24<small>s </small>066<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>24<small>s </small>066<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-07-20T12:00:00Z" title="20 Jul 2017, 15:00">20 Jul 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/ydq6pg0m" title=""><td class="nobr center">12th</td><td class="center"><a class="link-username nobr nounderline" href="/user/madnessHank"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Netherlands"><img class="flagicon" src="/images/flags/nl.png"></span><span class="username"><span class="username-light"><span style="color:#6666ee">m</span><span style="color:#616bea">a</span><span style="color:#5c70e6">d</span><span style="color:#5875e2">n</span><span style="color:#537bde">e</span><span style="color:#4f80da">s</span><span style="color:#4a85d6">s</span><span style="color:#458bd2">H</span><span style="color:#4190ce">a</span><span style="color:#3c95ca">n</span><span style="color:#389bc6">k</span></span><span class="username-dark"><span style="color:#6666ee">m</span><span style="color:#626eee">a</span><span style="color:#5f77ee">d</span><span style="color:#5b7fee">n</span><span style="color:#5888ee">e</span><span style="color:#5590ee">s</span><span style="color:#5199ee">s</span><span style="color:#4ea1ee">H</span><span style="color:#4aaaee">a</span><span style="color:#47b2ee">n</span><span style="color:#44bbee">k</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>24<small>s </small>470<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>24<small>s </small>470<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-06-16T12:00:00Z" title="16 Jun 2017, 15:00">16 Jun 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/9me61dqz" title="Wow."><td class="nobr center">13th</td><td class="center"><a class="link-username nobr nounderline" href="/user/wooby"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Italy"><img class="flagicon" src="/images/flags/it.png"></span><span class="username"><span class="username-light" style="color: #E44141">wooby</span><span class="username-dark" style="color: #EE4444">wooby</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>25<small>s </small>200<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>25<small>s </small>200<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2015-07-16T10:00:00Z" title="16 Jul 2015, 13:00">16 Jul 2015</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/jy9x2pky" title="Man first time testing out speedrunning, having alot of games in mind where i did not find any recor…"><td class="nobr center">14th</td><td class="center"><a class="link-username nobr nounderline" href="/user/FischkopfNKP"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Germany"><img class="flagicon" src="/images/flags/de.png"></span><span class="username"><span class="username-light"><span style="color:#389bc6">F</span><span style="color:#3c96c9">i</span><span style="color:#4091cd">s</span><span style="color:#448cd0">c</span><span style="color:#4887d4">h</span><span style="color:#4c82d8">k</span><span style="color:#517edb">o</span><span style="color:#5579df">p</span><span style="color:#5974e3">f</span><span style="color:#5d6fe6">N</span><span style="color:#616aea">K</span><span style="color:#6666ee">P</span></span><span class="username-dark"><span style="color:#44bbee">F</span><span style="color:#47b3ee">i</span><span style="color:#4aabee">s</span><span style="color:#4da3ee">c</span><span style="color:#509cee">h</span><span style="color:#5394ee">k</span><span style="color:#568cee">o</span><span style="color:#5984ee">p</span><span style="color:#5c7dee">f</span><span style="color:#5f75ee">N</span><span style="color:#626dee">K</span><span style="color:#6666ee">P</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>25<small>s </small>210<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>25<small>s </small>210<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2016-03-14T11:00:00Z" title="14 Mar 2016, 13:00">14 Mar 2016</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/z015kojy" title=""><td class="nobr center">15th</td><td class="center"><a class="link-username nobr nounderline" href="/user/SioNisti"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Finland"><img class="flagicon" src="/images/flags/fi.png"></span><span class="username"><span class="username-light" style="color: #389BC6">SioNisti</span><span class="username-dark" style="color: #44BBEE">SioNisti</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>27<small>s </small>278<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>27<small>s </small>278<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2019-07-17T12:00:00Z" title="17 Jul 2019, 15:00">17 Jul 2019</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/z035324z" title="lol @dylan"><td class="nobr center">16th</td><td class="center"><a class="link-username nobr nounderline" href="/user/GSchoen"><span class="username"><span class="username-light" style="color: #B4902E">GSchoen</span><span class="username-dark" style="color: #F0C03E">GSchoen</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>33<small>s </small>080<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>33<small>s </small>080<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2018-07-23T12:00:00Z" title="23 Jul 2018, 15:00">23 Jul 2018</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/meke682m" title=""><td class="nobr center">17th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Flutter"><span class="username"><span class="username-light" style="color: #A010A0">Flutter</span><span class="username-dark" style="color: #A010A0">Flutter</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>33<small>s </small>150<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>33<small>s </small>150<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-11-25T12:00:00Z" title="25 Nov 2017, 14:00">25 Nov 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/pzg4pxnz" title=""><td class="nobr center">18th</td><td class="center"><a class="link-username nobr nounderline" href="/user/OzzyZombie_FTW"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #EE2D88">OzzyZombie_FTW</span><span class="username-dark" style="color: #FF3091">OzzyZombie_FTW</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>42<small>s </small>670<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>42<small>s </small>670<small>ms</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-03-18T12:00:00Z" title="18 Mar 2017, 14:00">18 Mar 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/yw1q1o0z" title="NEW PB"><td class="nobr center">19th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Yoda1127"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light"><span style="color:#08ab6e">Y</span><span style="color:#16a967">o</span><span style="color:#25a861">d</span><span style="color:#34a75b">a</span><span style="color:#43a654">1</span><span style="color:#52a54e">1</span><span style="color:#61a448">2</span><span style="color:#70a342">7</span></span><span class="username-dark"><span style="color:#09b876">Y</span><span style="color:#1bba70">o</span><span style="color:#2dbc6b">d</span><span style="color:#40bf66">a</span><span style="color:#52c160">1</span><span style="color:#65c45b">1</span><span style="color:#77c656">2</span><span style="color:#8ac951">7</span></span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>49<small>s </small>150<small>ms</small></td><td class="nobr center hidden-sm-up">0<small>m </small>49<small>s </small>150<small>ms</small></td><td class="nobr center hidden-xs">Web  <sup title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Emulator">ᴇᴍᴜ</sup></td><td class="nobr center hidden-xs"><time class="short circa" datetime="2017-08-14T12:00:00Z" title="14 Aug 2017, 15:00">14 Aug 2017</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class=" linked" data-target="/linksbackyard/run/z03k7r8z" title=""><td class="nobr center">20th</td><td class="center"><a class="link-username nobr nounderline" href="/user/Cytruss"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Greece"><img class="flagicon" src="/images/flags/gr.png"></span><span class="username"><span class="username-light" style="color: #D37339">Cytruss</span><span class="username-dark" style="color: #EF8241">Cytruss</span></span></a></td><td class="nobr center hidden-xs">0<small>m </small>57<small>s</small></td><td class="nobr center hidden-sm-up">0<small>m </small>57<small>s</small></td><td class="nobr center hidden-xs">Web </td><td class="nobr center hidden-xs"><time class="short circa" datetime="2019-03-07T12:00:00Z" title="7 Mar 2019, 14:00">7 Mar 2019</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr><tr class="cell0 linked" data-target="/linksbackyard/run/zq3w601y" title=""><td class="nobr center">21st</td><td class="center"><a class="link-username nobr nounderline" href="/user/DylRocks17"><span title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="United States"><img class="flagicon" src="/images/flags/us.png"></span><span class="username"><span class="username-light" style="color: #B4902E">DylRocks17</span><span class="username-dark" style="color: #F0C03E">DylRocks17</span></span></a></td><td class="nobr center hidden-xs">2<small>m </small>20<small>s </small>100<small>ms</small></td><td class="nobr center hidden-sm-up">2<small>m </small>20<small>s </small>100<small>ms</small></td><td class="nobr center hidden-xs">Web  <sup title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Emulator">ᴇᴍᴜ</sup></td><td class="nobr center hidden-xs"><time class="short circa" datetime="2018-07-22T12:00:00Z" title="22 Jul 2018, 15:00">22 Jul 2018</time></td><td class="nobr center hidden-xs small"><i class="fas fa-video" title="Video available"></i></td></tr></tbody></table>
+
+<div class="modal fade formatting-help" id="rules" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Rules</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Time Ends on Killing Toad</p><p>How to OoB: <iframe class="youtube" src="https://www.youtube.com/embed/NHwSMlphXL8?autoplay=0&amp;wmode=transparent&amp;start=0" allowfullscreen="" style="height: 56.25px;"></iframe></p>				</div>
+				<div class="modal-footer">
+					<a class="btn btn-default" data-dismiss="modal">Close</a>
+				</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$('#rulesbutton').text('Show rules');
+</script>
+</div>
+		<script>leaderboardLoad();</script>
+	</div>
+</form>
+</div>
+			</div>
+
+
+
+</body>
+</html>
