@@ -38,8 +38,6 @@ h1 {
 <link rel="stylesheet" href="index.css">
 </head>
 	
-<body bgcolor="black">
-	
 <h1> Ocarina of Time </h1>
 <div class=center>
 <button id="myButton1" class="arial btn" >Back</button>
@@ -57,16 +55,78 @@ h1 {
 	
 <div class=center>
 <br> 
-<button onclick="myFunction()">Rules</button>
+<button class="arial btn" onclick="myFunction()">Rules</button>
 <br> 	
 <script>
 function myFunction() {
   alert("These go for all categories\nYou are allowed to watch the starting cutscene and save and reset and then start the run while skipping the cutscene like in JOTWAD\n\nMan on the Moon\nThe goal is to get the heart piece from the guy on the roof in kakariko. The timing starts on file select. Time ends when you see link hold the heart piece\n\nSalute%\nThe goal is to make child link salute by taking out your sword and then using the hookshot. The timing starts on file select. Time ends when you see links hand out and not moving\n\nTiwotr\nThe goal is to throw all the chicken is kakariko to the roof above the normal place where you throw them and then getting the bottle from anju. The timing starts on file select. Time ends when you see link hold the bottle");
 }
 </script>
-	
-<br>  
+<script>
+function mom() {
+  var x = document.getElementById("mom%");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("salute%");
+    x.style.display = "none";
+    var x = document.getElementById("omom%");
+    x.style.display = "none";
+    var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function salute() {
+  var x = document.getElementById("salute%");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("mom%");
+    x.style.display = "none";
+  var x = document.getElementById("omom%");
+    x.style.display = "none";
+  var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function omom() {
+  var x = document.getElementById("omom%");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("salute%");
+    x.style.display = "none";
+    var x = document.getElementById("mom%");
+    x.style.display = "none";
+    var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function tiwotr() {
+  var x = document.getElementById("tiwotr%");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("salute%");
+    x.style.display = "none";
+  var x = document.getElementById("mom%");
+    x.style.display = "none";
+  var x = document.getElementById("omom%");
+    x.style.display = "none";
+  }
+</script>
+
 <div class=center>
+
+<button class="arial btn" onclick="mom()">Man on the Moon</button>	
+<button class="arial btn" onclick="salute()">Salute%</button>
+<button class="arial btn" onclick="omom()">Old Man on the Moon</button>
+<button class="arial btn" onclick="tiwotr()">TIWOTR</button>		
+</div>	
+    
+    
+    
+<br>  
+<div id="salute%" style="display:none">
 <table align="center" width="470">
 <thead>
 <tr>
@@ -93,11 +153,9 @@ function myFunction() {
     <td>Wii Vc</td>
 </tr>
 </tbody>
-</table>    
-</div>    
+</table>       
 
 <br>	
-<div class=center>
 <table align="center" width="470">
 <thead>
 <tr>
@@ -121,12 +179,11 @@ function myFunction() {
 </table>    
 </div>    
 
-<br>	
-<div class=center>
+<div  id="mom%">
 <table align="center" width="470">
 <thead>
 <tr>
-    <th colspan="4">Mom% - OoT</th>
+    <th colspan="4">Man on the Moon% - OoT</th>
 </tr>
 <tr>
     <th>#</th>
@@ -161,15 +218,13 @@ function myFunction() {
     <td>Wii Vc</td>
 </tr>
 </tbody>
-</table>    
-</div>    	
+</table>     	
 
 <br>	
-<div class=center>
 <table align="center" width="470">
 <thead>
 <tr>
-    <th colspan="4">Mom% - FQ</th>
+    <th colspan="4">Man on the Moon% - FQ</th>
 </tr>
 <tr>
     <th>#</th>
@@ -194,13 +249,12 @@ function myFunction() {
 </tbody>
 </table>    
 </div>    	
-
-<br>	
-<div class=center>
+	
+<div   id="omom%" style="display:none">
 <table align="center" width="470">
 <thead>
 <tr>
-    <th colspan="4">Old Mom% - OoT</th>
+    <th colspan="4">Old Man on the Moon% - OoT</th>
 </tr>
 <tr>
     <th>#</th>
@@ -218,14 +272,12 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div> 	
 
 <br>	
-<div class=center>
 <table align="center" width="470">
 <thead>
 <tr>
-    <th colspan="4">Old Mom% - FQ</th>
+    <th colspan="4">Old Man on the Moon% - FQ</th>
 </tr>
 <tr>
     <th>#</th>
@@ -244,9 +296,8 @@ function myFunction() {
 </tbody>
 </table>    
 </div> 		
-
-<br>	
-<div class=center>
+	
+<div   id="tiwotr%" style="display:none">
 <table align="center" width="470">
 <thead>
 <tr>
@@ -268,10 +319,8 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div> 	
 
 <br>	
-<div class=center>
 <table align="center" width="470">
 <thead>
 <tr>
@@ -301,4 +350,3 @@ function myFunction() {
 	
 </body>
 </html>
- 
