@@ -1,0 +1,102 @@
+<html>
+<body>
+<script type="text/javascript">
+	var cats = {"2409":"120_Star","2410":"70_Star","2414":"16_Star","2415":"1_Star","2416":"0_Star"};
+
+	function getCategoryIDFromUrl(url) {
+		for (var id in cats) {
+			if (cats[id] === url) {
+				return id;
+			}
+		}
+	}
+
+	function getCategoryUrlFromID(id) {
+		return encodeURIComponent(cats[id]);
+	}
+
+	function leaderboardChange() {
+		$('#leaderboarddiv').html("\t\t<div class=\"loadingbox\"><div class=\"spinner center\"><i class=\"fas fa-circle-notch fa-spin\"><\/i><\/div><\/div>\n");
+
+		updateLeaderboard(true);
+	}
+
+	function leaderboardLoad() {
+		if (window.location.hash) {
+			var hash  = forgivingUrlDecode(window.location.hash.replace('#', ''));
+			var parts = hash.split(',');
+
+			if (parts.length > 0) {
+				$('#category').val(getCategoryIDFromUrl(parts[0]));
+			}
+		}
+
+		updateLeaderboard(false);
+	}
+
+	function updateLeaderboard(updateHash) {
+		var category = parseInt($('#category').val());
+
+		if (updateHash) {
+			window.location.replace('#' + getCategoryUrlFromID(category));
+		}
+
+		// Highlight the selected category.
+		activateCategory(category);
+
+		// Only show the variables relevant for the selected category.
+		switchVariables(category);
+
+		// Highlight the selected subcategory values.
+		activateValues();
+
+		// Get the actual leaderboard.
+		ajax_get($('#leaderboardform'), 'leaderboarddiv');
+
+		// Update the submit run button to link directly to the selected category.
+		if ($('#submitrun')) {
+			$('#submitrun').attr('href', '/sm64/editrun#' + getCategoryUrlFromID(category));
+		}
+	}
+
+	function activateCategory(category) {
+		// Remove the active class from all elements in the category navigations.
+		$('.category').removeClass('active');
+		$('#miscellaneous').removeClass('active');
+
+		// Highlight the selected category.
+		$('#category' + category).addClass('active');
+		$('#category' + category).parent().parent().children("#miscellaneous").addClass('active');
+	}
+
+	function activateValues() {
+		// Remove the active class from all elements in the values navigation.
+		$('.valuesnav').find('.active').removeClass('active');
+
+		// Highlight the selected value for each subcategory variable.
+		$('input.variable').each(function() {
+			var varID = parseInt(this.id.replace('variable', ''));
+			$('#varnav' + varID).find('li#value' + this.value).toggleClass('active');
+		});
+	}
+
+	function switchVariables(category) {
+		// Hide/show the right variables based for the category.
+		// Note that this affects all variables, subcategory or not.
+		$('.variable').each(function() {
+			var catvalue = parseInt($(this).data('cat'));
+			$(this).toggle(catvalue === -1 || catvalue === category);
+		});
+	}
+
+	$(document).ready(function() {
+
+		$('.filteroption').click(function() {
+			$(this).parent().children().removeClass('active');
+			$(this).addClass('active');
+		});
+
+	});
+</script>
+</body>
+</html>
