@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang=en-US>
-<head>
-<head>
+<html class="js"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,13 +53,678 @@
 		var fgscroll = 0;
 	</script>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet"></head>
-</head>
-<body background="bg0.png">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet"></head><span id="warning-container"><i data-reactroot=""></i></span>
+<body class="dark" style="">
+	
+<!-- Image and text -->
+<div class="navbar-background fixed-top">
+	<nav class="navbar navbar-expand navbar-dark">
+		<div class="container">
+			<a class="navbar-brand hidden-sm-down" href="/" style="float: left;">
+				<span class="hidden-light">
+											<img src="/themes/Default/1st.png" width="30" height="30" class="d-inline-block align-top" alt="">
+						<img class="logo hidden-lg-down" id="logo-light" src="/themes/Default/logo-light.png" alt="speedrun.com">
+						<img class="logo hidden-lg-down" id="logo-dark" src="/themes/Default/logo-dark.png" alt="speedrun.com" style="display: none;">
+									</span>
+				<span class="hidden-dark">
+					<img src="/themes/Default/1st.png" width="30" height="30" class="d-inline-block align-top" alt="">
+					<img class="logo hidden-lg-down" id="logo-light" src="/themes/Default/logo-light.png" alt="speedrun.com">
+				</span>
+			</a>
+
+			<div id="navbar-right">
+				<div id="navbar-main">
+					<ul class="navbar-nav">
+												<li class="hidden-md-down nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								Games
+							</a>
+							<div class="dropdown-menu" style="height: auto; width: auto; max-height: 960px;">
+								<a class="dropdown-item" href="/games">All games</a>
+								<div class="dropdown-divider"></div>
+								<div class="dropdown-header">Followed games</div>
+																<a class="dropdown-item" href="/mjth">Muumit ja Taikurin hattu</a>
+																<a class="dropdown-item" href="/mjnl">Muumit ja näkymätön lapsi</a>
+																<a class="dropdown-item" href="/muma">Muumit meren aalloilla</a>
+																<a class="dropdown-item" href="/aooni">Ao Oni</a>
+																<a class="dropdown-item" href="/moomin">Moomin's Tale</a>
+																<a class="dropdown-item" href="/Okami">Okami</a>
+																<a class="dropdown-item" href="/cave_story_plus">Cave Story+</a>
+																<a class="dropdown-item" href="/Muumit_Piilosilla">Muumit Piilosilla</a>
+																<a class="dropdown-item" href="/Mission_Escape_from_Island">Mission: Escape from Island</a>
+																<a class="dropdown-item" href="/mjss">Muumit ja Suuri Syysjuhla</a>
+																<a class="dropdown-item" href="/mjsh">Muumit ja Salaperäiset Huudot</a>
+																<a class="dropdown-item" href="/mjssds">Muumit ja Suuri Syysjuhla DS</a>
+																<a class="dropdown-item" href="/bm64">Bomberman 64</a>
+																<a class="dropdown-item" href="/Buck_Bumble">Buck Bumble</a>
+																<a class="dropdown-item" href="/hebereke">Hebereke</a>
+															</div>
+						</li>
+												<li class="nav-item hidden-md-down">
+							<a class="nav-link" href="/streams">Streams</a>
+						</li>
+						<li class="nav-item hidden-md-down">
+							<a class="nav-link" href="/forum">Forums</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle dropdown-toggle-hidden-md-down" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								<i class="fal fa-bars hidden-lg-up"></i>
+								<span class="hidden-md-down">More...</span>
+							</a>
+							<div class="dropdown-menu" style="height: auto; width: auto; max-height: 960px;">
+								<a class="hidden-lg-up dropdown-item" href="/"><i class="fal fa-home fa-margin"></i>Home</a>
+								<a class="hidden-lg-up dropdown-item" href="/games"><i class="fal fa-gamepad fa-margin"></i>Games</a>
+								<a class="hidden-lg-up dropdown-item" href="/streams"><i class="fab fa-twitch fa-margin"></i>Streams</a>
+								<a class="hidden-lg-up dropdown-item" href="/forum"><i class="fal fa-comments fa-margin"></i>Forums</a>
+								<div class="hidden-lg-up dropdown-divider"></div>
+								<a class="dropdown-item" href="http://www.speedrunslive.com/races" target="_blank"><i class="fal fa-flag-checkered menu-icon fa-margin"></i>Races &nbsp;<small><small class="text-muted">SpeedRunsLive</small></small></a>
+								<a class="dropdown-item" href="/resources"><i class="fal fa-link fa-margin"></i>Resources</a>
+								<a class="dropdown-item" href="/podcasts"><i class="fal fa-podcast fa-margin"></i>Podcasts</a>
+								<a class="dropdown-item" href="/users"><i class="fal fa-users fa-margin"></i>Users</a>
+								<a class="dropdown-item" href="/about"><i class="fal fa-info-circle fa-margin"></i>About</a>
+								<a class="dropdown-item" href="/statistics"><i class="fal fa-chart-line fa-margin"></i>Statistics</a>
+																<a class="dropdown-item" target="_blank" href="https://github.com/speedruncom/api"><i class="fal fa-cogs fa-margin"></i>API</a>
+								<a class="dropdown-item" href="/promotion"><i class="fal fa-image fa-margin"></i>Promotion</a>
+								<a class="dropdown-item" href="/help"><i class="fal fa-at fa-margin"></i>Help / Contact</a>
+								<a class="dropdown-item" href="/donate?ref=navbar"><i class="fab fa-paypal fa-margin"></i>Donate</a>
+								<a class="dropdown-item" target="_blank" href="https://www.patreon.com/speedruncom"><span class="icomoon icon-patreon"></span>Patreon</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item dark-mode active" href="javascript:;"><i class="fas fa-moon fa-margin"></i>Night Mode</a>
+								<div class="dropdown-divider"></div>
+								<div class="dropdown-header">Social</div>
+								<a class="dropdown-item" href="https://www.twitter.com/speedruncom" target="_blank"><i class="fab fa-twitter fa-margin"></i>Twitter</a>
+								<a class="dropdown-item" href="https://www.facebook.com/speedruncom" target="_blank"><i class="fab fa-facebook-f fa-margin"></i>Facebook</a>
+								<a class="dropdown-item" href="https://discord.gg/0h6sul1ZwHVpXJmK" target="_blank"><span class="icomoon icon-discord"></span>Discord</a>
+							</div>
+						</li>
+						<li class="hidden-sm-up nav-item dropdown">
+							<a class="nav-link search-button-xs" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								<i class="fal fa-search"></i>
+							</a>
+							<div class="dropdown-menu" id="search-results-xs" style="height: auto; width: auto; max-height: 960px;">
+								<form class="navbar-form" onsubmit="return false;">
+									<input type="text" id="search-xs" class="form-control search searchbar-xs ui-autocomplete-input" placeholder="Search for games, users, etc..." autocomplete="off">
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="navbar-user">
+					<ul class="navbar-nav">
+																		<li class="nav-item dropdown">
+							<a class="nav-link" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								<i class="fal fa-hourglass"></i>
+															</a>
+							<div class="dropdown-menu dropdown-menu-right" style="height: auto; width: auto; max-height: 960px;">
+								<div class="dropdown-header">Pending actions</div>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/pendingactions"><i class="fal fa-list fa-margin"></i>View all</a>
+
+																<a class="dropdown-item" href="/runsawaitingverification"><i class="fal fa-stopwatch fa-margin"></i>Runs awaiting verification (0)</a>
+								
+								
+								
+															</div>
+						</li>
+												<li class="nav-item dropdown">
+							<a class="nav-link" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								<i class="fal fa-envelope"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right" style="height: auto; width: auto; max-height: 960px;">
+								<div class="dropdown-header">Messages</div>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item">Coming soon™</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" onclick="ajax_post('/ajax_readnotifications.php');">
+								<i class="fal fa-bell"></i>
+															</a>
+							<div class="dropdown-menu dropdown-menu-right" id="dropdown-notifications" style="height: auto; width: auto; max-height: 960px;">
+								<div class="dropdown-header">Notifications</div>
+								<div class="dropdown-divider"></div>
+																<a class="dropdown-item" href="/post/1nyxv">Sanicbiscuit liked your post in the thread 'Toad%' in the Super Mario 64 Category Extensions forum. <small><time class="short" datetime="2019-08-21T01:39:50Z" title="21 Aug 2019, 04:39">04:39</time></small></a>
+																<a class="dropdown-item" href="/run/1099179">RepentMF beat the WR in Cave Story+ - Normal Ending - Normal (Original), Switch. The new WR is 46m 54s. <small><time class="short" datetime="2019-08-21T00:51:44Z" title="21 Aug 2019, 03:51">03:51</time></small></a>
+																<a class="dropdown-item" href="/cave_story_plus/resources">A new save resource, Hard Mode Run'n'gun Save, has been added to Cave Story+. <small><time class="short" datetime="2019-08-20T03:43:22Z" title="20 Aug 2019, 06:43">20 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/cave_story_plus/guide/89ftj">NathanTheQuick added a new guide to Cave Story+ titled How to Shoot Faster <small><time class="short" datetime="2019-08-20T03:15:45Z" title="20 Aug 2019, 06:15">20 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/run/961456">spins72 beat the WR in Bomberman 64 - 120 Cards. The new WR is 1h 09m 14s. <small><time class="short" datetime="2019-08-19T19:45:54Z" title="19 Aug 2019, 22:45">19 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/post/gtkb8">Sanicbiscuit liked your post in the thread 'Toad%' in the Super Mario 64 Category Extensions forum. <small><time class="short" datetime="2019-08-17T16:07:00Z" title="17 Aug 2019, 19:07">17 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/post/c1g28">Sanicbiscuit liked your post in the thread 'Toad%' in the Super Mario 64 Category Extensions forum. <small><time class="short" datetime="2019-08-16T22:45:34Z" title="17 Aug 2019, 01:45">17 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/run/1091328">tnkn_27kan beat the WR in Okami - NG+ Any%. The new WR is 1h 19m 17s. <small><time class="short" datetime="2019-08-13T19:37:13Z" title="13 Aug 2019, 22:37">13 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/run/1091117">NathanTheQuick beat the WR in Cave Story+ - Bad Ending - Hard, Other. The new WR is 1h 04m 56s. <small><time class="short" datetime="2019-08-13T14:39:41Z" title="13 Aug 2019, 17:39">13 Aug 2019</time></small></a>
+																<a class="dropdown-item" href="/run/1089141">miraejoah beat the WR in Cave Story+ - Spike% - Hard, Other. The new WR is 0m 12s. <small><time class="short" datetime="2019-08-12T01:39:53Z" title="12 Aug 2019, 04:39">12 Aug 2019</time></small></a>
+															</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown">
+								<i class="fal fa-user hidden-md-up"></i>
+								<span class="hidden-sm-down"><img class="usericon" src="https://static-cdn.jtvnw.net/badges/v1/7f0e0618-debe-4b01-818f-fb1fbbdd83e6/3" title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Twitch Affiliate"><span class="username"><span class="username-light" style="color: #389BC6">SioNisti</span><span class="username-dark" style="color: #44BBEE">SioNisti</span></span></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right" style="height: auto; width: auto; max-height: 960px;">
+								<a class="dropdown-item" href="/user/SioNisti">
+									<span class="hidden-xs"><i class="fal fa-user fa-margin"></i>View profile</span>
+									<span class="hidden-sm-up">
+										<i class="fal fa-user fa-margin"></i><strong>SioNisti</strong> &nbsp;
+										<small class="text-muted">View profile</small>
+									</span>
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/editprofile"><i class="fal fa-edit fa-margin"></i>Edit profile</a>
+								<a class="dropdown-item" href="/edittheme/user/SioNisti"><i class="fal fa-palette fa-margin"></i>Edit theme</a>
+								<a class="dropdown-item" href="/settings"><i class="fal fa-cog fa-margin"></i>Settings</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item dark-mode active" href="javascript:;"><i class="fas fa-moon fa-margin"></i>Night Mode</a>
+																<div class="dropdown-divider"></div>
+								<a class="dropdown-item postlink" href="/logout"><i class="fal fa-sign-out fa-margin"></i>Log out</a>
+							</div>
+						</li>
+											</ul>
+				</div>
+				<div id="navbar-search" class="hidden-xs">
+					<ul class="navbar-nav">
+						<form onsubmit="return false;">
+							<input class="form-control search ui-autocomplete-input" type="search" placeholder="Search for games, users, etc..." autocomplete="off">
+						</form>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
 
 
 
-<div class="col-auto" id="main">
+<div class="modal fade" id="language" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Language (Beta)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row hidden-xs">
+											<div class="col-4">
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="bg">
+									<img src="/images/flags/	bg.png" class="flagicon mr-1">български
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ca">
+									<img src="/images/flags/	es/ct.png" class="flagicon mr-1">Català
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="cs">
+									<img src="/images/flags/	cz.png" class="flagicon mr-1">Čeština
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="da">
+									<img src="/images/flags/	dk.png" class="flagicon mr-1">Dansk
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="de">
+									<img src="/images/flags/	de.png" class="flagicon mr-1">Deutsch
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="el">
+									<img src="/images/flags/	gr.png" class="flagicon mr-1">ελληνικά
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage active" data-language="en">
+									<img src="/images/flags/	gb.png" class="flagicon mr-1">English
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="es">
+									<img src="/images/flags/	es.png" class="flagicon mr-1">Español
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="fr">
+									<img src="/images/flags/	fr.png" class="flagicon mr-1">Français
+								</a>
+							</p>
+													</div>
+											<div class="col-4">
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ga">
+									<img src="/images/flags/	ie.png" class="flagicon mr-1">Gaeilge
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="gd">
+									<img src="/images/flags/	gb/sct.png" class="flagicon mr-1">Gàidhlig
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="id">
+									<img src="/images/flags/	id.png" class="flagicon mr-1">Bahasa Indonesia
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="it">
+									<img src="/images/flags/	it.png" class="flagicon mr-1">Italiano
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="he">
+									<img src="/images/flags/	il.png" class="flagicon mr-1">עברית‎
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="lv">
+									<img src="/images/flags/	lv.png" class="flagicon mr-1">Latviešu valoda
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="lt">
+									<img src="/images/flags/	lt.png" class="flagicon mr-1">Lietuvių kalba
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="nl">
+									<img src="/images/flags/	nl.png" class="flagicon mr-1">Nederlands
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ja">
+									<img src="/images/flags/	jp.png" class="flagicon mr-1">日本語
+								</a>
+							</p>
+													</div>
+											<div class="col-4">
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="no">
+									<img src="/images/flags/	no.png" class="flagicon mr-1">Norsk
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="pl">
+									<img src="/images/flags/	pl.png" class="flagicon mr-1">Polski
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="pt">
+									<img src="/images/flags/	pt.png" class="flagicon mr-1">Português
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ru">
+									<img src="/images/flags/	ru.png" class="flagicon mr-1">Русский
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="fi">
+									<img src="/images/flags/	fi.png" class="flagicon mr-1">Suomi
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="sv">
+									<img src="/images/flags/	se.png" class="flagicon mr-1">Svenska
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="tr">
+									<img src="/images/flags/	tr.png" class="flagicon mr-1">Türkçe
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="zh">
+									<img src="/images/flags/	cn.png" class="flagicon mr-1">中文 (简体)
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="zh-tw">
+									<img src="/images/flags/	tw.png" class="flagicon mr-1">中文 (繁體)
+								</a>
+							</p>
+													</div>
+									</div>
+				<div class="row hidden-sm-up">
+											<div class="col-6">
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="bg">
+									<img src="/images/flags/	bg.png" class="flagicon mr-1">български
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ca">
+									<img src="/images/flags/	es/ct.png" class="flagicon mr-1">Català
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="cs">
+									<img src="/images/flags/	cz.png" class="flagicon mr-1">Čeština
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="da">
+									<img src="/images/flags/	dk.png" class="flagicon mr-1">Dansk
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="de">
+									<img src="/images/flags/	de.png" class="flagicon mr-1">Deutsch
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="el">
+									<img src="/images/flags/	gr.png" class="flagicon mr-1">ελληνικά
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage active" data-language="en">
+									<img src="/images/flags/	gb.png" class="flagicon mr-1">English
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="es">
+									<img src="/images/flags/	es.png" class="flagicon mr-1">Español
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="fr">
+									<img src="/images/flags/	fr.png" class="flagicon mr-1">Français
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ga">
+									<img src="/images/flags/	ie.png" class="flagicon mr-1">Gaeilge
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="gd">
+									<img src="/images/flags/	gb/sct.png" class="flagicon mr-1">Gàidhlig
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="id">
+									<img src="/images/flags/	id.png" class="flagicon mr-1">Bahasa Indonesia
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="it">
+									<img src="/images/flags/	it.png" class="flagicon mr-1">Italiano
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="he">
+									<img src="/images/flags/	il.png" class="flagicon mr-1">עברית‎
+								</a>
+							</p>
+													</div>
+											<div class="col-6">
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="lv">
+									<img src="/images/flags/	lv.png" class="flagicon mr-1">Latviešu valoda
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="lt">
+									<img src="/images/flags/	lt.png" class="flagicon mr-1">Lietuvių kalba
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="nl">
+									<img src="/images/flags/	nl.png" class="flagicon mr-1">Nederlands
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ja">
+									<img src="/images/flags/	jp.png" class="flagicon mr-1">日本語
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="no">
+									<img src="/images/flags/	no.png" class="flagicon mr-1">Norsk
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="pl">
+									<img src="/images/flags/	pl.png" class="flagicon mr-1">Polski
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="pt">
+									<img src="/images/flags/	pt.png" class="flagicon mr-1">Português
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="ru">
+									<img src="/images/flags/	ru.png" class="flagicon mr-1">Русский
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="fi">
+									<img src="/images/flags/	fi.png" class="flagicon mr-1">Suomi
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="sv">
+									<img src="/images/flags/	se.png" class="flagicon mr-1">Svenska
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="tr">
+									<img src="/images/flags/	tr.png" class="flagicon mr-1">Türkçe
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="zh">
+									<img src="/images/flags/	cn.png" class="flagicon mr-1">中文 (简体)
+								</a>
+							</p>
+														<p class="mb-2">
+								<a href="javascript:;" class="changelanguage " data-language="zh-tw">
+									<img src="/images/flags/	tw.png" class="flagicon mr-1">中文 (繁體)
+								</a>
+							</p>
+													</div>
+									</div>
+			</div>
+			<div class="modal-footer">
+								<a class="btn btn-default" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="login" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="loginform" method="post" action="/ajax_login.php" class="ajaxpost form-horizontal" data-target="loginmessage">
+				<div class="modal-header">
+					<h5 class="modal-title">Log in</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group row">
+						<div class="col-sm-3 text-sm-right col-label-padding">
+							<label for="username0">
+								Username:
+							</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="username0" name="username" placeholder="Username" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-3 text-sm-right col-label-padding">
+							<label for="password">
+								Password:
+							</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password" required="">
+							<p class="hidden-sm-up right"><small><a href="/resetpassword">Forgot password</a></small></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-9 offset-sm-3">
+							<span id="loginmessage">&nbsp;</span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" type="submit">Log in</button>
+					<a class="btn btn-default hidden-xs" href="/resetpassword">Forgot password</a>
+					<a class="btn btn-default" data-dismiss="modal">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="signup" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="signupform" method="post" action="/ajax_signup.php" class="ajaxpost form-horizontal" data-target="signupmessage">
+				<div class="modal-header">
+					<h5 class="modal-title">Sign up</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group row">
+						<div class="col-sm-3 text-sm-right col-label-padding">
+							<label for="username1">
+								Username:
+							</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="username1" name="username" placeholder="Username" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-3 text-sm-right col-label-padding">
+							<label for="email">
+								E-mail:
+							</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-3 text-sm-right col-label-padding">
+							<label for="confirmemail">
+								Confirm:
+							</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" id="confirmemail" name="confirmemail" placeholder="you@example.com" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-3 col-label-padding">
+						</div>
+						<div class="col-9">
+							<div id="recaptcha" data-widget-id="0"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdYGyIUAAAAAB7r52DVOeJZKyfuaEpIjwgDCnH8&amp;co=aHR0cHM6Ly93d3cuc3BlZWRydW4uY29tOjQ0Mw..&amp;hl=fi&amp;v=v1563777128698&amp;theme=dark&amp;size=normal&amp;cb=bu1ilhe6uq8v" width="304" height="78" role="presentation" name="a-rgvr68dqzoxq" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+								<script>
+									var onloadCallback = function() {
+										recaptcha_render("dark");
+									};
+								</script>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-9 offset-sm-3">
+							<span id="signupmessage">&nbsp;</span>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" type="submit">Sign up</button> <a class="btn btn-default" data-dismiss="modal">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+	
+	<main role="main" class="container">
+			
+	
+				<div class="row">
+			
+			<div class="col-auto" id="sidebar">
+				
+
+<div class="panel">
+	<span class="center">
+			<p class="game-name">
+		<a href="/linksbackyard">
+						The Legend of Zelda:<br> Link's Backyard
+					</a>
+	</p>
+
+	<p>
+		<img class="cover-tall-128 border" src="/themes/linksbackyard/cover-256.png?version=" alt="">
+	</p>
+
+			
+									<p class="small"><a href="/zelda_fan_games">Zelda Fan Games series</a></p>
+			
+									<p class="small"><a href="/games#year=2006">2006</a></p>
+			
+
+						<p class="small text-muted">
+								<a href="/games#platform=Web">Web</a>							</p>
+
+									
+			
+						<p></p><form class="followbutton" action="/follow.php?game=4982&amp;origin=%2Flinksbackyard" method="POST">
+			<input type="hidden" name="csrftoken" value="1aXAH6LkM_QW-A41vyhN3psov4Sfr1_GMhfajBxbhS9K5dJjunzv8gJWN4Ol3nH5">
+			<p><button class="btn btn-primary" type="submit">Follow</button></p>
+		</form><p></p>
+			
+
+			</span>
+
+	<nav class="nav flex-column reverse-padding-sides mb-2 mt-4">
+		
+										<a class="nav-link" href="/linksbackyard/full_game"><i class="fal fa-trophy fa-margin"></i>Leaderboard</a>
+	 	
+						<a class="nav-link" href="/linksbackyard/guides"><i class="fal fa-book fa-margin"></i>Guides</a>
+		
+				
+		
+				
+		<a class="nav-link" href="/linksbackyard/streams"><i class="fab fa-twitch fa-margin"></i>Streams</a>
+
+				<a class="nav-link empty" href="/linksbackyard/resources"><i class="fal fa-link fa-margin"></i>Resources</a>
+		
+		<a class="nav-link" href="/linksbackyard/forum"><i class="fal fa-comments fa-margin"></i>Forum</a>
+
+				<a class="nav-link" href="/linksbackyard/gamestats"><i class="fal fa-chart-line fa-margin"></i>Statistics</a>
+		
+		
+		
+			</nav>
+
+	
+			<p class="center"><small class="text-muted">
+			Moderated by:<br>
+						<a class="link-username nobr nounderline" href="/user/Gold"><img class="usericon" src="/images/icons/supermod.png" title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Super Mod"><img class="usericon" src="/images/icons/coin.png?version=" title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Donated $2"><span class="username"><span class="username-light"><span style="color:#b4902e">G</span><span style="color:#9a826e">o</span><span style="color:#8074ae">l</span><span style="color:#6666ee">d</span></span><span class="username-dark"><span style="color:#f0c03e">G</span><span style="color:#c2a278">o</span><span style="color:#9484b3">l</span><span style="color:#6666ee">d</span></span></span></a>, 						<a class="link-username nobr nounderline" href="/user/YaBoyBTrue"><img class="usericon" src="/images/icons/supermod.png" title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Super Mod"><img class="usericon" src="https://static-cdn.jtvnw.net/badges/v1/59104569-896a-49e2-bc7a-e519498fc07a/3" title="" alt="" data-toggle="tooltip" data-placement="top" data-original-title="Twitch Affiliate"><span class="username"><span class="username-light" style="color: #08AB6E">YaBoyBTrue</span><span class="username-dark" style="color: #09B876">YaBoyBTrue</span></span></a>					</small></p>
+	</div>
+
+
+					
+	
+			</div>
+			<div class="col-auto" id="main">
 				<div class="maincontent"><script type="text/javascript">
 	var cats = {"15518":"Any","15519":"Glitchless1","20430":"All_Bushes1","20431":"All_Enemy_Kills1","20432":"1001"};
 
@@ -277,8 +939,47 @@ $('#rulesbutton').text('Show rules');
 </form>
 </div>
 			</div>
+			
+			
+					</div>
+	</main>
+
+	<footer>
+		<small class="text-muted">
+			© 2019
+					</small>
+	</footer>
+
+	<footer id="foreground" class="hidden-light"></footer>
+
+	<!-- Begin comScore -->
+	<script>
+	var _comscore = _comscore || [];
+	_comscore.push({ c1: "2", c2: "6035118" });
+	(function() {
+		var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+	</script>
+	<noscript>
+	   <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6035118&amp;cv=2.0&amp;cj=1" />
+	</noscript>
+	<!-- End comScore -->
+
+	
+	<!-- Nielsen Online SiteCensus -->
+	<div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""></div>
+	<!-- End Nielsen Online SiteCensus -->
+
+	<div class="device-xs hidden-sm-up"></div>
+	<div class="device-sm hidden-xs hidden-md-up"></div>
+	<div class="device-md hidden-sm-down hidden-lg-up"></div>
+	<div class="device-lg hidden-md-down hidden-xl"></div>
+	<div class="device-lg hidden-lg-down"></div>
+	<div class="fullscreen-menu-background" style="top: 1009px;"></div>
+	<a id="main-link" href="/"></a>
+	<div id="cdm-zone-end"></div>
 
 
-
-</body>
-</html>
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none; height: auto; max-height: 962px;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none; height: auto; max-height: 962px;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha-haaste" src="https://www.google.com/recaptcha/api2/bframe?hl=fi&amp;v=v1563777128698&amp;k=6LdYGyIUAAAAAB7r52DVOeJZKyfuaEpIjwgDCnH8&amp;cb=bsbzrev6rw4g" name="c-rgvr68dqzoxq" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
