@@ -34,6 +34,25 @@ body  {
      href="SO.ico" />
 <link rel="stylesheet" href="index.css">
 </head>
+
+<script>
+function umbrs() {
+  var x = document.getElementById("umbrs%");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("umbs%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function umbs() {
+  var x = document.getElementById("umbs%");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("umbrs%");
+    x.style.display = "none";
+  }
+</script>
 	
 <h1> Terraria </h1>
 <div class=center>
@@ -49,7 +68,7 @@ body  {
     };
 </script>
 
-<div class=center>	
+<div class="arial btn" class=center>	
 <br> 		
 <button onclick="myFunction()">Rules</button>
 	
@@ -62,9 +81,14 @@ function myFunction() {
 </div>
 <br> 	
 	
-	
-<br>  
 <div class=center>
+
+<button class="arial btn" onclick="umbrs()">Umbrella% Random Seed</button>	
+<button class="arial btn" onclick="umbs()">Umbrella% Seeded</button>	
+</div>	 
+
+<br>  
+<div id="umbrs%">
 <table align="center">
 <thead>
 <tr>
@@ -86,8 +110,8 @@ function myFunction() {
 </table>    
 </div>    	
 	
-<br>  
-<div class=center>
+
+<div id="umbs%" style="display:none">
 <table align="center">
 <thead>
 <tr>
