@@ -69,8 +69,35 @@ function ng2() {
 }
 </script>
 
+<h1> Twillight Princess </h1>
+<div class=center>
+<button id="myButton1" class="arial btn" >Back</button>
+<button id="myButton3" class="arial btn" >Submit Run</button>
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "selectgame.html";
+    };
+    document.getElementById("myButton3").onclick = function () {
+        location.href = "placeholder.html";
+    };
+</script>	
+	
+<button onclick="myFunction()">Rules</button>
+	
+<script>
+function myFunction() {
+  alert("Fruit Balloon NG+\nThe goal is to get the Silver rupee 200 from the fruit balloon minigame. The timing starts on selecting yes to play the game. Time ends when you see link hold the Rupee\n\nFruit Balloon NG\nSame goal as in NG+ but you have to start with a new save file");
+}
+</script>
+	
+	
+<div class=center>
+	
 <button class="arial btn" onclick="ng2()">NG+</button>
 <button class="arial btn" onclick="ng()">NG</button>	
+
+</div>	
 	
 <div id="ng" style="display:none">
 <table align="center" width="475">
