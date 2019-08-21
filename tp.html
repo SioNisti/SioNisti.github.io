@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang=en-US>
+<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Twillight Princess </title>
 <style> 
 .column {
@@ -35,7 +36,26 @@ body  {
      href="SO.ico" />
 <link rel="stylesheet" href="index.css">
 </head>
-	
+<body>
+<script>
+function ng() {
+  var x = document.getElementById("ng");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("ng2");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function ng2() {
+  var x = document.getElementById("ng2");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("ng");{
+    x.style.display = "none";
+  }
+}
+</script>
 <h1> Twillight Princess </h1>
 <div class=center>
 <button id="myButton1" class="arial btn" >Back</button>
@@ -48,25 +68,52 @@ body  {
     document.getElementById("myButton3").onclick = function () {
         location.href = "placeholder.html";
     };
-</script>
-
-<div class=center>
+</script>	
+<br>	
+<div class=center>	
+<button class="arial btn"  onclick="myFunction()">Rules</button>
 	
 <br>	
-	
-<button onclick="myFunction()">Rules</button>
 	
 <script>
 function myFunction() {
   alert("Fruit Balloon NG+\nThe goal is to get the Silver rupee 200 from the fruit balloon minigame. The timing starts on selecting yes to play the game. Time ends when you see link hold the Rupee\n\nFruit Balloon NG\nSame goal as in NG+ but you have to start with a new save file");
 }
-</script>
+</script>	
 	
-</div>
-<br>  
-	
-<br>  
+<br>	
 <div class=center>
+	
+<button class="arial btn" onclick="ng2()">NG+</button>
+<button class="arial btn" onclick="ng()">NG</button>	
+</div>	
+	
+<br>
+	
+<div id="ng" style="display:none">
+<table align="center" width="475">
+<thead>
+<tr>
+    <th colspan="4">Fruit Balloon% NG</th>
+</tr>
+<tr>
+    <th># </th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" target="_blank">-</a></td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>    	
+<div id="ng2">
 <table align="center" width="475">
 <thead>
 <tr>
@@ -88,37 +135,7 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div>    	
-	
-<br>  
-<div class=center>
-<table align="center" width="475">
-<thead>
-<tr>
-    <th colspan="4">Fruit Balloon% NG</th>
-</tr>
-<tr>
-    <th># </th>
-    <th>Runner</th>
-    <th>Time</th>
-    <th>Platform</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>1st</td>
-    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
-    <td>-</td>
-    <td>-</td>
-</tr>
-</tbody>
-</table>    
-</div>  	
-	
-<br>
-<br>
-<br>
-<br>
-
+</div>    
+</div>   
 </body>
 </html>
