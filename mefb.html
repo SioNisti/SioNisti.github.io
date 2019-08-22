@@ -48,10 +48,38 @@ body  {
 <link rel="stylesheet" href="index.css">
 </head>
 	
-<body bgcolor="black">
-	
 <h1> MEFB </h1>
 
+<script>
+function cat() {
+  var x = document.getElementById("cat%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function aa() {
+  var x = document.getElementById("aa%");
+    x.style.display = "block";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function cats() {
+  var x = document.getElementById("cats%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+  }
+</script>
 
 </div>
 <div class=center>
@@ -80,10 +108,16 @@ function myFunction() {
   alert("Use the most recent version. \nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner.");
 }
 </script>	
-<br>  	
+<br>
+<br> 
+<div class=center>
+<button class="arial btn" onclick="cat()">Cat RTA</button>	
+<button class="arial btn" onclick="aa()">All Achievements</button>	
+<button class="arial btn" onclick="cats()">Cat NG+ RTA</button>	
+</div>	
 
 <br>  
-<div class=center>
+<div  id="cat%">
 <table align="center">
 <thead>
 <tr>
@@ -103,10 +137,8 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div>    
 
 <br>  
-<div class=center>
 <table align="center">
 <thead>
 <tr>
@@ -127,9 +159,8 @@ function myFunction() {
 </tbody>
 </table>    
 </div>    
-
-<br>  
-<div class=center>
+  
+<div  id="aa%" style="display:none">
 <table align="center">
 <thead>
 <tr>
@@ -148,11 +179,10 @@ function myFunction() {
     <td>-</td>
 </tr>
 </tbody>
-</table>    
-</div>    	
+</table>  
+</div>
 
-<br>  
-<div class=center>
+<div  id="cats%" style="display:none">
 <table align="center">
 <thead>
 <tr>
@@ -171,11 +201,9 @@ function myFunction() {
     <td>-</td>
 </tr>
 </tbody>
-</table>    
-</div>    
+</table>        
 
 <br>  
-<div class=center>
 <table align="center">
 <thead>
 <tr>
