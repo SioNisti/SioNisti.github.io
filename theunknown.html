@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> Speedruns | The Unknown </title>
+<style> 
+.column {
+    float: left;
+    width: 33.33%;
+}
+	.column2 {
+	float:left;
+	width: 50%;
+}
+	
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+body  {
+  background-image: url("bg9.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style>
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="SO.ico" />
+<link rel="stylesheet" href="index.css">
+</head>
+	
+<h1> The Unknown </h1>
+<div class=center>
+<button id="myButton1" class="arial btn" >Back</button>
+<button id="myButton3" class="arial btn" >Submit Run</button>
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "selectgame.html";
+    };
+    document.getElementById("myButton3").onclick = function () {
+        location.href = "placeholder.html";
+    };
+</script>
+
+<div class=center>	
+<br> 		
+<button class="arial btn" onclick="myFunction()">Rules</button>
+	
+<script>
+function myFunction() {
+  alert("Beat The Game\n\n-The goal is to get to the end of screen\n-Must have video proof\n\n(Use the in game timer)");
+}
+</script>
+	
+</div>
+<br> 	 
+
+<div id="btg%">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="3">Beat The Game</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link"  target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>    	
+	
+<br>
+<br>
+<br>
+
+</body>
+</html>
