@@ -173,7 +173,9 @@ td {
 tbody tr:hover {
     background-color: rgba(135, 196, 15, .15);
 }
-
+th:hover {
+  background-color: grey;
+}
 .run-link {
 	text-transform: none;
 	text-decoration: underline;
