@@ -38,7 +38,38 @@ body  {
 <h1> FlowerStick </h1>
 	
 </div>
-	
+
+<script>
+function crta() {
+  var x = document.getElementById("crta%");
+    x.style.display = "block";
+    var x = document.getElementById("trta%");
+    x.style.display = "none";
+    var x = document.getElementById("tcrta%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function trta() {
+  var x = document.getElementById("trta%");
+    x.style.display = "block";
+    var x = document.getElementById("crta%");
+    x.style.display = "none";
+    var x = document.getElementById("tcrta%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function tcrta() {
+  var x = document.getElementById("tcrta%");
+    x.style.display = "block";
+    var x = document.getElementById("crta%");
+    x.style.display = "none";
+    var x = document.getElementById("trta%");
+    x.style.display = "none";
+  }
+</script>
+
 <div class=center>
 <button id="myButton1" class="arial btn" >Back</button>
 <button id="myButton2" class="arial btn" >Submit</button>
@@ -54,16 +85,23 @@ body  {
 </script>
 <div class=center>
 <br>	
-<button onclick="myFunction()">Rules</button>
+<button class="arial btn" onclick="myFunction()">Rules</button>
 <div class=center>	
 <script>
 function myFunction() {
-  alert("Use the most recent version (WC means wall climb) RTA Timing starts upon selecting difficulty and ends on the first full black frame of credits on the boss");
+  alert("Use the most recent version RTA Timing starts upon selecting difficulty and ends on the first full black frame of credits on the boss");
 }
 </script>	
-	
-<br>  
+
+<br> 
 <div class=center>
+<button class="arial btn" onclick="crta()">Clock RTA</button>	
+<button class="arial btn" onclick="trta()">Tarmo RTA</button>	
+<button class="arial btn" onclick="tcrta()">True clock RTA</button>	
+</div>	
+    
+<br>  
+<div id="crta%">
 <table align="center">
 <thead>
 <tr>
@@ -85,10 +123,8 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div> 
 	
 <br>  
-<div class=center>
 <table align="center">
 <thead>
 <tr>
@@ -111,9 +147,8 @@ function myFunction() {
 </tbody>
 </table>    
 </div> 
-	
-<br>  
-<div class=center>
+	 
+<div id="trta%" style="display:none">
 <table align="center">
 <thead>
 <tr>
@@ -135,10 +170,8 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div> 
 	
 <br>  
-<div class=center>
 <table align="center">
 <thead>
 <tr>
@@ -162,8 +195,7 @@ function myFunction() {
 </table>    
 </div>	
 	
-<br>  
-<div class=center>
+<div id="tcrta%" style="display:none">
 <table align="center">
 <thead>
 <tr>
@@ -185,10 +217,8 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-</div>	
 	
 <br>  
-<div class=center>
 <table align="center">
 <thead>
 <tr>
