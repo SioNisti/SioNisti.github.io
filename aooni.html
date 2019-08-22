@@ -46,17 +46,33 @@ body  {
      href="SO.ico" />
 <link rel="stylesheet" href="index.css">
 </head>
-	
+
+<script>
+function dies() {
+  var x = document.getElementById("dies");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("giacad");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function giacad() {
+  var x = document.getElementById("giacad");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("dies");
+    x.style.display = "none";
+  }
+</script>
+
 <h1> Ao Oni </h1>
-
-	
-
 	
 </div>
 	
 <div class=center>
 <button id="myButton1" class="arial btn" >Back</button>
-<button id="myButton2" class="arial btn" >Submit</button>
+<button id="myButton2" class="arial btn" >Submit run</button>
 	
 </div>
 <script type="text/javascript">
@@ -69,7 +85,7 @@ body  {
 </script>
 <div class=center>
 <br>	
-<button onclick="myFunction()">Rules</button>
+<button class="arial btn" onclick="myFunction()">Rules</button>
 <div class=center>	
 <script>
 function myFunction() {
@@ -77,9 +93,14 @@ function myFunction() {
 }
 </script>	
 	
-<div class=center>	
-<br>  
 <div class=center>
+<br> 
+<button class="arial btn" onclick="dies()">Dies%</button>	
+<button class="arial btn" onclick="giacad()">Go in a closet and die%</button>	
+</div>	  
+    
+<br>  
+<div  id="dies">
 <table align="center" width="300">
 <thead>
 <tr>
@@ -105,9 +126,8 @@ function myFunction() {
 </tbody>
 </table>    
 </div> 
-	
-<br>  
-<div class=center>
+	 
+<div  id="giacad" style="display:none">
 <table align="center" width="300">
 <thead>
 <tr>
