@@ -1,0 +1,204 @@
+h1 {
+	font-family:Verdana;
+	text-align: center;
+	font-size: 72px;
+}
+p {
+	font-family:Arial;
+	text-align: center;
+	font-size:25px;
+}
+.arial {
+	font-family:Arial;
+}
+.verdana {
+	font-family:Verdana;
+}
+.georgia {
+	font-family:Georgia;
+}
+.timesnewroman {
+	font-family:Times New Roman;
+}
+.center {
+	text-align:center;
+}
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
+.bglightgray {
+	background: #CACACA;
+}
+.bgblack {
+	background: #000000;
+	color:white;
+}
+.bgwhite {
+	background: #ffffff;
+	color:black;
+}
+.courier {
+	font-family: Courier;
+}
+.couriernew {
+	font-family: Courier New;
+}
+.fontgreen {
+	color: #00FF00;
+}
+.bgBUP {
+	background: #FDE7AE;
+}
+.aligncenter {
+	float:right;
+	position:relative;
+	left:50%;
+}
+h2 {
+	font-size:40px;
+}
+.margin {
+	width:900px;
+	margin:auto;
+	
+}
+.big {
+	font-size: 30px;
+}
+a:hover {
+    background-color:white;
+}
+#globalnav {
+	position:relative;
+	float:left;
+	width:100%;
+	padding:0 0 1.75em 1em;
+	margin:0;
+	list-style:none;
+	line-height:1em;
+}
+
+#globalnav LI {
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#globalnav A {
+	display:block;
+	color:#444;
+	text-decoration:none;
+	font-weight:bold;
+	background:#ddd;
+	margin:0;
+	padding:0.25em 1em;
+	border-left:1px solid #fff;
+	border-top:1px solid #fff;
+	border-right:1px solid #aaa;
+}
+
+#globalnav A:hover,
+#globalnav A:active,
+#globalnav A.here:link,
+#globalnav A.here:visited {
+	background:#bbb;
+}
+
+#globalnav A.here:link,
+#globalnav A.here:visited {
+	position:relative;
+	z-index:102;
+}
+
+/*subnav*/
+
+#globalnav UL {
+	position:absolute;
+	left:0;
+	top:1.5em;
+	float:left;
+	background:#bbb;
+	width:100%;
+	margin:0;
+	padding:0.25em 0.25em 0.25em 1em;
+	list-style:none;
+	border-top:1px solid #fff;
+}
+
+#globalnav UL LI {
+	float:left;
+	display:block;
+	margin-top:1px;
+}
+
+#globalnav UL A {
+	background:#bbb;
+	color:#fff;
+	display:inline;
+	margin:0;
+	padding:0 1em;
+	border:0
+}
+
+#globalnav UL A:hover,
+#globalnav UL A:active,
+#globalnav UL A.here:link,
+#globalnav UL A.here:visited {
+	color:#444;
+}
+th {
+	font-weight: bold;
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+th.full {
+	text-align: center;
+	letter-spacing: 0.5px;
+	border: 2px inset rgba( 255, 255, 255, .2);
+}
+
+td, th, tr {
+	padding: 0.35em 1.5em;
+	text-align: center;
+	background: #ffffff;
+}
+
+td {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+tbody tr:hover {
+    background-color: rgba(135, 196, 15, .15);
+}
+
+.run-link {
+	text-transform: none;
+	text-decoration: underline;
+	font-family: 'Lato', Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+.btn {
+  background-color: #00c26c;
+  border: black;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #006337;
+  color: black;
+  border: black;
+}
