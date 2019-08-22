@@ -46,7 +46,7 @@ body  {
     
 <div class=center>	
 <br> 		
-<button onclick="myFunction()">Rules</button>
+<button class="arial btn" onclick="myFunction()">Rules</button>
 	
 <script>
 function myFunction() {
@@ -55,32 +55,50 @@ function myFunction() {
 </script>
 	
 </div>
+<br> 	
+<script>
+function YTOEMU() {
+  var x = document.getElementById("YTOEMU");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("YTOGC");
+    x.style.display = "none";
+    var x = document.getElementById("YTON");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function YTOGC() {
+  var x = document.getElementById("YTOGC");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("YTOEMU");
+    x.style.display = "none";
+    var x = document.getElementById("YTON");
+    x.style.display = "none";
+  }
+</script>    
+<script>
+function YTON() {
+  var x = document.getElementById("YTON");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("YTOEMU");
+    x.style.display = "none";
+    var x = document.getElementById("YTOGC");
+    x.style.display = "none";
+  }
+</script>       
 	
-<br>  
 <div class=center>
-<table align="center" width="300">
-<thead>
-<tr>
-    <th colspan="3">Yellow Toad OoB - GC</th>
-</tr>
-<tr>
-    <th>#</th>
-    <th>Runner</th>
-    <th>Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>1st</td>
-    <td class="bold"><a class="run-link" target="_blank">-</a></td>
-    <td>-</td>
-</tr>
-</tbody>
-</table>    
-</div> 
-	
-<br>  
-<div class=center>
+
+<button class="arial btn" onclick="YTOEMU()">Umbrella% Random Seed</button>	
+<button class="arial btn" onclick="YTOGC()">Umbrella% Seeded</button>	
+<button class="arial btn" onclick="YTON()">Umbrella% Seeded</button>
+
+<br>     
+<br> 
+<div   id="YTOEMU">
 <table align="center" width="300">
 <thead>
 <tr>
@@ -106,9 +124,30 @@ function myFunction() {
 </tbody>
 </table>    
 </div>    	
-	
-<br>  
-<div class=center>
+  
+<div  id="YTOGC" style="display:none">
+<table align="center" width="300">
+<thead>
+<tr>
+    <th colspan="3">Yellow Toad OoB - GC</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div> 
+
+<div   id="YTON" style="display:none">
 <table align="center" width="300">
 <thead>
 <tr>
@@ -133,3 +172,4 @@ function myFunction() {
 <br>
 <br>
 </body>
+</html>
