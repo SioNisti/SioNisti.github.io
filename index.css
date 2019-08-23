@@ -170,8 +170,8 @@ td {
 	font-family: 'Lato', Arial, sans-serif;
 }
 
-tbody tr:hover {
-    background-color: rgba(0, 153, 51);
+tr:hover td {
+    background-color: grey;
 }
 
 .run-link {
@@ -202,4 +202,3 @@ table, th, td {
   color: black;
   border: black;
 }
-tr:hover {background-color:#f5f5f5;}
