@@ -3,16 +3,37 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Submit a run</title>
+<style>    
+.hello {
+  font-size: 4em;
+}    
+</style>    
+    
 <body>
 
-var date = new Date(),
-    day = date.getDate(),
-    month = date.getMonth()+1;
-
-if (8 == month && 27 == day) {
-    document.body.style.backgroundColor = "#FF9100";
+function updateBackground() {
+  var 
+    hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,    
+    hello = document.querySelector(".hello");    
+  if (hr < 10) {
+    bstyle.backgroundColor = "yellow";
+    bstyle.color = "black";
+    hello.innerText = "Have a good morning";
+  } else if (hr < 20) {
+    bstyle.backgroundColor = "green";
+    bstyle.color = "white";
+    hello.innerText ="Have a good day!";
+  } else {
+    bstyle.backgroundColor = "black";
+    bstyle.color = "white";
+    hello.innerText = "Have a good night!";
+  } 
 }
+
+setInterval(updateBackground, 1000 * 60);
+updateBackground();
   
 </body>
 </html>
-
