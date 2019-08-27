@@ -12,14 +12,13 @@
 <body>
 
 <script>
-var t = new Date().getHours();
+var d = new Date().getDays();
+var m = new Date().getMonth();
 
-if (t < 10) {
-    document.write("Have a good morning!");
-} else if (t < 20) {
-    document.write("Have a good day!");
+if (d < 27) (m < 8) {
+    document.write("Today is today");
 } else {
-    document.write("Have a good night!");
+    document.write("Today isnt today");
 }
 </script>
   
