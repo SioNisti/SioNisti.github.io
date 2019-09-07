@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-		body {
-			background-color: red;
-			transition: background-color 2s;
-		}
-	</style>  
-  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Test</title>
-  
+ 
+<style>	
+	
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}	
+</style>	
 </head>      
 <body>
-	<script type="text/javascript">
-		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-		var i = 1;
-		window.setInterval(function(){
-			document.body.style.backgroundColor = colors[i];
-			i++;
-			if (i === colors.length){
-				i=0;
-			}
-		}, 5000);
-	</script>
- 
-<div id="p1" class=center>
+
+<div class="wrapper" class=center>
 <h1>Welcome to my testing page</h1>  
-<iframe width="600" height="340" src="https://www.youtube.com/embed/+lastest?list=UUcLSJ5EO1sP7TNX8-YFe9AQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="600" height="340" src="https://www.youtube.com/embed/+lastest?list=UUcLSJ5EO1sP7TNX8-YFe9AQ" autoplay frameborder="0" allowfullscreen></iframe>
 
 
 </div>
