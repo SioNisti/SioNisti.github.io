@@ -1,63 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style type="text/css">
+		body {
+			background-color: red;
+			transition: background-color 7s;
+		}
+	</style>  
+  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Test</title>
-<style>    
-.hello {
-  font-size: 4em;
-}  
-body {
-    background-color: lightgreen;
-    animation-name: BGC;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
-}
-
-
-@-webkit-keyframes BGC {
-  0% {
-    background: red;
-  }
-
-  20% {
-    background: orange;
-  }
-
-  40% {
-    background: yellow;
-  }
-
-  60% {
-    background: lightgreen;
-  }
-
-  80% {
-    background: turquoise;
-  }
-
-  90% {
-    background: blue;
-  }
-
-  100% {
-    background: purple;
-  }
-  }
   
-  #p1 {
-     textsize: 50px; 
-  }
-</style>    
-    
+</head>      
 <body>
-<head>
-
+	<script type="text/javascript">
+		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+		var i = 1;
+		window.setInterval(function(){
+			document.body.style.backgroundColor = colors[i];
+			i++;
+			if (i === colors.length){
+				i=0;
+			}
+		}, 5000);
+	</script>
+ 
 <div id="p1" class=center>
 <h1>Welcome to my testing page</h1>  
 <iframe width="600" height="340" src="https://www.youtube.com/embed/+lastest?list=UUcLSJ5EO1sP7TNX8-YFe9AQ" frameborder="0" allowfullscreen></iframe>
 
-</head>  
+
 </div>
 </body>
 </html>
