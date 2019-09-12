@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> SioNisti | Stardew Valley </title>
+<style> 
+.column {
+    float: left;
+    width: 33.33%;
+}
+	.column2 {
+	float:left;
+	width: 50%;
+}
+	
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1 {
+  color: white;
+}
+h2 {
+  color: white;
+}
+a {
+  color: blue;
+}
+p {
+  color: white;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+body  {
+  background-image: url("bg10.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style>
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="tea.ico" />
+<link rel="stylesheet" href="index.css">
+</head>
+
+<script>
+function dies() {
+  var x = document.getElementById("dies");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("giacad");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function giacad() {
+  var x = document.getElementById("giacad");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("dies");
+    x.style.display = "none";
+  }
+</script>
+
+<h1> Stardew Valley </h1>
+	
+</div>
+	
+<div class=center>
+<button id="myButton1" class="arial btn" >Back</button>
+<button id="myButton2" class="arial btn" >Submit run</button>
+	
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "selectgame.html";
+    };
+    document.getElementById("myButton2").onclick = function () {
+        location.href = "placeholder.html";
+    };
+</script>
+<div class=center>
+<br>	
+<button class="arial btn" onclick="myFunction()">Rules</button>
+<div class=center>	
+<script>
+function myFunction() {
+  alert("Halibut% \nTime Starts when pressing OK on character creation \nTime ends on the frame halibut appears on your hotbar\n Item id trick isnt allowed");
+}
+</script>	
+	
+<div class=center>
+<br> 
+<button class="arial btn" onclick="halibut()">Halibut%</button>	
+</div>	  
+    
+<br>  
+<div  id="halibut">
+<table align="center" width="300">
+<thead>
+<tr>
+    <th colspan="3">Halibut%</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/run/sion210stardewhali.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/sion" target="_blank">SioN</a></td>
+    <td><a href="">2m 10s 960ms</a></td>
+</tr>
+</tbody>
+</table>    
+</div> 
+
+
+</body>
+</html>
