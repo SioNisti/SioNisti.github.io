@@ -68,9 +68,6 @@ h2 {
 .big {
 	font-size: 30px;
 }
-a:hover {
-    background-color:white;
-}
 #globalnav {
 	position:relative;
 	float:left;
