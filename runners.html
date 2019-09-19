@@ -30,6 +30,57 @@ p {
 h2 {
   color: white;
 }
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.imgT {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgD {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 </style>
 <link rel="icon" type="image/vnd.microsoft.icon"
      href="tea.ico" />
@@ -53,110 +104,147 @@ h2 {
 </div>
 <div class=center>    
 <br> 
-<a href="https://www.speedrun.com/user/akillezii">
-<img src="https://www.speedrun.com/themes/user/AkillezII/image.png?version=x" height="100" width="100">
-<p>AkillezII
-</p>
-</a>    
-<a href="https://www.speedrun.com/user/mrjimmysteel25">
-<img src="https://www.speedrun.com/themes/user/MrJimmysteel25/image.png?version=x" height="100" width="100">
-<p>MrJimmysteel125
-</p>
-</a>    
-<a href="https://www.speedrun.com/user/RWBYSorry">
-<img src="https://www.speedrun.com/themes/user/RWBYSorry/image.png?version=x" height="100" width="100">
-<p>RWBYSorry
-</p>
-</a>    
-<a href="https://www.speedrun.com/user/BennyMKW">
-<img src="https://www.speedrun.com/themes/user/BennyMKW/image.png?version=x" height="100" width="100">
-<p>BennyMKW
-</p>
-</a>    
-<a href="https://www.speedrun.com/user/Bobo_bobo">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/66752cb0-a684-43b7-b12a-d2f027cdd59d-profile_image-70x70.jpg" height="100" width="100">
-<p>Bobo_bobo
-</p>
-</a>    
-<a href="https://www.speedrun.com/user/Buff_Head">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/buff_head-profile_image-ad816ef3461f0acf-70x70.jpeg" height="100" width="100">
-<p>Buff_Head
-</p>
-</a>            
-<a href="https://www.speedrun.com/user/Camtumin">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/1e2bf03c-663d-4d3c-a813-3b6fcbf68c94-profile_image-70x70.png" height="100" width="100">
-<p>Camtumin
-</p>
-</a>             
-<a href="https://www.speedrun.com/user/dnvic">
-<img src="https://www.speedrun.com/themes/user/DNVIC/image.png?version=x" height="100" width="100">
-<p>DNVIC
-</p>
-</a>              
-<a href="https://www.speedrun.com/user/finiego">
-<img src="https://www.speedrun.com/themes/user/finiego/image.png?version=x" height="100" width="100">
-<p>Finiego
-</p>
-</a>              
-<a href="https://www.speedrun.com/user/goodmanbcool">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/25767029-03dc-4e4c-aa64-5dd10aa18780-profile_image-70x70.jpg" height="100" width="100">
-<p>goodmanbcool
-</p>
-</a>   
-<a href="https://www.speedrun.com/user/JeremyMKW">
-<img src="https://www.speedrun.com/themes/user/JeremyMKW/image.png?version=675e953c" height="100" width="100">
-<p>JeremyMKW
-</p>
-</a>            
-<a href="https://www.speedrun.com/user/Lumbojacko">
-<img src="https://www.speedrun.com/themes/user/LumboJacko/image.png?version=x" height="100" width="100">
-<p>LumboJacko
-</p>
-</a>             
-<a href="mango">
-<img src="none.png" height="100" width="100">
-<p>Mango
-</p>
-</a>             
-<a href="https://www.speedrun.com/user/mrlink2k">
-<img src="https://www.speedrun.com/themes/user/mrlink2k/image.png?version=x" height="100" width="100">
-<p>mrlink2k
-</p>
-</a>            
-<a href="nathan">
-<img src="none.png" height="100" width="100">
-<p>Nathan</p>
-</a>             
-<a href="https://www.speedrun.com/user/poke711">
-<img src="https://www.speedrun.com/themes/user/Poke711/image.png?version=x" height="100" width="100">
-<p>Poke711
-</p>
-</a>               
-<a href="saunders">
-<img src="none.png" height="100" width="100">
-<p>Saunders
-</p>
-</a>              
-<a href="https://www.speedrun.com/user/thesilvermane">
-<img src="https://www.speedrun.com/themes/user/TheSilverMane/image.png?version=x" height="100" width="100">
-<p>TheSilverMane
-</p>
-</a>               
-<a href="https://www.speedrun.com/user/SioN">
-<img src="https://www.speedrun.com/themes/user/SioN/image.png?version=x" height="100" width="100">
-<p>SioN
-</p>
-</a>                      
-<a href="https://www.speedrun.com/user/theweatherupthere">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/bb03dcff-32dd-403d-83fe-e18f52e57ea5-profile_image-70x70.jpg" height="100" width="100">
-<p>theweatherupthere
-</p>
-</a>                       
-<a href="https://www.speedrun.com/user/zephxavier">
-<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/675027bd-4b66-4392-8faf-0a3470c39686-profile_image-70x70.jpg" height="100" width="100">
-<p>ZephXavier
-</p>
-</a>          
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/akillezii/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">AkillezII</div>
+    <div class="imgd">A moderator of the Duke Nukem boards</div>
+  </div>
+</div>
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/mrjimmysteel25/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">MrJimmysteel25</div>
+      <div class="imgd">Destoyed the N64 6 Toad wr</div>
+  </div>
+</div>   
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/RWBYSorry/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">RWBYSorry</div>
+      <div class="imgd">The original god of 6 Toad</div>
+  </div>
+</div>    
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/BennyMKW/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">BennyMKW</div>
+  </div>
+</div>    
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/Bobo_bobo/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">Bobo_bobo</div>
+    <div class="imgd">Liked the OoT categories too much</div>
+  </div>
+</div>    
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/Buff_Head/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">Buff_Head</div>
+    <div class="imgd">Retired speedrunner</div>
+  </div>
+</div>    
+<div class="container">
+  <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/1e2bf03c-663d-4d3c-a813-3b6fcbf68c94-profile_image-70x70.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="imgt">Camtumin</div>
+    <div class="imgd">Has disappeared?</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/DNVIC/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">DNVIC</div>
+    <div class="text2">Created the base for this website AKA 6 Toad boards</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/finiego/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">finiego</div>
+    <div class="text2">Made "The Unknown" Game</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/goodmanbcool/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">goodmanbcool</div>
+    <div class="text2">Addicted to Mom% ?</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/JeremyMKW/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">JeremyMKW</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/Lumbojacko/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Lumbojacko</div>
+    <div class="text2">One of the 6 OGs</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="none.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">mango</div>
+    <div class="text2">One of the 6 OGs</div>
+  </div>
+</div>   
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/mrlink2k/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">mrlink2k</div>
+    <div class="text2">One of the 6 OGs</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="none.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">nathan</div>
+    <div class="text2">One of the 6 OGs</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/poke711/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Poke711</div>
+    <div class="text2">Likes SM64 1 star too much</div>
+  </div>
+</div> 
+<div class="Saunders">
+  <img src="none.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Saunders</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/TheSilverMane/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">TheSilverMane</div>
+  </div>
+</div>   
+<div class="container">
+  <img src="https://www.speedrun.com/themes/user/sion/image.png?version=x" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">SioN</div>
+    <div class="text2">The creator of this site</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/bb03dcff-32dd-403d-83fe-e18f52e57ea5-profile_image-70x70.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">theweatherupthere</div>
+  </div>
+</div>  
+<div class="container">
+  <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/675027bd-4b66-4392-8faf-0a3470c39686-profile_image-70x70.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">ZephXavier</div>
+  </div>
+</div>       
 
 </div>
 <br>  
