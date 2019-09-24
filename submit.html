@@ -62,13 +62,24 @@ body  {
 <br>
 <div class=center>
 <h2>Submit a run</h2>
-    
+<!--    
 <button class="arial btn" onclick="goBack()">Back</button>
     
 <script> function goBack() {
 window.history.back(); 
 } 
-</script>    
+</script>   --> 
+    
+
+
+<button id="myButton4" class="arial btn" >Submit Run</button>
+
+<script type="text/javascript">
+
+     document.getElementById("myButton4").onclick = function () {
+        location.href = "submit.html";
+    };
+</script>
     
 <div class=center>
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd57p1bdv1f_54-R0hqLGXzeXoNzC-_mO9aVXYffkZrOzZhOA/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
