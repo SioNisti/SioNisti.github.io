@@ -47,7 +47,6 @@ p {
 body  {
   background-image: url("lolhomo.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 </style>
 
@@ -62,18 +61,10 @@ body  {
 <br>
 <div class=center>
 <h2>Submit a run</h2>
-<!-- old back button that didnt work properly with google docs   
-<button class="arial btn" onclick="goBack()">Back</button>
-    
-<script> function goBack() {
-window.history.back(); 
-} 
-</script>   --> 
+<!--   background-attachment: fixed;  --> 
     
 <button id="myButton4" class="arial btn" >Back</button>
-
 <script type="text/javascript">
-
      document.getElementById("myButton4").onclick = function () {
         location.href = "submit.html";
     };
