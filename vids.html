@@ -13,17 +13,29 @@
     content: "";
     display: table;
     clear: both;
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  /* width: 40%;  */
+  width="435"
 }
+td, th {
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px;
+  background-color: white;
+}   
 h2 {
       color: white;
 }
 h1 {
       color: white;
 }
-a {
+p {
       color: white;
 }
-p {
+a {
       color: white;
 }
 table {
@@ -53,6 +65,26 @@ body  {
 </script>
     
 </head>
+    
+<script>
+function oot() {
+  var x = document.getElementById("oot");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("sm64");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function sm64() {
+  var x = document.getElementById("sm64");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("oot");
+    x.style.display = "none";
+  }
+</script>
+    
 <body class=lolhomo>
 <script async src="background.js"></script>
 <h1>Here are my Speedrun video tutorials</h1>
@@ -64,19 +96,59 @@ body  {
         location.href = "index.html";
     };
 </script>
-<h2 class=center> Ocarina of Time  </h2>
-<p> <a href=https://www.youtube.com/watch?v=dly5eVZlhcQ>B1 Jump</a></p>
-<p> <a href=https://www.youtube.com/watch?v=MzZeafAA1As>Flame stick and Gohma Double KO</a></p>
-<p> <a href=https://www.youtube.com/watch?v=HGqdyNXTdFM>Adult DoT Skip with hoverboots</a></p>
-<p> <a href=https://www.youtube.com/watch?v=Qo4RIYEbgps>Shadow TMPL early with Hookshot jump</a></p>
-<p> <a href=https://www.youtube.com/watch?v=hnEXLVPX8M8>Navi dive to lost woods from zora's river as child </a></p>
-<p> <a href=https://www.youtube.com/watch?v=rSkjcWdif7M>Navi dive to lost woods from zora's river as adult</a></p>
-<p><a href=https://www.youtube.com/watch?v=d3UkDSV6ubU>1080 visual que to the edge of loading zone</a></p>
 
- 
-<h2 class=center> Super Mario 64 </h2>
-<p> <a href=https://www.youtube.com/watch?v=U8HwVmrKJNw>16 Star tutorial</a></p>
-<p> <a href=https://www.youtube.com/watch?v=LSx4whPqhmo>Lobby Backwards Long Jump</a></p>
-<p> <a href=https://www.youtube.com/watch?v=JlRrDUoRNcU>Rolling Log Triple Jump</a></p>
-<p> <a href=https://www.youtube.com/watch?v=cyn6R_2BKsY>Triple Jump Wall Kick in BITS</a></p>
-</div>
+<div class="container" class=center id="oot">
+
+<table align="center" width="435">
+    
+  <tr>
+    <th colspan="4">OoT Tutorials</th>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=dly5eVZlhcQ';">
+    <td>B1 Jump</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=MzZeafAA1As';">
+    <td>Flame stick and Gohma Double KO</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=HGqdyNXTdFM';">
+    <td>Adult DoT Skip with hoverboot</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=Qo4RIYEbgps';">
+    <td>Shadow TMPL early with Hookshot jump</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=hnEXLVPX8M8';">
+    <td>Navi dive to lost woods from zora's river as child </td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=rSkjcWdif7M';">
+    <td>Navi dive to lost woods from zora's river as adult</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=d3UkDSV6ubU';">
+    <td>1080 visual que to the edge of loading zone</td>
+  </tr>
+</table>	
+</div>	    
+    
+<div class="container" class=center id="sm64" style="display:none">
+
+<table align="center" width="435">
+    
+  <tr>
+    <th colspan="4">SM64 Tutorials</th>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=U8HwVmrKJNw';">
+    <td>Bad 16 Star tutorial</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=LSx4whPqhmo';">
+    <td>LBLJ</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=JlRrDUoRNcU';">
+    <td>Rolling Log Triple Jump</td>
+  </tr>
+  <tr onclick="window.location='https://www.youtube.com/watch?v=cyn6R_2BKsY';">
+    <td>Triple Jump Wall Kick in BITS</td>
+  </tr>
+</table>	
+</div>	
+
+</body>
+</html>
