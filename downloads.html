@@ -73,6 +73,109 @@ body  {
     
 </head>
 
+<script>
+function fs() {
+  var x = document.getElementById("fs");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("ftc");
+    x.style.display = "none";
+    var x = document.getElementById("mvp");
+    x.style.display = "none";
+    var x = document.getElementById("mefb");
+    x.style.display = "none";
+    var x = document.getElementById("remakes");
+    x.style.display = "none";
+    var x = document.getElementById("othr");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function fs() {
+  var x = document.getElementById("ftc");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("fs");
+    x.style.display = "none";
+    var x = document.getElementById("mvp");
+    x.style.display = "none";
+    var x = document.getElementById("mefb");
+    x.style.display = "none";
+    var x = document.getElementById("remakes");
+    x.style.display = "none";
+    var x = document.getElementById("othr");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function fs() {
+  var x = document.getElementById("mvp");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("fs");
+    x.style.display = "none";
+    var x = document.getElementById("ftc");
+    x.style.display = "none";
+    var x = document.getElementById("mefb");
+    x.style.display = "none";
+    var x = document.getElementById("remakes");
+    x.style.display = "none";
+    var x = document.getElementById("othr");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function fs() {
+  var x = document.getElementById("mefb");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("fs");
+    x.style.display = "none";
+    var x = document.getElementById("ftc");
+    x.style.display = "none";
+    var x = document.getElementById("mvp");
+    x.style.display = "none";
+    var x = document.getElementById("remakes");
+    x.style.display = "none";
+    var x = document.getElementById("othr");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function fs() {
+  var x = document.getElementById("remakes");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("fs");
+    x.style.display = "none";
+    var x = document.getElementById("ftc");
+    x.style.display = "none";
+    var x = document.getElementById("mvp");
+    x.style.display = "none";
+    var x = document.getElementById("mefb");
+    x.style.display = "none";
+    var x = document.getElementById("othr");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function fs() {
+  var x = document.getElementById("othr");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("fs");
+    x.style.display = "none";
+    var x = document.getElementById("ftc");
+    x.style.display = "none";
+    var x = document.getElementById("mpv");
+    x.style.display = "none";
+    var x = document.getElementById("mefb");
+    x.style.display = "none";
+    var x = document.getElementById("remakes");
+    x.style.display = "none";
+  }
+</script>
+	
 <body class=lolhomo>
 <script async src="background.js" />
 <div class=center>
@@ -92,12 +195,20 @@ body  {
         location.href = "index.html";
     };
 </script>
+<div class=center>
+<br> 
+<button class="arial btn" onclick="fs()">FlowerStick</button>	
+<button class="arial btn" onclick="ftc()">Find The Cat</button>
+<button class="arial btn" onclick="mvp()">Mikun Villapaitapeli</button>	
+<button class="arial btn" onclick="mefb()">MEFB</button>
+<button class="arial btn" onclick="remakes()">Remakes</button>	
+<button class="arial btn" onclick="othr()">Other</button>	
+</div>	 
 	
 <div class=center>
 <h1>Games</h1>
 	   
-<div class=center>
-<h2>FlowerStick</h2>
+<div class=center id="fs">
 
 <div class="container">
 
@@ -161,15 +272,12 @@ body  {
     <td>5.2.5</td>
     <td><a href="https://www.dropbox.com/s/kyrpeihtgox1my4/FlowerStick%205.2.5.exe?dl=1">Exe</a></td>
   </tr>   
-  
-</table>
+</table>	
+</div>	
 
-<div class=center>
-<h2>FTC</h2>
+<div class="container" class=center id="ftc" style="display:none">
 
-<div class="container">
-
-	<table align="center">
+<table align="center">
     
   <tr>
     <th colspan="4">FTC</th>
@@ -184,15 +292,12 @@ body  {
     <td>1.0</td>
     <td><a href="https://www.dropbox.com/s/zgowo3wpch64ly5/Find%20The%20Cat.exe?dl=1">Exe</a></td>
   </tr>
-  
-</table>
-	
-<div class=center>
-<h2>Mikun Villapaitapeli</h2>
+</table>	
+</div>	
 
-<div class="container">
+<div class="container" class=center id="giacad" style="display:none">
 
-	<table align="center">
+<table align="center">
     
   <tr>
     <th colspan="4">Mikun Villapaitapeli</th>
@@ -209,12 +314,9 @@ body  {
   </tr>
   
 </table>	
+</div>	
 	
-<div class=center>
-	
-<h2>MEFB</h2>
-
-<div class="container">
+<div class="container" class=center id="mefb" style="display:none">
 
 	<table align="center">
     
@@ -272,14 +374,12 @@ body  {
     <td><a href="https://www.dropbox.com/s/6zaxcjqwm6ozmcr/MEFB1.1.5.exe?dl=1">Exe</a></td>
   </tr>
   
-</table>
-	
-<div class=center>
-<h2>The Legend of Siru Remake</h2>
+</table>	
+</div>
 
-<div class="container">
+<div class="container" class=center id="remakes" style="display:none">
 
-	<table align="center">
+<table align="center">
     
   <tr>
     <th colspan="4">TLoSr</th>
@@ -293,16 +393,14 @@ body  {
     <td>TLoSr</td>
     <td>1.0</td>
     <td><a href="https://www.dropbox.com/home/Games/Remakes?preview=TLoS+Remake.exe">Exe</a></td>
-  </tr>
-  
+  </tr>  
 </table>
 	
 <div class=center>
 <h2>SioNisti Remake</h2>
 
 <div class="container">
-
-	<table align="center">
+<table align="center">
     
   <tr>
     <th colspan="4">SioNistiR</th>
@@ -317,11 +415,10 @@ body  {
     <td>1.0</td>
     <td><a href="https://www.dropbox.com/home/Games/Remakes?preview=SioNisti+Remake.exe">Exe</a></td>
   </tr>
-  
-</table>	
-<h1>Other</h1>
+</table>
+</div>
 
-<div class="container">
+<div class="container" id="othr" style="display:none">
 
 	<table align="center">
     
@@ -349,6 +446,7 @@ body  {
     <td><a href="https://www.dropbox.com/s/s83ws9xmwgkexn6/Terraria%20Manual%20Boss%20Tracker.exe?dl=1">Exe</a></td>
   </tr>
 </table>
-
+</div>
+	
 </body>
 </html>
