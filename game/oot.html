@@ -1,0 +1,374 @@
+	<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8">
+<head>
+<script data-ad-client="ca-pub-3817087033538976" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<title> Games |  Ocarina of Time </title>
+
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="../img/random/tea.ico" />
+<link rel="stylesheet" href="../index.css"> 
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148826214-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-148826214-1');
+</script>
+    
+</head>
+
+<script src="../top.js"> </script>
+
+<style> 
+body {
+	background-image: url("../img/background/oot.png");
+    background-attachment:fixed;
+}
+a {
+  color: black;
+}
+</style>
+
+<body>
+
+<div class="seis">
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="fi"  id=fi> Suomi </option>
+</select>
+
+<button onclick=setStorage()> change </button>
+</div>
+
+<div class=center>
+<h1> Ocarina of Time </h1>
+</div>
+
+<div class=center>
+<button id="myButton1" class="arial btn oot1" >Back</button>
+<button id="myButton3" class="arial btn oot2" >Submit Run</button>
+</div>
+	
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "../games.html";
+    };
+    document.getElementById("myButton3").onclick = function () {
+        location.href = "../submit.html";
+    };
+</script>
+	
+<div class=center>
+<br> 
+<button class="arial btn oot3" onclick="myFunction()">Rules</button>
+<br>     
+<script>
+function myFunction() {
+    if(localStorage.getItem("Language") === 'en') {
+    alert("These go for all categories\nYou are allowed to watch the starting cutscene and save and reset and then start the run while skipping the cutscene like in JOTWAD\n\nMan on the Moon\nThe goal is to get the heart piece from the guy on the roof in kakariko. The timing starts on file select. Time ends when you see link hold the heart piece\n\nSalute%\nThe goal is to make child link salute by taking out your sword and then using the hookshot. The timing starts on file select. Time ends when you see links hand out and not moving\n\nTiwotr\nThe goal is to throw all the chicken is kakariko to the roof above the normal place where you throw them and then getting the bottle from anju. The timing starts on file select. Time ends when you see link hold the bottle");
+}    
+if(localStorage.getItem("Language") === 'fi') {
+    alert("Nämä koskevat kaikkia kategorioita\nSinä saat katsoa alku videon jonka jälkeen tallennat ja käytät kyseistä tallennusta\n\nMan on the Moon\nTässä päämäärä on saada sydämmen palanen mieheltä joka istuu talon katon päällä kakarikossa.  Aika alkaa kun valitset tallennuksesi. Aika loppuu kun hahmo pitelee sydäntä käsissään.\n\nSalute%\Päämäärä on saada nuori link pitämään kättään ylhäällä niinkuin tervehtisi, tämän saat kun otat miekan esiin ja sitten käytät heittokoukkua.  Aika alkaa kun valitset tallennuksesi.  Aika loppuu kun link nostaa kätensä eikä pysty liikkumaan.\n\nPäämäärä on heittää kaikki kanat kana-aitauksen katolle kakarikossa. Aika alkaa kun valitset tallennuksesi.  Aika loppuu kun saat anjulta pullon ja link pitelee sitä päällään");
+}
+}
+</script> 
+<script>
+function mom() {
+  var x = document.getElementById("mom%");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("salute%");
+    x.style.display = "none";
+    var x = document.getElementById("omom%");
+    x.style.display = "none";
+    var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function salute() {
+  var x = document.getElementById("salute%");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("mom%");
+    x.style.display = "none";
+  var x = document.getElementById("omom%");
+    x.style.display = "none";
+  var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function omom() {
+  var x = document.getElementById("omom%");{
+    x.style.display = "block";
+  }
+    var x = document.getElementById("salute%");
+    x.style.display = "none";
+    var x = document.getElementById("mom%");
+    x.style.display = "none";
+    var x = document.getElementById("tiwotr%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function tiwotr() {
+  var x = document.getElementById("tiwotr%");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("salute%");
+    x.style.display = "none";
+  var x = document.getElementById("mom%");
+    x.style.display = "none";
+  var x = document.getElementById("omom%");
+    x.style.display = "none";
+  }
+</script>
+</div>
+<br> 
+<div class=center>
+
+<button class="arial btn" onclick="mom()">Man on the Moon</button>	
+<button class="arial btn" onclick="salute()">Salute%</button>
+<button class="arial btn" onclick="omom()">Old Man on the Moon</button>
+<button class="arial btn" onclick="tiwotr()">TIWOTR</button>		
+</div>	   
+    
+<br>  
+
+<div  id="mom%">
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Man on the Moon% - OoT</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/bobo_mom_332.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/bobo_bobo" target="_blank">BoBo</a></td>
+    <td><a href="https://www.youtube.com/watch?v=WoMYBQABTJA">3:32</a></td>
+    <td>N64</td>
+</tr>
+<tr onclick="window.location='/game/oot/sion_mom_334.html';">
+    <td>2nd</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/Sionisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=AQ1xch6G5gk">3:34</a></td>
+    <td>Wii Vc</td>
+</tr>
+<tr onclick="window.location='/game/oot/goodmanbcool_mom_341.html';">
+    <td>3rd</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/goodmanbcool" target="_blank">goodmanbcool</a></td>
+    <td><a href="https://www.youtube.com/watch?v=pVQIWxQsHNE">3:41</a></td>
+    <td>N64</td>
+</tr>
+<tr>
+    <td>4th</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/theweatherupthere" target="_blank">theweatherupthere</a></td>
+    <td><a href="https://www.twitch.tv/videos/320853390?t=02h56m59s">7:05</a></td>
+    <td>Wii Vc</td>
+</tr>
+<tr onclick="window.location='/game/oot/dnvic_mom_1004.html';">
+    <td>5th</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">DNVIC</a></td>
+    <td><a href="">10:04</a></td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>     	
+
+<br>	
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Man on the Moon% - FQ</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/sion_FQ_mom_328.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/Sionisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=pgt83Zr1FkQ">3:28</a></td>
+    <td>Wii Vc</td>
+</tr>
+<tr onclick="window.location='/game/oot/mrlink2k_FQ_mom_336.html';">
+    <td>2nd</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/mrlink2k" target="_blank">mrlink2k</a></td>
+    <td><a href="https://www.youtube.com/watch?v=cqhHOnlSV6c">3:36</a></td>
+    <td>Emulator</td>
+</tr>
+</tbody>
+</table>    
+</div>    	
+
+<div id="salute%" style="display:none">
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Salute% - OoT</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/bobo_salute_1403.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/BoBo_BoBo" target="_blank">BoBo</a></td>
+    <td><a href="https://www.youtube.com/watch?v=zeeI5FnH5Nk&t=5s">14:03</a></td>
+    <td>N64</td>
+</tr>
+<tr onclick="window.location='/game/oot/sion_salute_4244.html';">
+    <td>2nd</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/SioNisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=giXgvAm3qKY">42:44</a></td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>       
+
+<br>	
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Salute% - FQ</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/sion_FQ_salute_1628.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/SioNisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=q_5SBPuhEio">16:28</a></td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>    
+</div>    
+
+	
+<div   id="omom%" style="display:none">
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Old Man on the Moon% - OoT</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/sion_oldmom_1301.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/Sionisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=UdCX2xXUwLE">13:01</a></td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>    
+
+<br>	
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">Old Man on the Moon% - FQ</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/Sionisti" target="_blank">SioN</a></td>
+    <td>16:26</td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>    
+</div> 		
+	
+<div   id="tiwotr%" style="display:none">
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">TIWOTR - OoT</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+
+<br>	
+<table align="center" width="470">
+<thead>
+<tr>
+    <th colspan="4">TIWOTR - FQ</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+    <th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/oot/sion_FQ_tiwotr_901.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="https://www.speedrun.com/user/Sionisti" target="_blank">SioN</a></td>
+    <td><a href="https://www.youtube.com/watch?v=jp1A_8WNpRA">9:01</a></td>
+    <td>Wii Vc</td>
+</tr>
+</tbody>
+</table>    
+</div>	
+
+<br>
+<br>
+<br>
+
+<script src="../bottom.js"> </script>
+	
+</body>
+</html>

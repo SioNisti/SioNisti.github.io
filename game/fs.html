@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8">
+<head>
+<script data-ad-client="ca-pub-3817087033538976" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<title> Game | FlowerStick </title>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="../img/random/tea.ico" />
+<link rel="stylesheet" href="../index.css"> 
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148826214-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-148826214-1');
+</script>
+   
+<script src="../top.js"> </script>
+    
+</head>
+
+<style> 
+body {
+	background-image: url("../img/background/fs.png");
+    background-attachment:fixed;
+}
+
+a {
+  color: black;
+}
+</style>
+
+<body>
+
+<div class="seis">
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="fi"  id=fi> Suomi </option>
+</select>
+
+<button onclick=setStorage()> change </button>
+</div>
+
+<div class=center>
+<h1> FlowerStick </h1>
+</div>
+
+<script>
+function crta() {
+  var x = document.getElementById("crta%");
+    x.style.display = "block";
+    var x = document.getElementById("trta%");
+    x.style.display = "none";
+    var x = document.getElementById("tcrta%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function trta() {
+  var x = document.getElementById("trta%");
+    x.style.display = "block";
+    var x = document.getElementById("crta%");
+    x.style.display = "none";
+    var x = document.getElementById("tcrta%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function tcrta() {
+  var x = document.getElementById("tcrta%");
+    x.style.display = "block";
+    var x = document.getElementById("crta%");
+    x.style.display = "none";
+    var x = document.getElementById("trta%");
+    x.style.display = "none";
+  }
+</script>
+
+<div class=center>
+<button id="myButton1" class="arial btn fs1" >Back</button>
+<button id="myButton2" class="arial btn fs2" >Submit</button>
+	
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "../games.html";
+    };
+    document.getElementById("myButton2").onclick = function () {
+        location.href = "../submit.html";
+    };
+</script>
+
+<br>	
+
+<div class=center>
+<button class="arial btn fs3" onclick="myFunction()">Rules</button>
+<script>
+function myFunction() {
+    if(localStorage.getItem("Language") === 'en') {
+	alert("Use the most recent version RTA Timing starts upon selecting difficulty and ends on the first full black frame of credits on the boss");
+}   if(localStorage.getItem("Language") === 'fi') {
+	alert("Käytä uusinta versiota\nRTA aika alkaa kun valitset vaikeus asteen ja aika loppuu ensimmäiseen koko mustaan frameen kun olet tappanut pomon");
+}
+}
+</script>	
+</div>
+
+<br> 
+
+<div class=center>
+<button class="arial btn" onclick="crta()">Clock RTA</button>	
+<button class="arial btn" onclick="trta()">Tarmo RTA</button>	
+<button class="arial btn" onclick="tcrta()">True clock RTA</button>	
+</div>	
+    
+<br>  
+<div id="crta%">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Clock Easy RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<tr onclick="window.location='/game/fs/sion_clockeasy_0435.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">SioN</a></td>
+    <td><a href="">43.05</a></td>
+</tr>
+<tr onclick="window.location='/game/fs/dnvic_clockeasy_106.html';" title="gay">
+    <td>2nd</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">DNVIC</a></td>
+    <td><a href="">1:06.44</a></td>
+</tr>
+<tr onclick="window.location='/game/fs/mrlink2k_clockeasy_113.html';" title="lmao">
+    <td>3rd</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">mrlink2k</a></td>
+    <td><a href="">1:13.58</a></td>
+</tr>
+</tbody>
+</table>    
+	
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Clock Normal RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/fs/dnvic_clocknormal_701.html';" title="i gay">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">DNVIC</a></td>
+    <td><a href="">7:01.28</a></td>
+</tr>
+</tbody>
+</table>    
+</div> 
+	 
+<div id="trta%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Tarmo Easy RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/fs/sion_tarmoeasy_125.html';" title="Found this old run">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">SioN</a></td>
+    <td><a href="">1:25.24</a></td>
+</tr>
+</tbody>
+</table>    
+	
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Tarmo Normal RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>	
+	
+<div id="tcrta%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">True clock Easy RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='/game/fs/sion_tceasy_1408.html';">
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">SioN</a></td>
+    <td><a href="">1:40.09</a></td>
+</tr>
+</tbody>
+</table>    
+	
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">True clock Normal RTA</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>IGT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>		
+		
+<br>  	
+<br>  	
+<br>  	
+<br>  	
+	
+<script src="../bottom.js"> </script>
+
+</body>
+</html>
