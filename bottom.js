@@ -10,7 +10,7 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("index6")[0].innerHTML = "Muut";
     document.getElementsByClassName("index7")[0].innerHTML = "Minä olen SioN, minä tykkään pelata vanhoja pelejä koska tykkään niistä.<br/> Minun salainen kykyni on että osaan röyhtäistä milloin haluan.";
     document.getElementsByClassName("index8")[0].innerHTML = "Stream aikataulut:";
-    document.getElementsByClassName("index9")[0].innerHTML = "Perjantaina ja launataina kello 20:00<br/> (Joskus saatan streamata myös sunnuntaina)";
+    document.getElementsByClassName("index9")[0].innerHTML = "Perjantaina kello 22:00 ja launataina kello 20:00<br/> (Joskus saatan streamata myös sunnuntaina)";
     document.getElementsByClassName("index10")[0].innerHTML = "Viimeisin Streami";
     document.getElementsByClassName("index11")[0].innerHTML = "Twitch Upotus";
     document.getElementsByClassName("index12")[0].innerHTML = "Sosiaalinen Media";
