@@ -1,7 +1,7 @@
 var fileName = location.href.split("/").slice(-1);
 
 if(localStorage.getItem('Language') === 'fi') {
-  if(fileName[0] === 'index.html') {
+  if(fileName[0] === 'index') {
     document.getElementsByClassName("index1")[0].innerHTML = "sionTea Discord serveri";
     document.getElementsByClassName("index2")[0].innerHTML = "Jos sinulla on ylimääräistä rahaa voit lahjoittaa minulle täältä. (Ketään ei pakoiteta lahjoittamaan)";
     document.getElementsByClassName("index3")[0].innerHTML = "Speedrun kategoriat";
