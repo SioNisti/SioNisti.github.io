@@ -155,6 +155,10 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("dn2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("dn3")[0].innerHTML = "Säännöt";
   }
+	
+  if(fileName[0] === '404'	) {
+    document.getElementsByClassName("4041")[0].innerHTML = "Sinulla on väärä URL osoite tai jokin muu meni pieleen";
+  }
 }
 if(localStorage.getItem("Language") === "null") {
   localStorage.setItem("Language", "en");
