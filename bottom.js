@@ -157,7 +157,7 @@ if(localStorage.getItem('Language') === 'fi') {
   }
 	
   if(fileName[0] === '404'	) {
-    document.getElementsByClassName("4041")[0].innerHTML = "Sinulla on väärä URL osoite tai jokin muu meni pieleen";
+    document.getElementsByClassName("error1")[0].innerHTML = "Sinulla on väärä URL osoite tai jokin muu meni pieleen";
   }
 }
 if(localStorage.getItem("Language") === "null") {
