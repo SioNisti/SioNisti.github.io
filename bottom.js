@@ -16,27 +16,27 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("index12")[0].innerHTML = "Sosiaalinen Media";
   } 
 
-  if(fileName[0] === 'videos.html'	) {
+  if(fileName[0] === 'videos'	) {
     document.getElementsByClassName("video1")[0].innerHTML = "Speedrun Tutoriaalit";
     document.getElementsByClassName("video2")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("video3")[0].innerHTML = "Ocarina of Time Tutoriaalit";
     document.getElementsByClassName("video4")[0].innerHTML = "Super Mario 64 Tutoriaalit";
   }
 
-  if(fileName[0] === 'downloads.html'	) {
+  if(fileName[0] === 'downloads'	) {
     document.getElementsByClassName("download1")[0].innerHTML = "Pelit";
     document.getElementsByClassName("download2")[0].innerHTML = "sionTea Discord serveri";
     document.getElementsByClassName("download3")[0].innerHTML = "Takaisin";
   }
 
-  if(fileName[0] === 'other.html'	) {
+  if(fileName[0] === 'other'	) {
     document.getElementsByClassName("other1")[0].innerHTML = "Muut";
     document.getElementsByClassName("other2")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("other3")[0].innerHTML = "Ao Oni (Suomalainen Käännös)";
     document.getElementsByClassName("other4")[0].innerHTML = "JEPPLEksen ProStrats ohjelma";
   }
 
-  if(fileName[0] === 'aoonifin.html'	) {
+  if(fileName[0] === 'aoonifin'	) {
     document.getElementsByClassName("onifin1")[0].innerHTML = "Ao Oni (Suomalainen Käännös)";
     document.getElementsByClassName("onifin2")[0].innerHTML = "Tekijä SioN";
     document.getElementsByClassName("onifin3")[0].innerHTML = "Tämä on suomalainen käännös Ao Oni nimisestä RPG kauhupelistä";
@@ -44,14 +44,14 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("onifin5")[0].innerHTML = "Takaisin";
   }
 
-  if(fileName[0] === 'prostrats.html'	) {
+  if(fileName[0] === 'prostrats'	) {
     document.getElementsByClassName("pro1")[0].innerHTML = "Tekijä JEPPLES";
     document.getElementsByClassName("pro2")[0].innerHTML = "ProStrats on simppeli ohjelma joka laskee sinun onnistumis prosenttisi esimerkiksi jossain speedrun tempussa";
     document.getElementsByClassName("pro3")[0].innerHTML = "Lataa";
     document.getElementsByClassName("pro4")[0].innerHTML = "Takaisin";
   }
 
-  if(fileName[0] === 'games.html'	) {
+  if(fileName[0] === 'games'	) {
     document.getElementsByClassName("game1")[0].innerHTML = "Valitse peli";
     document.getElementsByClassName("game2")[0].innerHTML = "sionTea Discord Serveri";
     document.getElementsByClassName("game3")[0].innerHTML = "Me olemme saatu 131+ speedrunia 17/11/2017 lähtien";
@@ -61,7 +61,7 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("game7")[0].innerHTML = "Lataa Muumipelit";
   }
 	
-  if(fileName[0] === 'sm64.html'	) {
+  if(fileName[0] === 'sm64'	) {
     document.getElementsByClassName("sm641")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("sm642")[0].innerHTML = "Rom Hackit";
     document.getElementsByClassName("sm643")[0].innerHTML = "Säännöt, Toad Kartta ja reitit";
@@ -69,14 +69,14 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("sm645")[0].innerHTML = "Jotkin videot ovat hukattuja koska alussa vain minun tarvitsi nähdä se jonka takia yleensä niitä videoita ei tallennettu";
   }
 	
-  if(fileName[0] === 'sm64hacks.html'	) {
+  if(fileName[0] === 'sm64hacks'	) {
     document.getElementsByClassName("sm64hack1")[0].innerHTML = "Rom Hackit";
     document.getElementsByClassName("sm64hack2")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("sm64hack3")[0].innerHTML = "Säännöt";
     document.getElementsByClassName("sm64hack4")[0].innerHTML = "Lähetä speedruni";
   }
 	
-  if(fileName[0] === 'sm64rules.html'	) {
+  if(fileName[0] === 'sm64rules'	) {
     document.getElementsByClassName("sm64rule1")[0].innerHTML = "SÄÄNNÖT, KARTAT JA REITIT";
     document.getElementsByClassName("sm64rule2")[0].innerHTML = "Takaisin SM64:ään";
     document.getElementsByClassName("sm64rule3")[0].innerHTML = "SÄÄNNÖT:";
@@ -90,49 +90,49 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("sm64rule11")[0].innerHTML = "3.0 Kartta";
   }
 	
-  if(fileName[0] === 'oot.html'	) {
+  if(fileName[0] === 'oot'	) {
     document.getElementsByClassName("oot1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("oot2")[0].innerHTML = "Lähetä speedruni";	//muista korjata se saatanan nappula kaikkiin pelien runi boardeille tarkoitetuille sivulle jotka ovat tässä alla--------------- (tehty) 
     document.getElementsByClassName("oot3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'tp.html'	) {
+  if(fileName[0] === 'tp'	) {
     document.getElementsByClassName("tp1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("tp2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("tp3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'terraria.html'	) {
+  if(fileName[0] === 'terraria'	) {
     document.getElementsByClassName("terraria1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("terraria2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("terraria3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'sms.html'	) {
+  if(fileName[0] === 'sms'	) {
     document.getElementsByClassName("sms1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("sms2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("sms3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'aooni.html'	) {
+  if(fileName[0] === 'aooni'	) {
     document.getElementsByClassName("oni1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("oni2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("oni3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'fs.html'	) {
+  if(fileName[0] === 'fs'	) {
     document.getElementsByClassName("fs1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("fs2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("fs3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'mefb.html'	) {
+  if(fileName[0] === 'mefb'	) {
     document.getElementsByClassName("mefb1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("mefb2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("mefb3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'theunknown.html'	) {
+  if(fileName[0] === 'theunknown'	) {
     document.getElementsByClassName("unknown1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("unknown2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("unknown3")[0].innerHTML = "Säännöt";
@@ -144,7 +144,7 @@ if(localStorage.getItem('Language') === 'fi') {
     document.getElementsByClassName("sv3")[0].innerHTML = "Säännöt";
   }
 	
-  if(fileName[0] === 'multimeme.html'	) {
+  if(fileName[0] === 'multimeme'	) {
     document.getElementsByClassName("mm1")[0].innerHTML = "Takaisin";
     document.getElementsByClassName("mm2")[0].innerHTML = "Lähetä speedruni";
     document.getElementsByClassName("mm3")[0].innerHTML = "Säännöt";
