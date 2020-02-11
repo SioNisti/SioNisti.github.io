@@ -19,12 +19,7 @@
 </script>
       
 <script src="../top.js"> </script>
-  
-<script>
- if(fileName[0].endsWith("#gay"))  {
-    document.getElementById("gay").style.backgroundColor = "yellow";
-}
-</script>
+
   
 </head>
 
@@ -108,6 +103,13 @@ function myFunction() {
 </table>    
 	
 <script src="../bottom.js"> </script>
-
+  
+<script>
+ var fileName = location.href.split("/").slice(-1);
+ if(fileName[0].endsWith("#gay"))  {
+    document.getElementById("gay").style.backgroundColor = "yellow";
+}
+</script>
+	
 </body>
 </html>
