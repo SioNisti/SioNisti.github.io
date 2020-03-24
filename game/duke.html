@@ -57,6 +57,7 @@ a {
 <div class=center>
 <button id="myButton1" class="arial btn dn1" >Back</button>
 <button id="myButton2" class="arial btn dn2" >Submit</button>
+<button class="arial btn dn3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -66,13 +67,6 @@ a {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>	
-
-<div class=center>
-<button class="arial btn dn3" onclick="myFunction()">Rules</button>
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Time starts on the get ready duke text appearing\nTime ends on the full black frame after defeating Dr. Proton\n\nYou are allowed to use the debug cheat (Backspace&Pgdn)");
@@ -82,8 +76,8 @@ function myFunction() {
 }
 }
 </script>
-</div>
-	
+
+<br>	
 <br>
  
 <div  id="debug">
