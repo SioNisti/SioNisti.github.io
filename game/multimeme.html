@@ -82,6 +82,7 @@ function cats() {
 <div class=center>
 <button id="myButton1" class="arial btn mm1" >Back</button>
 <button id="myButton2" class="arial btn mm2" >Submit</button>
+<button class="arial btn mm3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -91,14 +92,6 @@ function cats() {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br> 
-
-<div class=center>	 	
-<button class="arial btn mm3" onclick="myFunction()">Rules</button>
-	
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Most Popular categories\nTime between games isnt counted\nFollow the category rules\n\nMust beat all these categories\n6 Toad - SM64\nKokiri Toad - SM64 OoT\nYTOoB - SMS\nMoM% - OoT\nClock Easy RTA - FS\nHalibut% - Stardew Valley\nBeat the game - Muumit ja Taikurin Hattu");
@@ -107,9 +100,9 @@ function myFunction() {
 	alert("Most Popular Categories\nAikaa pelien välissä ei lasketa mukaan\nSeuraa pelin kategorian sääntöjä\n\nSinun täytyy tehdä runi seuraavista kategorioista\n6 Toad - SM64\nKokiri Toad - SM64OoT\nYTOoB - SMS\nMoM% - OoT\nClock Easy RTA - FS\nHalibut% - Stardew Vallew\nBea The Game - Muumit ja Taikurin Hattu");
 }
 }
-</script>	
-</div>
+</script>
 
+<br> 
 <br> 
 
 <div class=center>
