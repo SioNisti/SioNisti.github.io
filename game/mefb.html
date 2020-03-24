@@ -82,6 +82,7 @@ function cats() {
 <div class=center>
 <button id="myButton1" class="arial btn mefb1" >Back</button>
 <button id="myButton2" class="arial btn mefb2" >Submit</button>
+<button class="arial btn mefb3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -91,14 +92,6 @@ function cats() {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>  	
-
-<div class=center>	
-<button class="arial btn mefb3" onclick="myFunction()">Rules</button>
-	
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner.");
@@ -106,9 +99,9 @@ function myFunction() {
 	alert("Käytä uusinta versiota.\nOld KB runeille sinun täytyy aktivoida OKB koodi (kirjoita bljs are my favorite salaiseen menuun)\n\nKäytä pelin sisäistä kelloa Boss RTA runeissa ja käytä ulkoista kelloa All Achievements runeissa\nAll Achievements runeissa aika alkaa kun valitset vaikeuden ja loppuu kun olet saanut kahdeksannen saavutuksen.");
 }
 }
-</script>	
-</div>
+</script>
 
+<br>  	
 <br> 
 
 <div class=center>
