@@ -70,6 +70,7 @@ function ng2() {
 <div class=center>
 <button id="myButton1" class="arial btn tp1" >Back</button>
 <button id="myButton3" class="arial btn tp2" >Submit Run</button>
+<button class="arial btn tp3"  onclick="myFunction()">Rules</button>
 </div>
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
@@ -78,15 +79,7 @@ function ng2() {
     document.getElementById("myButton3").onclick = function () {
         location.href = "../submit";
     };
-</script>	
-<br>	
-<div class=center>	
-<button class="arial btn tp3"  onclick="myFunction()">Rules</button>
-	
-<br>	
-	
-<script> //käännä tää paska silleen että se nappi myös toimii (huuda dnvicille)
-function myFunction() {
+	function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Fruit Balloon NG+\nThe goal is to get the Silver rupee 200 from the fruit balloon minigame. The timing starts on selecting yes to play the game. Time ends when you see link hold the Rupee\n\nFruit Balloon NG\nSame goal as in NG+ but you have to start with a new save file");
 } 
@@ -95,6 +88,13 @@ function myFunction() {
 }
 }
 </script>	
+<br>	
+<div class=center>	
+	
+<br>	
+	
+//käännä tää paska silleen että se nappi myös toimii (huuda dnvicille)
+	
 </div>	
 	
 <br>	
