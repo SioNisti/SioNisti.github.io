@@ -70,6 +70,7 @@ function giacad() {
 <div class=center>
 <button id="myButton1" class="arial btn sv1" >Back</button>
 <button id="myButton2" class="arial btn sv2" >Submit run</button>
+<button class="arial btn sv3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -79,13 +80,6 @@ function giacad() {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>	
-
-<div class=center>
-<button class="arial btn sv3" onclick="myFunction()">Rules</button>
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Halibut% \nTime Starts when pressing OK on character creation \nTime ends on the frame halibut appears on your hotbar\n Item id trick isnt allowed");
@@ -94,9 +88,9 @@ function myFunction() {
 	alert("Halibut%\nAika alkaa kun painat OK hahmon luomisen jälkeen\nAika loppuu kun halibut(kala) näkyy ala rivissä\nTavara id temppu ei ole sallittu");
 }	
 }
-</script>	
-</div>	  
+</script>
 
+<br>	
 <br> 
 	
 <div class=center>
