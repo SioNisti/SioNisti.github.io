@@ -71,6 +71,7 @@ function umbs() {
 <div class=center>
 <button id="myButton1" class="arial btn terraria1" >Back</button>
 <button id="myButton3" class="arial btn terraria2" >Submit Run</button>
+<button class="arial btn terraria3" onclick="myFunction()">Rules</button>
 </div>
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
@@ -79,14 +80,6 @@ function umbs() {
     document.getElementById("myButton3").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>
-
-<div class=center>	 		
-<button class="arial btn terraria3" onclick="myFunction()">Rules</button>
-	
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {	
 	alert("Umbrella%\nThe goal is to get the Umbrella item (found in chests)\nTime starts when you enter the world and ends on the frame the umbrella is in your inventory\n\n- in Seeded runs you must show the seed\n- video must show world and character creation");
@@ -96,6 +89,10 @@ function myFunction() {
 }
 }
 </script>
+
+<br>
+
+<div class=center>	 		
 	
 </div>
 <br> 	
