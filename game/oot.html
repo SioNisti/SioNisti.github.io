@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang=en-US>
 <meta charset="UTF-8">
 <head>
@@ -50,6 +50,7 @@ a {
 <div class=center>
 <button id="myButton1" class="arial btn oot1" >Back</button>
 <button id="myButton3" class="arial btn oot2" >Submit Run</button>
+<button class="arial btn oot3" onclick="myFunction()">Rules</button>
 </div>
 	
 <script type="text/javascript">
@@ -59,13 +60,6 @@ a {
     document.getElementById("myButton3").onclick = function () {
         location.href = "../submit";
     };
-</script>
-	
-<div class=center>
-<br> 
-<button class="arial btn oot3" onclick="myFunction()">Rules</button>
-<br>     
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
     alert("These go for all categories\nYou are allowed to watch the starting cutscene and save and reset and then start the run while skipping the cutscene like in JOTWAD\n\nMan on the Moon\nThe goal is to get the heart piece from the guy on the roof in kakariko. The timing starts on file select. Time ends when you see link hold the heart piece\n\nSalute%\nThe goal is to make child link salute by taking out your sword and then using the hookshot. The timing starts on file select. Time ends when you see links hand out and not moving\n\nTiwotr\nThe goal is to throw all the chicken is kakariko to the roof above the normal place where you throw them and then getting the bottle from anju. The timing starts on file select. Time ends when you see link hold the bottle");
@@ -74,7 +68,11 @@ if(localStorage.getItem("Language") === 'fi') {
     alert("Nämä koskevat kaikkia kategorioita\nSinä saat katsoa alku videon jonka jälkeen tallennat ja käytät kyseistä tallennusta\n\nMan on the Moon\nTässä päämäärä on saada sydämmen palanen mieheltä joka istuu talon katon päällä kakarikossa.  Aika alkaa kun valitset tallennuksesi. Aika loppuu kun hahmo pitelee sydäntä käsissään.\n\nSalute%\Päämäärä on saada nuori link pitämään kättään ylhäällä niinkuin tervehtisi, tämän saat kun otat miekan esiin ja sitten käytät heittokoukkua.  Aika alkaa kun valitset tallennuksesi.  Aika loppuu kun link nostaa kätensä eikä pysty liikkumaan.\n\nPäämäärä on heittää kaikki kanat kana-aitauksen katolle kakarikossa. Aika alkaa kun valitset tallennuksesi.  Aika loppuu kun saat anjulta pullon ja link pitelee sitä päällään");
 }
 }
-</script> 
+</script>
+	
+<div class=center>
+<br> 
+<br>     
 <script>
 function mom() {
   var x = document.getElementById("mom%");{
