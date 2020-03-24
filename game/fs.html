@@ -82,6 +82,7 @@ function tcrta() {
 <div class=center>
 <button id="myButton1" class="arial btn fs1" >Back</button>
 <button id="myButton2" class="arial btn fs2" >Submit</button>
+<button class="arial btn fs3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -91,13 +92,6 @@ function tcrta() {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>	
-
-<div class=center>
-<button class="arial btn fs3" onclick="myFunction()">Rules</button>
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Use the most recent version RTA Timing starts upon selecting difficulty and ends on the first full black frame of credits on the boss");
@@ -105,9 +99,9 @@ function myFunction() {
 	alert("Käytä uusinta versiota\nRTA aika alkaa kun valitset vaikeus asteen ja aika loppuu ensimmäiseen koko mustaan frameen kun olet tappanut pomon");
 }
 }
-</script>	
-</div>
+</script>
 
+<br>	
 <br> 
 
 <div class=center>
