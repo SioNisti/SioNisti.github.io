@@ -52,6 +52,7 @@ h1, a {
 <div class=center>
 <button id="myButton" class="arial btn sms1" >Back</button>
 <button id="myButton4" class="arial btn sms2" >Submit Run</button>
+<button class="arial btn sms3" onclick="myFunction()">Rules</button>
 </div>
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
@@ -60,14 +61,6 @@ h1, a {
      document.getElementById("myButton4").onclick = function () {
         location.href = "../submit";
     };
-</script>
-    	
-<br> 
-
-<div class=center>		
-<button class="arial btn sms3" onclick="myFunction()">Rules</button>
-	
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Yellow Toad OoB\nTalk to the yellow toad out of bounds\nTime starts on file select\nTime ends when mario's butt hits the ground when dying after talking to toad\n\nSkipping the starting cutscene is allowed");
@@ -76,6 +69,10 @@ function myFunction() {
 }	
 }
 </script>
+    	
+<br> 
+
+<div class=center>		
 	
 </div>
 <br> 	
