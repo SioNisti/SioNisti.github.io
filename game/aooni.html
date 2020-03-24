@@ -69,6 +69,7 @@ function giacad() {
 <div class=center>
 <button id="myButton1" class="arial btn oni1" >Back</button>
 <button id="myButton2" class="arial btn oni2" >Submit run</button>
+<button class="arial btn oni3" onclick="myFunction()">Rules</button>
 	
 </div>
 <script type="text/javascript">
@@ -78,15 +79,6 @@ function giacad() {
     document.getElementById("myButton2").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br>
-
-<div class=center>	
-<button class="arial btn oni3" onclick="myFunction()">Rules</button>
-<div class=center>	
-
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Die% \nTime Starts when pressing OK after naming your character \nTime ends on black screen after getting caught\n\nGo in a closet and die%\nTime Starts when pressing OK after naming your character\nTime ends on the first frame of oni opening the closet");
@@ -94,8 +86,9 @@ function myFunction() {
 	alert("Die%\nAika alkaa kun painat OK hahmon nimeämisen jälkeen\nAika loppuu kun ruutu menee mustaksi kun jäät kiinni\n\nGo in a closet and die%\nAika alkaa kun painat OK hahmon nimeämisen jälkeen\nAika loppuu ensimmäisellä framella kun näät oni:n avaavan kaapin")
 }
 }
-</script>	
-	
+</script>
+
+<br>
 <br> 
 
 <div class=center>
