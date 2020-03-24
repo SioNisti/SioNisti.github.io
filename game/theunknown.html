@@ -51,6 +51,7 @@ a {
 <div class=center>
 <button id="myButton1" class="arial btn unknown1" >Back</button>
 <button id="myButton3" class="arial btn unknown2" >Submit Run</button>
+<button class="arial btn unknown3" onclick="myFunction()">Rules</button>
 </div>
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
@@ -59,13 +60,6 @@ a {
     document.getElementById("myButton3").onclick = function () {
         location.href = "../submit";
     };
-</script>
-
-<br> 		
-
-<div class=center>	
-<button class="arial btn unknown3" onclick="myFunction()">Rules</button>
-<script>
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("Beat The Game\n\n-The goal is to get to the end screen\n-Must have video proof\n\nDue to recent rule change now we time runs with real time so time begins first frame you move and ends on the frame the block appears on the last screen");
@@ -74,8 +68,8 @@ function myFunction() {
 }
 }
 </script>
-</div>	
- 
+
+<br> 		
 <br> 	
 <div id="btg%">
 <table align="center">
