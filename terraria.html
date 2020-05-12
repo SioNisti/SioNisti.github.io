@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8">
+<head>
+
+<title> Terraria 1.4 countdown </title>
+
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="img/random/tea.ico" /> 
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148826214-1"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148826214-1');
+</script>
+    
+<script src="top.js"> </script>
+    
+</head>
+
+<style> 
+body {
+	background-image: url("img/background/terraria.png");
+    background-attachment:fixed;
+} 
+</style>
+
+<body>
+
+<!-- timer from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
+
+<h1 id="demo"></h1>
+
+<script>
+var countDownDate = new Date("May 16, 2020 13:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "1.4 is out, everybody go ham";
+  }
+}, 1000);
+</script>
+
+
+
+<script src="bottom.js"> </script>
+
+</body>
+</html>
