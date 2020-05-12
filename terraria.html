@@ -29,6 +29,28 @@ body {
 	background-image: url("img/background/terraria.png");
     background-attachment:fixed;
 } 
+	
+	
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+}
+ 
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+ 
+.swingimage{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}	
+	
 </style>
 
 <body>
@@ -37,7 +59,7 @@ body {
 
 <div class="center">
 	
-<img src="img/random/terrariaJE.png"> 
+<img class="swingimage" src="img/random/terrariaJE.png" height="196px" width="487px"> 
 	
 <h2>Releases on May 16th at 1PM EST</h2>	
 	
