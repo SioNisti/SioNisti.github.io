@@ -135,3 +135,12 @@ table {
 	position: fixed;
 	text-align:center;
 }
+table {
+    height: 320px;
+    width: 350px;  
+    table-layout: fixed;
+}
+td {
+    font-size: 12px;
+    font-weight: bold;
+}
