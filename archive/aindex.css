@@ -144,3 +144,17 @@ td {
     font-size: 12px;
     font-weight: bold;
 }
+.column {
+    float: left;
+    width: 25%;
+}
+.column2 {
+	float: left;
+	width: 33.3%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
