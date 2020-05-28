@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<title> SioNisti </title>
+<style> 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+}    
+
+.column {
+    float: left;
+    width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/vnd.microsoft.icon"
+     href="nuuskispää.ico" />
+</head>
+<body bgcolor="#66ffff">
+    
+    <div class="navbar">
+  <a href="https://www.youtube.com/watch?v=he6FZ8YWc2M">???</a>
+  <a href="https://sionisti.github.io/vids.html">Speedrun Tutorials</a>
+  <div class="dropdown">
+    <button class="dropbtn">Meme Speedruns 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Select The Game</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Ocarina of Time</h3>
+          <a href="sionisti.github.io/oot.html">Leaderboard</a>
+          <a href="sionisti.github.io/ootrules.html">Rules</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSevM3CMdBHPTEMpQT5dvniG4PigDs2GKFTtB91uGdtfpQtC0A/viewform">Submit run</a>
+        </div>
+        <div class="column">
+          <h3>Super Mario 64</h3>
+           <a href="sionisti.github.io/sm64.html">Leaderboard</a>
+          <a href="sionisti.github.io/sm64rules.html">Rules</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScMesJJLtZMUE1m1JhsRHaW7N1JH4hJUX5r93fm5bJdU6nW_w/viewform">Submit run</a>
+          </div>
+        <div class="column">
+          <h3>Twilight Princess</h3>
+           <a href="https://sionisti.github.io/tp.html">Leaderboard</a>
+          <a href="https://sionisti.github.io/tprules.html">Rules</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSepZdkBMGI8SXAhEC-JBtVOvkDtr1aaP341f00KYGUKQHtv7w/viewform">Submit run</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+    
+<h1>Welcome</h1>
+<div class=center>
+<button id="myButton" class="arial btn" >Speedrun Meme Categories</button>
+<button id="myButton1" class="arial btn" >My Speedrun Tutorials</button>
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "selectgame.html";
+    };
+       document.getElementById("myButton1").onclick = function () {
+        location.href = "vids.html";
+    };
+</script>
+<div class=center> <img src="nuuskapoeka.png">
+<div class=center> <h2> Who am i? </h2>
+<p> Well I call my self SioN on the internet and I am a 14 year old boy from finland that likes to play games that are older than me and do that faster than an casual gamer. </p>
+<p> I've been learning english for almost 7 years now but some words like schedule for example are really hard to pronounce. </p>
+
+
+</div>
+    
+<iframe frameborder="0"
+        scrolling="no"
+        id="chat_embed"
+        src="https://www.twitch.tv/embed/sion_510n/chat"
+        align="right"
+        height="500"
+        width="350">
+</iframe>
+</iframe>
+    
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!--
+      Create a Twitch.Embed object that will render
+      within the "twitch-embed" root element.
+    -->
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "sion_510n",
+        layout: "video",
+        autoplay: false
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+
+    <h2 class=center> You can find me on these sites: </h2>
+<p> <a href=https://www.twitch.tv/sion_510n>Twitch </a></p>
+<p> <a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA>YouTube </a></p>
+<p> <a href=https://twitter.com/SioN__510N>Twitter </a></p>
+<p> <a href=https://www.speedrun.com/user/SioNisti>Speedrun.com </a></p>
+    
+</body>
