@@ -18,7 +18,7 @@
 }
 @font-face {
    font-family: gothic;
-   src: url(gothic.ttf);
+   src: url(../gothic.ttf);
 }
 h1 {
 	font-family:gothic;
