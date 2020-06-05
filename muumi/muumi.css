@@ -27,6 +27,7 @@ h3 {
 a {
 	font-family:gothic;
     	color: white;
+	text-decoration: none;
 }
 .center {
 	text-align:center;
