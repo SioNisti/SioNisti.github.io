@@ -29,7 +29,6 @@
 <style> 
 body {
 	background-image: url("../img/background/background.png");
-    background-attachment:fixed;
 } 
 #gay {
 	font-size: 50px
@@ -97,9 +96,6 @@ function aaaaaaaa() {
 	document.getElementById("gay").innerHTML = sionsstupidlistofweebcharacters[stupidnumber];
   document.getElementById("gay").title = sionsstupidlistoftitleshit[stupidnumber];
 }
-  var x = document.getElementById("gay");{
-    x.style.display = "block";
-}
 </script>
 
 
@@ -109,15 +105,15 @@ function aaaaaaaa() {
 </div>
 
 <div class=center>
-<button class="arial btn" onclick="hiraganacharties()">Show hiragana chart</button>	
-<button class="arial btn" onclick="katakanacharties()">Show katakana chart</button>	
-<button class="arial btn" onclick="hidecharties()">Hide chart</button>	
+<button class="arial btn" onclick="hiraganacharties()">Show Hiragana Chart</button>	
+<button class="arial btn" onclick="katakanacharties()">Show Katakana Chart</button>	
+<button class="arial btn" onclick="hidecharties()">Hide Chart</button>	
 <br/>
 <button class="arial btn"  onclick=aaaaaaaa()>Random Hiragana Character</button>
 <button class="arial btn"  onclick="">Random Katakana Character (soonTM)</button>
 </div>	  
 
-<p id=gay style="display:none" title="">Hover over the hiragana to show the pronounciation</p>
+<p id=gay title="">Hover over the hiragana to show the pronounciation (for "random hiragana")</p>
 
 <div class="center" id="hiraganachart" style="display:none">
 <img src="../img/random/hiraganachart.png">
