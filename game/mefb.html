@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8">
+<head>
+<script data-ad-client="ca-pub-3817087033538976" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<title> Game | MEFB </title>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="../img/random/tea.ico" />
+<link rel="stylesheet" href="../index.css"> 
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148826214-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-148826214-1');
+</script>
+    
+<script src="../top.js"> </script>
+    
+</head>
+
+<style> 
+body {
+	background-image: url("../img/background/mefb.png");
+    background-attachment:fixed;
+}
+
+a {
+  color: black;
+}
+</style>
+
+<body>
+
+<div class="seis">
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="fi"  id=fi> Suomi </option>
+</select>
+
+<button onclick=setStorage()> change </button>
+</div>
+
+<div class=center>
+<h1> MEFB </h1>
+</div>
+
+<script>
+function cat() {
+  var x = document.getElementById("cat%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function aa() {
+  var x = document.getElementById("aa%");
+    x.style.display = "block";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function cats() {
+  var x = document.getElementById("cats%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+  }
+</script>
+	
+<div class=center>
+<button id="myButton1" class="arial btn mefb1" >Back</button>
+<button id="myButton2" class="arial btn mefb2" >Submit</button>
+<button class="arial btn mefb3" onclick="myFunction()">Rules</button>
+	
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "../game";
+    };
+    document.getElementById("myButton2").onclick = function () {
+        location.href = "../submit";
+    };
+function myFunction() {
+    if(localStorage.getItem("Language") === 'en') {
+	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner.");
+}  	if(localStorage.getItem("Language") === 'fi') {
+	alert("Käytä uusinta versiota.\nOld KB runeille sinun täytyy aktivoida OKB koodi (kirjoita bljs are my favorite salaiseen menuun)\n\nKäytä pelin sisäistä kelloa Boss RTA runeissa ja käytä ulkoista kelloa All Achievements runeissa\nAll Achievements runeissa aika alkaa kun valitset vaikeuden ja loppuu kun olet saanut kahdeksannen saavutuksen.");
+}
+}
+</script>
+
+<br>  	
+<br> 
+
+<div class=center>
+<button class="arial btn" onclick="cat()">Cat RTA</button>		
+<button class="arial btn" onclick="cats()">Cat NG+ RTA</button>	
+<button class="arial btn" onclick="aa()">All Achievements</button>
+</div>	
+
+<br>  
+
+<div  id="cat%">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Easy</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Hard</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+ 
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Easy (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>      
+    
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Hard (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>    
+  
+<div  id="aa%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">All Achievements</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>
+<br> 	
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">All Achievements (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div  id="cats%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Easy NG+</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>        
+
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Hard NG+</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+  
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Easy NG+ (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>      
+    
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cat Hard NG+ (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>    
+  
+<script src="../bottom.js"> </script>
+
+</body>
+</html>

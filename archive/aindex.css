@@ -1,0 +1,151 @@
+#headerPopup{
+  width:75%;
+  margin:0 auto;
+}
+
+#headerPopup iframe{
+  width:100%;
+  margin:0 auto;
+}
+@font-face {
+   font-family: gothic;
+   src: url(../gothic.ttf);
+}
+h1 {
+	font-family:gothic;
+	text-align: center;
+	font-size: 72px;
+      	color: white;
+}
+p {
+	font-family:gothic;
+	text-align: center;
+	font-size:25px;
+}
+h2 {
+	font-family:gothic;
+	font-size:40px;
+   	color: white;
+}
+h3 {
+	font-family:gothic;
+	font-size:95;
+   	color: white;
+}
+a {
+	font-family:gothic;
+    	color: white;
+}
+p {
+	font-family:gothic;
+      	color: white;
+}
+.arial {
+	font-family:Arial;
+}
+.plok {
+	font-family:plok;
+}
+.center {
+	text-align:center;
+}
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
+.aligncenter {
+	float:right;
+	position:relative;
+	left:50%;
+}
+.margin {
+	width:900px;
+	margin:auto;
+	
+}
+.big {
+	font-size: 30px;
+}
+th {
+	font-weight: bold;
+}
+
+th.full {
+	text-align: center;
+	letter-spacing: 0.5px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+td, th, tr {
+	padding: 0.35em 1.5em;
+	text-align: center;
+	background: #ffffff;
+}
+
+td, th {
+	font-family: gothic;
+	border-radius: 4px;
+}
+.run-link {
+	text-transform: none;
+	text-decoration: underline;
+	font-family: gothic;
+}
+.btn {
+  background-color: #ffffff;
+  border: black;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.5s;
+  border: 1px solid Black;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #1affa3;
+  border: white;
+  color: white;
+  border: 1px solid  white;
+  border-radius: 15px;
+}
+iframe {
+  border-radius: 15px;
+
+}
+table {
+  border-radius: 15px;
+
+}
+.seis {
+	position: fixed;
+	text-align:center;
+}
+table {
+    height: 320px;
+    width: 350px;  
+    table-layout: fixed;
+}
+td {
+    font-size: 12px;
+    font-weight: bold;
+}
+.column {
+    float: left;
+    width: 20%;
+}
+.column2 {
+	float: left;
+	width: 100%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

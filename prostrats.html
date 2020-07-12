@@ -1,51 +1,13 @@
 <!DOCTYPE html>
 <html lang=en-US>
+<meta charset="UTF-8">
 <head>
-<title> Resources | ProStrats </title>
+<title> Other | ProStrats </title>
 	
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	
-<style>
-	
-body {
-   background-image: url("jeppiebg.png");
-   background-color: black;
-}
-
-h1 {
-    color: white;
-font-family: "Times New Roman", Times, serif;
-}
-
-p {
-    color: white;
-font-family: "Times New Roman", Times, serif;
-}
-	
-a {
-    color: #f2f2f2;
-font-family: "Times New Roman", Times, serif;
-}
-
- .btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.btn:hover {
-    background-color: RoyalBlue;
-} 
-</style>	
 	
 <link rel="icon" type="image/vnd.microsoft.icon"
-     href="pro.ico" />
+     href="img/random/tea.ico" />
 <link rel="stylesheet" href="index.css"> 
     
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,31 +19,55 @@ font-family: "Times New Roman", Times, serif;
   gtag('config', 'UA-148826214-1');
 </script>
     
+<script src="top.js"> </script>   
+
 </head>
-<body class=jeppiebg>
-<script async src="background.js"></script>
+
+<style> 
+body {
+	background-image: url("img/background/jepples.png");
+    background-attachment:fixed;
+}
+a {
+	color: white;
+}
+</style>
+
+<body>
+	
+<div class="seis">
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="fi"  id=fi> Suomi </option>
+</select>
+</div>
+
+<button onclick=setStorage()> change </button>
+
 <div class=center>
-	
 <h1> ProStrats</h1>
-<p> Made by <a href=https://www.twitch.tv/jepples>JEPPLES</a></p>
-	
+<a href=https://www.twitch.tv/jepples class="pro1"> Made by  JEPPLES</a>
 </div>
 	
-<p> ProStrats is a simple program that counts your consistency percentage on a speedrun trick for example </p>
-	
 <div class=center>
-	
-<a download="" onclick="this.href='https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true';"
-<button class="btn"><i class="fa fa-download"></i>Download</button>
- </a>
+<p class="pro2"> ProStrats is a simple program that counts your consistency percentage on a speedrun trick for example </p>
+</div>
 
-<button id="myButton" class="arial btn" >Back</button>
+<div class=center>
+<button id="dwnldbtn" class="gothic btn pro3" onclick="https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true" >Download</button>
+<button id="backbtn" class="gothic btn pro4" >Back</button>
 
 <script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "resources.html";
+    document.getElementById("dwnldbtn").onclick = function () {
+        location.href = "https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true";
+    };	
+    document.getElementById("backbtn").onclick = function () {
+        location.href = "other";
     };	
 </script>
+</div>
+
+<script src="bottom.js"> </script>
 	
 </body>
 </html>
