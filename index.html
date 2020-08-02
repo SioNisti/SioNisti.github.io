@@ -53,6 +53,17 @@ function stream() {
     x.style.display = "none";
   }
 </script>
+<script>
+function stream2() {
+  var x = document.getElementById("stream2");{
+    x.style.display = "block";
+  }
+  var x = document.getElementById("vods");
+    x.style.display = "none";
+    var x = document.getElementById("stream");
+    x.style.display = "none";
+  }
+</script>
 
 <div class="seis">
 <select id=languageSelector>
@@ -133,8 +144,9 @@ My super power is that i can burp on command </p>
 <br/> -->
 
 <div class=center>
-<button class="arial btn index10" onclick="vods()">Recent Stream</button>	
-<button class="arial btn index11" onclick="stream()">Twitch embed</button>	
+<button class="arial btn index10" onclick="vods()"><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> Vods</button>	
+<button class="arial btn index11" onclick="stream()"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N</button>
+<button class="arial btn index11" onclick="stream2()"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> sionTea</button>	
 </div>	  
     
 <br/>
@@ -162,13 +174,33 @@ My super power is that i can burp on command </p>
     </script>
 </div>
 </div>
+
+<div class=center id="stream2" style="display:none">
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <div style="padding-left: 400px; text-align:center;">
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "sionTea",
+        layout: "video",
+        autoplay: false,
+      });
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+</div>
+</div>
     
 <h2 class="center index12"> Social media: </h2>
-<p> <a href=https://www.twitch.tv/sion_510n>Twitch</a></p>
-<p> <a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA>YouTube</a></p>
-<p> <a href=https://twitter.com/SioN_510N>Twitter</a></p>
-<p> <a href=https://www.speedrun.com/user/SioN>Speedrun.com</a></p>
-<p> <a href="https://www.youtube.com/channel/UCcLSJ5EO1sP7TNX8-YFe9AQ">Stream Vods</a></p>  
+<p> <a href=https://www.twitch.tv/sion_510n><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> Twitch</a></p>
+<p> <a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> YouTube</a></p>
+<p> <a href=https://twitter.com/SioN_510N><img src="https://abs.twimg.com/favicons/twitter.ico" height="15" width="15"> Twitter</a></p>
+<p> <a href=https://www.speedrun.com/user/SioN><img src="https://speedrun.com/themes/Default/1st.png" height="15" width="15"> Speedrun.com</a></p>
+<p> <a href="https://www.youtube.com/channel/UCcLSJ5EO1sP7TNX8-YFe9AQ"><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> Stream Vods</a></p>  
 
 
 
