@@ -196,20 +196,6 @@ and I'll stream on my alt account (sionTea) outside of my normal times</p>
 <br/>
 <br/>
 
-<script>
-$.getJSON('https://api.twitch.tv/kraken/streams/mychannel?client_id=myclientid', function(channel) {
-
-    if (channel["stream"] == null) { 
-        $(".online").hide();
-        $(".offline").show();
-
-    } else {
-        $(".offline").hide();
-        $(".online").show();
-    }
-});
-</script>
-
 </div>
 
 <script src="bottom.js"> </script>
