@@ -46,7 +46,7 @@ function vods() {
   }
     var x = document.getElementById("stream");
     x.style.display = "none";
-    var x = document.getElementById("vittunyt");
+    var x = document.getElementById("streamtea");
     x.style.display = "none";
   }
 </script>
@@ -57,13 +57,13 @@ function stream() {
   }
   var x = document.getElementById("vods");
     x.style.display = "none";
-    var x = document.getElementById("vittunyt");
+    var x = document.getElementById("streamtea");
     x.style.display = "none";
   }
 </script>
 <script>
-function vittunyt() {
-  var x = document.getElementById("vittunyt");{
+function streamtea() {
+  var x = document.getElementById("streamtea");{
     x.style.display = "block";
   }
   var x = document.getElementById("vods");
@@ -73,6 +73,7 @@ function vittunyt() {
   }
 </script>
 
+<!--
 <div class="seis">
 <select id=languageSelector>
 <option value="en" id=en> English </option>
@@ -80,28 +81,27 @@ function vittunyt() {
 </select>
 
 <button onclick=setStorage()> change </button>
-</div>
+</div> -->
 
 <div class=center>    
-<a href="https://siontea.com/archive">
-<img src="img/random/logo_old.png">
-</a>
-</div>
-
-<div class=center> 
-<a href="https://discord.gg/mJ9cFQk" class="index1">sionTea Discord Server! </a>
-<img src="img/random/discord.png" height="15" width="15">
-<br/>
-<a href="https://paypal.me/siontea?locale.x=fi_FI" class="index2">If you feel like wasting money,  you can donate to me from here. (no one is forced to donate)</a>
+<img class=center src="img/random/logo_old.png">
 </div>
 
 <br/>
 
-<div class=center>  
-<button id="categories" class="arial btn index3" >Speedrun Categories</button>
-<button id="videos" class="arial btn index4" >Videos</button>
-<button id="downloads" class="arial btn index5" >My Games</button>
-<button id="other" class="arial btn index6" >Other</button>
+<div class="center linkbox">
+<a href=https://www.twitch.tv/sion_510n><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
+<a href=https://www.twitch.tv/siontea><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> sionTea -</a>
+<a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> SilentOnion -</a>
+<a href="https://www.youtube.com/channel/UCcLSJ5EO1sP7TNX8-YFe9AQ"><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> SioN's Stream Vods -</a>
+<a href=https://twitter.com/SioN_510N><img src="https://abs.twimg.com/favicons/twitter.ico" height="15" width="15"> SioN_510N -</a>
+<a href=https://www.speedrun.com/user/SioN><img src="https://speedrun.com/themes/Default/1st.png" height="15" width="15"> SioN</a>
+</div>
+
+<div class="center btnbox">  
+<button id="main" class="arial curry" >Main</button>
+<button id="categories" class="arial btn" >Speedrun Categories</button>
+<button id="downloads" class="arial btn" >My Games</button>
 </div>
 
 <script type="text/javascript">
@@ -114,110 +114,105 @@ function vittunyt() {
        document.getElementById("downloads").onclick = function () {
         location.href = "downloads";
     };
-       document.getElementById("other").onclick = function () {
-        location.href = "other";
-    };
 </script>
+
+<div class="lowerbox">
 
 <div class="center">  
 <h2> Info Card</h2>
 <img class="infoslip" src="img/random/infocard.png">
-</div>		
 
-<br/>
-
-<div class="center">  
 <h2 class="index8">Stream schedule:</h2>
-<p class="index9">Fridays at 10PM and Saturdays at 8 PM (UTC+3) <br/>
+<p class="index9">Fridays at (10PM UTC+3 / 3PM EST) and Saturdays at (8PM UTC+3 / 1PM EST)<br/>
 (Sometimes I may do a stream on Sunday) <br/>
 and I'll stream on my alt account (sionTea) outside of my normal times</p>
 </div>	
 	
-<br/> <!--
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/> -->
 
 <div class=center>
 <button class="arial btn index10" onclick="vods()"><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> Vods</button>	
 <button class="arial btn index11" onclick="stream()"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N</button>
-<button class="arial btn index11" onclick="vittunyt()"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> sionTea</button>	
+<button class="arial btn index11" onclick="streamtea()"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> sionTea</button>	
 </div>	  
     
 <br/>
 
 <div class=center id="vods">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/+lastest?list=UUcLSJ5EO1sP7TNX8-YFe9AQ" frameborder="0" allowfullscreen></iframe>
+<!-- Vods embed -->
+<iframe 
+	width="854" 
+	height="480" 
+	src="https://www.youtube.com/embed/+lastest?list=UUcLSJ5EO1sP7TNX8-YFe9AQ" 
+	frameborder="0" 
+	allowfullscreen="true">
+</iframe>
 </div> 
 
-<div class=center id="stream" style="display:none">
-    <div id="twitch-embed"></div>
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <div style="padding-left: 400px; text-align:center;">
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "sion_510n",
-        layout: "video",
-        autoplay: false,
-      });
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
-</div>
-</div>
+<div id="stream" class="bordereded center" style="display:none">
+<!-- Stream embed -->
+<iframe
+	id="stream_embed"
+	src="https://player.twitch.tv/?channel=sion_510n"
+	frameborder="0"
+	allowfullscreen="true"
+	scrolling="no"
+	height="480"
+	width="854">
+</iframe>
+	
+<!-- Chat embed -->
+<iframe
+  id="chat_embed"
+  src="https://www.twitch.tv/embed/sion_510n/chat"
+  height="480"
+  width="400">
+</iframe>
+
 </div>
 
-<div class=center id="vittunyt" style="display:none">
-    <div id="twitch-embed2"></div>
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <div style="padding-left: 400px; text-align:center;">
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed2", {
-        width: 854,
-        height: 480,
-        channel: "sionTea",
-        layout: "video",
-        autoplay: false,
-      });
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
-</div>
+
+<div id="streamtea" class="bordereded center" style="display:none">
+<!-- Stream embed -->
+<iframe
+	id="stream_embed"
+	src="https://player.twitch.tv/?channel=siontea"
+	frameborder="0"
+	allowfullscreen="true"
+	scrolling="no"
+	height="480"
+	width="854">
+</iframe>
+	
+<!-- Chat embed -->
+<iframe
+  id="chat_embed"
+  src="https://www.twitch.tv/embed/siontea/chat"
+  height="480"
+  width="400">
+</iframe>
 </div>
     
-<h2 class="center index12"> Social media: </h2>
-<p> <a href=https://www.twitch.tv/sion_510n><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> Twitch</a></p>
-<p> <a href=https://www.youtube.com/channel/UCAJsCCCMxk2A4dJkqSjMgaA><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> YouTube</a></p>
-<p> <a href=https://twitter.com/SioN_510N><img src="https://abs.twimg.com/favicons/twitter.ico" height="15" width="15"> Twitter</a></p>
-<p> <a href=https://www.speedrun.com/user/SioN><img src="https://speedrun.com/themes/Default/1st.png" height="15" width="15"> Speedrun.com</a></p>
-<p> <a href="https://www.youtube.com/channel/UCcLSJ5EO1sP7TNX8-YFe9AQ"><img src="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" height="15" width="15"> Stream Vods</a></p>  
-
-
-
 <br/>
 <br/>
+
+<script>
+$.getJSON('https://api.twitch.tv/kraken/streams/mychannel?client_id=myclientid', function(channel) {
+
+    if (channel["stream"] == null) { 
+        $(".online").hide();
+        $(".offline").show();
+
+    } else {
+        $(".offline").hide();
+        $(".online").show();
+    }
+});
+</script>
+
+</div>
 
 <script src="bottom.js"> </script>
-
-
 
 </body>
 </html>
