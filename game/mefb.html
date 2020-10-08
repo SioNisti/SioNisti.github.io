@@ -56,6 +56,10 @@ function cat() {
     x.style.display = "none";
     var x = document.getElementById("cats%");
     x.style.display = "none";
+    var x = document.getElementById("cards%");
+    x.style.display = "none";
+    var x = document.getElementById("card%");
+    x.style.display = "none";
   }
 </script>
 <script>
@@ -66,6 +70,10 @@ function aa() {
     x.style.display = "none";
     var x = document.getElementById("cats%");
     x.style.display = "none";
+    var x = document.getElementById("cards%");
+    x.style.display = "none";
+    var x = document.getElementById("card%");
+    x.style.display = "none";
   }
 </script>
 <script>
@@ -75,6 +83,38 @@ function cats() {
     var x = document.getElementById("aa%");
     x.style.display = "none";
     var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cards%");
+    x.style.display = "none";
+    var x = document.getElementById("card%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function cards() {
+  var x = document.getElementById("card%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+    var x = document.getElementById("cards%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function card() {
+  var x = document.getElementById("cards%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+    var x = document.getElementById("card%");
     x.style.display = "none";
   }
 </script>
@@ -94,7 +134,7 @@ function cats() {
     };
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
-	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner.");
+	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner. (MAKE SURE TO NOT COVER THE TOP LEFT WITH ANYTHING so i can see the achievements pop up) ");
 }  	if(localStorage.getItem("Language") === 'fi') {
 	alert("Käytä uusinta versiota.\nOld KB runeille sinun täytyy aktivoida OKB koodi (kirjoita bljs are my favorite salaiseen menuun)\n\nKäytä pelin sisäistä kelloa Boss RTA runeissa ja käytä ulkoista kelloa All Achievements runeissa\nAll Achievements runeissa aika alkaa kun valitset vaikeuden ja loppuu kun olet saanut kahdeksannen saavutuksen.");
 }
@@ -107,6 +147,8 @@ function myFunction() {
 <div class=center>
 <button class="arial btn" onclick="cat()">Cat RTA</button>		
 <button class="arial btn" onclick="cats()">Cat NG+ RTA</button>	
+<button class="arial btn" onclick="cards()">Cards RTA</button>		
+<button class="arial btn" onclick="card()">Cards NG+ RTA</button>	
 <button class="arial btn" onclick="aa()">All Achievements</button>
 </div>	
 
@@ -196,6 +238,92 @@ function myFunction() {
 </tbody>
 </table>    
 </div>    
+	
+	
+<div  id="card%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Easy</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Hard</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+ 
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Easy (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>      
+    
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Hard (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+</div>    
   
 <div  id="aa%" style="display:none">
 <table align="center">
@@ -210,10 +338,10 @@ function myFunction() {
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr onclick="window.location='/game/mefb/dnvic_achievements_910';">
     <td>1st</td>
-    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
-    <td>-</td>
+    <td class="bold">DNVIC</a></td>
+    <td>9:10</td>
 </tr>
 </tbody>
 </table>
@@ -322,6 +450,92 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
+	
+
+<div  id="card%" style="display:none">
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Easy NG+</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>        
+
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Hard NG+</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>    
+  
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Easy NG+ (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>      
+    
+<br>  
+<table align="center">
+<thead>
+<tr>
+    <th colspan="4">Cards Hard NG+ (Old KB)</th>
+</tr>
+<tr>
+    <th>#</th>
+    <th>Runner</th>
+    <th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1st</td>
+    <td class="bold"><a class="run-link" href="" target="_blank">-</a></td>
+    <td>-</td>
+</tr>
+</tbody>
+</table>   
+	
 </div>    
   
 <script src="../bottom.js"> </script>
