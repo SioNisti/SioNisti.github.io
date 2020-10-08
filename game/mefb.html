@@ -92,20 +92,6 @@ function cats() {
 </script>
 <script>
 function cards() {
-  var x = document.getElementById("card%");
-    x.style.display = "block";
-    var x = document.getElementById("aa%");
-    x.style.display = "none";
-    var x = document.getElementById("cat%");
-    x.style.display = "none";
-    var x = document.getElementById("cats%");
-    x.style.display = "none";
-    var x = document.getElementById("cards%");
-    x.style.display = "none";
-  }
-</script>
-<script>
-function card() {
   var x = document.getElementById("cards%");
     x.style.display = "block";
     var x = document.getElementById("aa%");
@@ -115,6 +101,20 @@ function card() {
     var x = document.getElementById("cats%");
     x.style.display = "none";
     var x = document.getElementById("card%");
+    x.style.display = "none";
+  }
+</script>
+<script>
+function card() {
+  var x = document.getElementById("card%");
+    x.style.display = "block";
+    var x = document.getElementById("aa%");
+    x.style.display = "none";
+    var x = document.getElementById("cat%");
+    x.style.display = "none";
+    var x = document.getElementById("cats%");
+    x.style.display = "none";
+    var x = document.getElementById("cards%");
     x.style.display = "none";
   }
 </script>
@@ -134,7 +134,7 @@ function card() {
     };
 function myFunction() {
     if(localStorage.getItem("Language") === 'en') {
-	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements. \nFor All Achievements time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner. (MAKE SURE TO NOT COVER THE TOP LEFT WITH ANYTHING so i can see the achievements pop up) ");
+	alert("Use the most recent version. \nFor Old KB runs you must activate the OKB code (type bljs are my favorite in secret menu)\n\nUse ingame time for Boss RTA and use an external timer for All Achievements.\nBoss RTAs\n-Dying and reloading a save/retrying is not allowed \nAll Achievements\n time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner. (MAKE SURE TO NOT COVER THE TOP LEFT WITH ANYTHING so i can see the achievements pop up) ");
 }  	if(localStorage.getItem("Language") === 'fi') {
 	alert("Käytä uusinta versiota.\nOld KB runeille sinun täytyy aktivoida OKB koodi (kirjoita bljs are my favorite salaiseen menuun)\n\nKäytä pelin sisäistä kelloa Boss RTA runeissa ja käytä ulkoista kelloa All Achievements runeissa\nAll Achievements runeissa aika alkaa kun valitset vaikeuden ja loppuu kun olet saanut kahdeksannen saavutuksen.");
 }
@@ -160,10 +160,10 @@ function myFunction() {
 <tr>
     <th colspan="4">Cat Easy</th>
 </tr>
-<tr>
-    <th>#</th>
-    <th>Runner</th>
-    <th>Time</th>
+<tr onclick="window.location='/game/mefb/dnvic_cateasy_203993';">
+    <td>1st</td>
+    <td class="bold">DNVIC</a></td>
+    <td>2:03.993</td>
 </tr>
 </thead>
 <tbody>
@@ -450,9 +450,9 @@ function myFunction() {
 </tr>
 </tbody>
 </table>    
-	
+</div>	
 
-<div  id="card%" style="display:none">
+<div  id="cards%" style="display:none">
 <table align="center">
 <thead>
 <tr>
