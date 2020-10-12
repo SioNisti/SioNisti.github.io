@@ -1,0 +1,48 @@
+
+a {
+	color:white;
+}
+.board {
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid White;
+	width: 50%;
+	margin-left: 25%;
+}
+.neko {
+	background-color: rgba(0,0,0,0.5);
+	border-left: 1px solid White;
+	border-right: 1px solid White;
+	border-top: 1px solid White;
+	width: 50%;
+	margin-left: 25%;
+}
+th {
+	font-weight: bold;
+}
+
+th.full {
+	text-align: center;
+	letter-spacing: 0.5px;
+	border-top: 1px solid White;
+	border-radius: 0px;
+}
+
+td, th, tr {
+	padding: 0.35em 1.5em;
+	text-align: center;
+	background: rgba(255,255,255,0);
+	border-top: 1px solid White;
+}
+
+td, th {
+	font-family: gothic;
+	border-radius: 0px;
+	color:white;
+}
+
+tr:hover td {
+    background-color: #1affa3;
+}
+table {
+	width: 100%
+}
