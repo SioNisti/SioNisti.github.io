@@ -43,7 +43,8 @@ td, th {
 }
 
 tr:hover td {
-    background-color: #1affa3;
+    background-color: #FFFFFF;
+	color: black;
 }
 table {
 	width: 100%
