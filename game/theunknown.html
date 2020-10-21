@@ -64,7 +64,7 @@ function giacad() {
 <br/>
 <h1 class="gamename"> The Unknown </h1>
 </div>
-	
+<!--
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -79,7 +79,7 @@ function rules() {
 	alert("Beat The Game\n\nPäämäärä on päästä loppu ruutuun\n-Täytyy olla video todiste\n\nAika alkaa kun aloitat liikkumisen ja loppuu sillä framella kun valkoinen palikka tukkii tien viimeisessä ruudussa");
 }
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -119,9 +119,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Beat The Game\n\n-The goal is to get to the end screen\n-Must have video proof\n\nDue to recent rule change now we time runs with real time so time begins first frame you move and ends on the frame the block appears on the last screen");
+};
+</script>
+		 
 <div id="btg%">
 <table align="center">
 <thead>
