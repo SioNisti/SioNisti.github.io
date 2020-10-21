@@ -243,7 +243,7 @@ function aa() {
 <div class="center">
 <br/>
 <h1 class="gamename"> MEFB </h1>
-</div>
+</div><!--
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -258,7 +258,7 @@ function rules() {
 	alert("Käytä uusinta versiota.\nOld KB runeille sinun täytyy aktivoida OKB koodi (kirjoita bljs are my favorite salaiseen menuun)\n\nKäytä pelin sisäistä kelloa Boss RTA runeissa ja käytä ulkoista kelloa All Achievements runeissa\nAll Achievements runeissa aika alkaa kun valitset vaikeuden ja loppuu kun olet saanut kahdeksannen saavutuksen.");
 }
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -306,9 +306,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
 
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Use the most recent version. \n\nUse ingame time for Boss RTA and use an external timer for All Achievements.\nBoss RTAs\n-Dying and reloading a save/retrying is not allowed \nAll Achievements\n time starts on clicking the difficulty and ends when you see the 8th trophy get on the top left corner. (MAKE SURE TO NOT COVER THE TOP LEFT WITH ANYTHING so i can see the achievements pop up) ");
+};
+</script>
+	
 <div  id="cate">
 <table align="center">
 <thead>
