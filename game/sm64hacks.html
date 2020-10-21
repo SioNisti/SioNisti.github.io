@@ -121,7 +121,7 @@ function mrta() {
 <br/>
 <h1 class="gamename"> SM64OoT </h1>
 </div>
-	
+<!--	
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -133,7 +133,7 @@ function rules() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("");
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -177,9 +177,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-  
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Kokiri Toad\nTalk to all toads in kokiri forest then beat the deku tree (get the grandstar) and finally get the star above the shop\nTime starts on reset and ends when the shop star disappears after collecting it\n\n'SioN' Skip\nGet the star above the shop\nTime starts on reset\Time ends upon the star disappearing\n\nDeku Tree RTA\nGet the deku tree grand star\nTime starts on reset\nTime ends on touching the star\n\Toad's Monkey problem\nGet the start the toad gives after dealing with the monkeys\nTime ends on touching the star\n\nMagic RTA\nGet magic\nTime ends after closing the text box");
+};
+</script>
+	
 <div id="ktoad">
 <table align="center" width="355">
 <thead>
