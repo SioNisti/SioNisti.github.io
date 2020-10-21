@@ -64,7 +64,7 @@ function giacad() {
 <br/>
 <h1 class="gamename"> MultiMeme </h1>
 </div>
-	
+<!--	
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -80,7 +80,7 @@ function rules() {
 	alert("Most Popular Categories\nAikaa pelien välissä ei lasketa mukaan\nSeuraa pelin kategorian sääntöjä\n\nSinun täytyy tehdä runi seuraavista kategorioista\n6 Toad - SM64\nKokiri Toad - SM64OoT\nYTOoB - SMS\nMoM% - OoT\nClock Easy RTA - FS\nHalibut% - Stardew Vallew\nBea The Game - Muumit ja Taikurin Hattu");
 }
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -114,14 +114,24 @@ function rules() {
 <br> 
 
 <div class="neko">
-<button class="arial btn" onclick="mpc()">Most popular categories</button>	
+<button class="arial btn" onclick="mpc()">Most popular categories</button>
 </div>	  
 
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("	Most Popular categories\nTime between games isnt counted\nFollow the category rules\n\nMust beat all these categories\n6 Toad - SM64\nKokiri Toad - SM64 OoT\nYTOoB - SMS\nMoM% - OoT\nClock Easy RTA - FS\nHalibut% - Stardew Valley\nBeat the game - Muumit ja Taikurin Hattu");
+};
+</script>
 	 
 <div  id="mpc">
 <table align="center">
