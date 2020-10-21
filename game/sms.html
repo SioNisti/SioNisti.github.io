@@ -79,7 +79,7 @@ function YTON() {
 <br/>
 <h1 class="gamename"> Super Mario Sunshine </h1>
 </div>
-	
+<!--	
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -94,7 +94,7 @@ function rules() {
 	alert("Yellow Toad OoB\nPuhu keltaiselle Toad:ille joka on kentän ulkopuolella\nAika alkaa tallennuksen valinnasta\nAika loppuu kun marion pylly osuu maahan sen jälkeen kun olet puhunut Toad:ille\n\nAlku video skippaaminen on sallittua")
 }	
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -136,10 +136,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
 
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Yellow Toad OoB\nTalk to the yellow toad out of bounds\nTime starts on file select\nTime ends when mario's butt hits the ground when dying after talking to toad\n\nSkipping the starting cutscene is allowed");
+};
+</script>
+	
 <div   id="YTOEMU">
 <table align="center" width="300">
 <thead>
