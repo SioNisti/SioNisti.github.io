@@ -64,7 +64,7 @@ function giacad() {
 <br/>
 <h1 class="gamename"> Stardew Valley</h1>
 </div>
-	
+<!--
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -80,7 +80,7 @@ function rules() {
 	alert("Halibut%\nAika alkaa kun painat OK hahmon luomisen jälkeen\nAika loppuu kun halibut(kala) näkyy ala rivissä\nTavara id temppu ei ole sallittu");
 }	
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -120,9 +120,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Halibut% \nTime Starts when pressing OK on character creation \nTime ends on the frame halibut appears on your hotbar\n Item id trick isnt allowed");
+};
+</script>
+	
 <div  id="halibut">
 <table align="center" width="300">
 <thead>
