@@ -64,7 +64,7 @@ function umbs() {
 <br/>
 <h1 class="gamename"> Terraria </h1>
 </div>
-	
+<!--
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -81,6 +81,7 @@ function rules() {
 }
 }
 </script>
+-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -121,9 +122,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Umbrella%\nThe goal is to get the Umbrella item (found in chests)\nTime starts when you enter the world and ends on the frame the umbrella is in your inventory\n\n- in Seeded runs you must show the seed\n- video must show world and character creation");
+};
+</script>
+		 
 <div id="umbrs%">
 <table align="center">
 <thead>
