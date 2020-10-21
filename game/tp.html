@@ -65,7 +65,7 @@ function ng2() {
 <br/>
 <h1 class="gamename"> Twilight Princess </h1>
 </div>
-	
+<!--
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -81,7 +81,7 @@ function rules() {
 	alert("Fruit Balloon NG+\nPäämääränä on saada hopea raha (200) hedelmä pallo minipelistä.  Aika alkaa kun valitset yes pelataksesi minipeliä.  Aika loppu kun link pitää hopea rahaa pään päällään\n\nFruit Balloon NG\nSama päämäärä kuin NG+:ssa mutta sinun pitää aloittaa uudella tallennuksella.");
 }
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -122,9 +122,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
-</div>		 
-  	
+<button id="submit" class="arial btn" >Submit run</button>
+</div>	
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Fruit Balloon NG+\nThe goal is to get the Silver rupee 200 from the fruit balloon minigame. The timing starts on selecting yes to play the game. Time ends when you see link hold the Rupee\n\nFruit Balloon NG\nSame goal as in NG+ but you have to start with a new save file");
+};
+</script>
+	 	
 <div id="ng2">
 <table align="center" width="475">
 <thead>
