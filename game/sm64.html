@@ -394,7 +394,7 @@ function mom64em() {
 <br/>
 <h1 class="gamename"> Super Mario 64 </h1>
 </div>
-	
+<!--	
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -406,7 +406,7 @@ function rules() {
     if(localStorage.getItem("Language") === 'en') {
 	alert("The goal is to talk to the required ammount of toads then WDW clip on endless stairs.\nTiming starts on power on (reset on emu)\nProject 64 1.6 only\nTime ends on the first frame the wdw star select can be seen after the clip");
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -457,10 +457,19 @@ function rules() {
 <div class="board"> 
 <div class="right">   
 <button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
 
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("The goal is to talk to the required ammount of toads then WDW clip on endless stairs.\nTiming starts on power on (reset on emu)\nProject 64 1.6 only\nTime ends on the first frame the wdw star select can be seen after the clip");
+};
+</script>
+	
 <div id="Etoad64">
 <table align="center" width="435">
 <thead>
