@@ -55,7 +55,7 @@ function giacad() {
 <br/>
 <h1 class="gamename">Duke Nukem</h1>
 </div>
-	
+<!--	
 <script type="text/javascript">
     document.getElementById("myButton1").onclick = function () {
         location.href = "../game";
@@ -70,7 +70,7 @@ function rules() {
 	alert("Aika alkaa kun ruudulla näkyy teksti 'get ready duke'\nAika loppuu kun ruutu menee mustaksi sen jälkeen kun olet voittanut Dr. Protonin\n\nSinä saat käyttää debug koodia (Backspace ja PGDN samaanaikaan)");
 }
 }
-</script>
+</script>-->
 
 <div class="center linkbox">
 <a href=https://www.twitch.tv/sion_510n target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="15" width="15"> SioN_510N -</a>
@@ -109,10 +109,20 @@ function rules() {
 
 <div class="board"> 
 <div class="right">   
-<button class="arial btn" onclick="rules()">Rules</button>	
-<button id="myButton2" class="arial btn" >Submit run</button>
+<button class="arial btn" onclick="rules()">Rules</button>		
+<button id="submit" class="arial btn" >Submit run</button>
 </div>	
-	 
+
+<script>
+document.getElementById("submit").onclick = function () {
+location.href = "../submit";
+};
+
+function rules() {
+	alert("Time starts on the get ready duke text appearing\nTime ends on the full black frame after defeating Dr. Proton\n\nYou are allowed to use the debug cheat (Backspace&Pgdn)");
+};
+</script>
+	
 <div  id="debug">
 <table align="center">
 <thead>
