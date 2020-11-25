@@ -22,49 +22,93 @@
 <script src="top.js"> </script>   
 
 </head>
-
+<!-- -->
 <style> 
 body {
-	background-image: url("img/background/jepples.png");
-    background-attachment:fixed;
+	background-attachment:fixed;
+	background-color: black;
+	background-image: url("/img/background/jepples2.png"); 
 }
-a {
-	color: white;
+h1, h2, p, a {
+  color: white;
+  font-family:gothic;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 50px;
+}
+p, a {
+  font-size: 20px;
+}
+.smol {
+  font-size: 15px;
+}
+.btn {
+  	background-color: white;
+  	color: black;
+  	padding: 16px 32px;
+  	text-align: center;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	transition: 0.2s;
+  	border: 1px solid lime;
+  	border-radius: 1px;
+}
+.btn:hover {
+  	background-color: gray;
+  	color: black;
+ 	border: 1px solid  lime;
+	border-radius: 2px;
+}
+.jbox {
+	border: 1px solid white;
+	height: 100%;
+	width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8%;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
-
-<body>
-	
-<div class="seis">
-<select id=languageSelector>
-<option value="en" id=en> English </option>
-<option value="fi"  id=fi> Suomi </option>
-</select>
-</div>
-
-<button onclick=setStorage()> change </button>
-
-<div class=center>
-<h1> ProStrats</h1>
-<a href=https://www.twitch.tv/jepples class="pro1"> Made by  JEPPLES</a>
-</div>
-	
-<div class=center>
-<p class="pro2"> ProStrats is a simple program that counts your consistency percentage on a speedrun trick for example </p>
-</div>
-
-<div class=center>
-<button id="dwnldbtn" class="gothic btn pro3" onclick="https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true" >Download</button>
-<button id="backbtn" class="gothic btn pro4" >Back</button>
 
 <script type="text/javascript">
     document.getElementById("dwnldbtn").onclick = function () {
         location.href = "https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true";
     };	
-    document.getElementById("backbtn").onclick = function () {
-        location.href = "other";
-    };	
 </script>
+	
+<body>
+<div class="jbox">	
+	
+<div class="center">
+<h1> ProStrats</h1>
+<p> Made by <a href="http://jepples.com/" class="pro1">JEPPLES</a></p>
+</div>
+
+<br>
+<br>	
+	
+<div class="center">
+<button id="dwnldbtn" class="gothic btn" onclick="https://github.com/JEPPSER/ProStrats/blob/master/c%23/ProStrats/ProStrats/bin/Debug/ProStrats.exe?raw=true">Download</button>
+</div>
+
+<br>
+<br>	
+	
+<div class="center">
+<p> ProStrats counts your consistency on a speedrun trick and is useful for practicing </p>
+</div>
+
+<br>
+<br>	
+	
+<div class="center">
+<img src="/img/random/prostrats_preview.png">
+<p class="smol">(Preview image)</p>
+</div>
+
 </div>
 
 <script src="bottom.js"> </script>
