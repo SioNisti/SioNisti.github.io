@@ -1,0 +1,93 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://siontea.com/index.css">
+
+</head>
+
+<style>
+html {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-image: url("https://siontea.com/img/background/background.png");
+    text-align: center;
+}  
+body {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 200px;
+}
+.inpt {
+  background-color: #ffffff;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.5s;
+  border: 1px solid Black;
+  border-radius: 4px;
+  width: 180px;
+}
+</style>
+
+<body>
+<h1><i>SioN's IGT calculator</i></h1>
+<p>Why does this exist?  mainly for <a href="https://speedrun.com/drift86">Drift86</a> mods verifying fullgame runs</p>
+
+<button class="btn" onclick="alert('Put the desired values into each box and hit the add button, then repeat as many times as needed.\n(note that for ms if you just put in 82 it will be input as 082 not 820)')">How to</button>
+
+<br>
+<br>
+
+<script>
+var shour = 0;
+var sminute = 0;
+var ssecond = 0;
+var smsecond = 0;
+
+function addtime() {
+    shour = shour + Number(document.getElementById("hourput").value);
+    sminute = sminute + Number(document.getElementById("minput").value);
+    ssecond = ssecond + Number(document.getElementById("secput").value);
+    smsecond = smsecond + Number(document.getElementById("milput").value);
+
+    if (smsecond > 999) {
+        ssecond++;
+        smsecond = smsecond - 1000;
+    }
+    if (ssecond > 59) {
+        sminute++;
+        ssecond = ssecond - 60;
+    }
+    if (sminute > 59) {
+        shour++;
+        sminute = sminute - 60;
+    }
+    var ttime = "Final Time: " + shour + ":" + sminute + ":" + ssecond + "." + smsecond;
+    document.getElementById("totaltime").innerHTML = ttime;
+
+    //i know this code is probably garbage but i dont care it works and it was my first actual js test thing
+}
+</script>
+
+<form id="paska">
+<input class="inpt" size="10" id="hourput" type="number" placeholder="Hours"></input>
+<input class="inpt" size="2" id="minput" type="number" placeholder="Minutes"></input>
+<input class="inpt" size="2" id="secput" type="number" placeholder="Seconds"></input>
+<input class="inpt" size="3" id="milput" type="number" placeholder="Milliseconds"></input>
+<button class="btn" onclick="addtime()">Add</button>
+</form>
+
+<h2 id="totaltime">Final Time: 0:0:0.0</h2>
+<p>H:M:S:MS</p>
+
+</body>
+
+</html>
