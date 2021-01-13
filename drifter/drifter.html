@@ -10,7 +10,10 @@
 <link rel="icon" type="image/vnd.microsoft.icon" href="../img/random/tea.ico" />
 <link rel="stylesheet" href="../index.css"> 
 <style type="text/css">
-html {height: 100%;}
+	
+html {
+	height: 100%;
+}
 body {
 	background-image: url("../img/background/background.png");
 	background-repeat: no-repeat;
@@ -19,112 +22,6 @@ body {
 	min-height: 100%;
 	margin: 0;
 	}
-h1,p {
-	color: black;
-}
-#bloctxt {
-	border-left-width: 5px;
-	border-left-style: solid;
-	border-left-color: #962300;
-	padding-left: 10px;
-	position: absolute;
-	top:5%;
-	left: 50%;
-	width: 600px;
-	margin-left: -260px
-}
-#wrapper {
-	padding: 10px;
-	margin: 0 auto;
-}
-#border {
-	background-color: #99C;
-	border: 1px solid #B90000;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-	margin: 0 auto;
-	padding: 5px;
-	width:640px;
-	height:480px;
-}
-
-#canvas {
-	width:640px; 
-	height:480px;
-}
-
-#MMFCanvas {
-	-webkit-box-shadow:  0px 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    box-shadow:  0px 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-</style>
-
-  <title>Clickteam Fusion Developer 2.5 HTML5 Runtime</title>
-
-	<script>
-	   	// Detection of old browsers that do not support the canvas element
-		// Falls back to a default page
-	    if (!document.createElement("canvas").getContext)
-	    {
-			window.open("http://www.clickteam.com/html5/html5-fallback.html", "_self");
-		}
-	</script>
-	
-  	<!-- EXTRASOURCES -->
-	<!-- Loads the Javascript code...-->
-  	<script src="src/Runtime.js"></script>
-  	
-  <script>
-
-	// Detects if the html file is ran locally.
-	// You can remove this code for the final version
-	if (window.location.protocol == "file:")
-	{
-		document.write('<div id="bloctxt">');
-		document.write('<h1>The application cannot be run...</h1>');
-		document.write('<p>HTML browsers do not allow you to launch data files directly from the file system.<br>');
-		document.write('A drag & drop of the html file on a web-browser window will not work, on any machine.<br>');
-		document.write('Please use the Build & Run option (it opens a local web server) to run your application,<br>') 
-		document.write('or upload your application folder to a remote web-server, and start it from there...</p>');
-		document.write('</div>');
-		throw new error("Cannot run application");
-	}
-  </script>
-</head>
-
-<!-- This is where we create the Canvas element that will contain the application...-->
 <body>
-    <div id="wrapper">
-	    <div id="border">
-		    <div id="canvas">
-			    <canvas id="MMFCanvas" width="640" height="480">
-				    <p>Your browser does not support Canvas.</p>
-			    </canvas>   
-		    </div>
-	    </div>
-    </div>  
-    <script>
-        // RUNTIMESTART
-        // This is where the HTML5 runtime is actually started
-	    window.addEventListener("load", windowLoaded, false);
-	    function windowLoaded()
-	    {
-		    // Calls the runtime
-		    // First parameter : name of the canvas element
-		    // Second parameter : path to the cch file. Images and sounds must lay beside this file
-		    new Runtime("MMFCanvas", "resources/drifter2.cch");
-	    }
-        // RUNTIMESTARTEND
-    </script>
-<h1>HOW TO USE:</h1>
-<p>1. put minutes on the first box (the one that says "insert_minutes")<br/>
-   2. put seconds on the first box (the one that says "insert_seconds")<br/>
-   3. put milliseconds on the first box (the one that says "milliseconds")<br/>
-   4. click the "add" button to add them to the total time (shown at the bottom)<br/>
-   REPEAT steps 1-4 as many times as you need to<br/>
-   5. click the "convert all" button until nothing happens anymore<br/>
-   <br/>
-   (if you have "82" ms then insert it as "82" and not "082" or if you have "2" seconds insert it as "2" and not "02")<br/>
-   (it might still work but just to be sure)</p></body>
+	<a href="http://siontea.com/IGT">moved to here</a>
 </html>
