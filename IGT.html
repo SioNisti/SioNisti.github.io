@@ -74,15 +74,15 @@ function addtime() {
 
     if (smsecond > 999) {
         ssecond++;
-        smsecond = smsecond - 1000;
+        smsecond = smsecond / 1000;
     }
     if (ssecond > 59) {
         sminute++;
-        ssecond = ssecond - 60;
+        ssecond = ssecond / 60;
     }
     if (sminute > 59) {
         shour++;
-        sminute = sminute - 60;
+        sminute = sminute / 60;
     }
     var ttime = "Final Time: " + shour + ":" + sminute + ":" + ssecond + "." + smsecond;
     document.getElementById("totaltime").innerHTML = ttime;
