@@ -50,52 +50,13 @@
       border-radius: 4px;
       width: 180px;
     }
-         #confirm {
-            display: none;
-            background-color: rgba(0, 0, 0, 0.99);
-            border: 1px solid white;
-            position: fixed;
-            width: 550px;
-            height: auto;
-            margin-left: 23.6%;
-            padding: 20px;
-            text-align: center;
-            border-radius: 4px;
-         }
-         #confirm button {
-            background-color: #ffffff;
-            color: black;
-            padding: 16px 32px;
-            text-align: center;
-            font-size: 16px;
-            transition: 0.5s;
-            border: 1px solid Black;
-            border-radius: 4px;
-         }
-         #confirm button:hover {
-            background-color: #1affa3;
-            color: white;
-            border: 1px solid  white;
-            border-radius: 15px;
-         }
-         #confirm .message {
-            color: white;
-	          font-family:gothic;
-         }
 </style>
 
 <body>
-      <div class="center">
-        <div id="confirm">
-         <div class="message">Put the desired values into each box and hit the "add" button, then repeat as many times as needed.<br>(note that for ms if you just put in 82 it will be input as 082 not 820)<br>And if you made a mistake then just click the "fuck, go back" button to remove the inputted values from the total time</div>
-         <br>
-         <button class="yes">OK</button>
-        </div>
-      </div>
     <h1><i>SioN's IGT calculator</i></h1>
     <p>Why does this exist?  mainly for <a href="https://speedrun.com/drift86">Drift86</a> mods verifying fullgame runs</p>
     
-    <button class="btn" onclick = "howtodoit();">How to</button>
+    <button class="btn" onclick="alert('Put the desired values into each box and hit the add button, then repeat as many times as needed.\n(note that for ms if you just put in 82 it will be input as 082 not 820)\nAnd if you made a mistake then just click the fuck, go back button to remove the inputted values from the total time')">How to</button>
     
     <br>
     <br>
