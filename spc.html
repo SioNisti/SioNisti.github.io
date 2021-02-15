@@ -21,6 +21,7 @@
 
 <script>
 var bp = 0;
+var at = 0;
 var pisses = 0;
 var pisstxt = "";
 var pbtxt = "";
@@ -37,17 +38,37 @@ function getpisses(mostpisses) {
          console.log('--something went wrong---');
     }
  }
+function getat(alltime) {
+    var match = document.cookie.match(new RegExp('(^| )' + "alltime" + '=([^;]+)'));
+    if (match) {
+      console.log("Most pisses: " + match[2]);
+      at = match[2];
+      attxt = "Alltime: " + at;
+      document.getElementById("best").innerHTML = attxt;
+    }
+    else{
+         console.log('--something went wrong---');
+    }
+ }
 
 function add() {
 pisses++;
+at++;
+attxt = "Alltime: " + at;
 pisstxt = "Current: " + pisses;
+document.getElementById("current").innerHTML = attxt;
 document.getElementById("current").innerHTML = pisstxt;
+document.cookie = "alltime=" + at;
 }
 function take() {
     if (pisses > 0) {
     pisses --;
+    at --;
+    attxt = "Alltime: " + at;
+    document.getElementById("current").innerHTML = attxt;
     pisstxt = "Current: " + pisses;
     document.getElementById("current").innerHTML = pisstxt;
+    document.cookie = "alltime=" + at;
     }
 }
 function zero() {
@@ -67,6 +88,7 @@ location.href = "";
 </script>
 <h1 id="current">Current: 0</h1>
 <h1 id="best">Best: 0</h1>
+<h1 id="total">Alltime: 0</h1>
 
 <button title="Add 1 to the 'Current'" onclick="add()">+</button>
 <button title="Remove 1 from the 'Current'"onclick="take()">-</button>
