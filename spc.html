@@ -17,7 +17,7 @@
     }
 </style>
 
-<body onload="getpisses()">
+<body onload="getpisses(), getat()">
 
 <script>
 var bp = 0;
@@ -35,28 +35,28 @@ function getpisses(mostpisses) {
       document.getElementById("best").innerHTML = pbtxt;
     }
     else{
-         console.log('--something went wrong---');
+         console.log('--something went wrong or the value just doesnt exist yet---');
     }
  }
 function getat(alltime) {
     var match = document.cookie.match(new RegExp('(^| )' + "alltime" + '=([^;]+)'));
     if (match) {
-      console.log("Most pisses: " + match[2]);
+      console.log("all time pisses: " + match[2]);
       at = match[2];
       attxt = "Alltime: " + at;
-      document.getElementById("best").innerHTML = attxt;
+      document.getElementById("total").innerHTML = attxt;
     }
     else{
-         console.log('--something went wrong---');
+         console.log('--something went wrong or the value just doesnt exist yet---');
     }
  }
 
 function add() {
 pisses++;
 at++;
-attxt = "Alltime: " + at;
+attxt = "All time: " + at;
 pisstxt = "Current: " + pisses;
-document.getElementById("current").innerHTML = attxt;
+document.getElementById("total").innerHTML = attxt;
 document.getElementById("current").innerHTML = pisstxt;
 document.cookie = "alltime=" + at;
 }
@@ -64,8 +64,8 @@ function take() {
     if (pisses > 0) {
     pisses --;
     at --;
-    attxt = "Alltime: " + at;
-    document.getElementById("current").innerHTML = attxt;
+    attxt = "All time: " + at;
+    document.getElementById("total").innerHTML = attxt;
     pisstxt = "Current: " + pisses;
     document.getElementById("current").innerHTML = pisstxt;
     document.cookie = "alltime=" + at;
@@ -85,6 +85,10 @@ function db() {
 document.cookie = "mostpisses= ;expires=Thu, 01 Jan 1970 00:00:01 GMT";
 location.href = "";
 }
+function datc() {
+document.cookie = "alltime= ;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+location.href = "";
+}
 </script>
 <h1 id="current">Current: 0</h1>
 <h1 id="best">Best: 0</h1>
@@ -98,6 +102,7 @@ location.href = "";
 <br/>
 <button title="Save your 'Current' as your new best" onclick="sab()">Save As Best</button>
 <button title="Delete your best" onclick="db()">Delete Best</button>
+<button title="Delete your all time count" onclick="datc()">Delete All Time Count</button>
 
 <br/><br/><br/><br/><br/><br/><br/><br/>
 <p>This site uses cookies to save your best</p>
