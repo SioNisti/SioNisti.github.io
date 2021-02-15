@@ -72,9 +72,13 @@ function take() {
     }
 }
 function zero() {
+at = at - pisses;
 pisses = 0;
+attxt = "All time: " + at;
+document.getElementById("total").innerHTML = attxt;
 pisstxt = "Current: " + pisses;
 document.getElementById("current").innerHTML = pisstxt;
+document.cookie = "alltime=" + at;
 }
 function sab() {
 document.cookie = "mostpisses=" + pisses;
