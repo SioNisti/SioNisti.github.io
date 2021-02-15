@@ -1,0 +1,85 @@
+<html>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://siontea.com/img/random/tea.ico" />
+<title>SioN's Piss Counter (SPC)</title>
+
+<style>
+    body {
+    background-color: black;
+    }
+    @font-face {
+    font-family: gothic;
+    src: url(gothic.ttf);
+    }
+    p, h1 {
+    color: white;
+    font-family: gothic;
+    }
+</style>
+
+<body onload="getpisses()">
+
+<script>
+var bp = 0;
+var pisses = 0;
+var pisstxt = "";
+var pbtxt = "";
+
+function getpisses(mostpisses) {
+    var match = document.cookie.match(new RegExp('(^| )' + "mostpisses" + '=([^;]+)'));
+    if (match) {
+      console.log("Most pisses: " + match[2]);
+      bp = match[2];
+      pbtxt = "Best: " + bp;
+      document.getElementById("best").innerHTML = pbtxt;
+    }
+    else{
+         console.log('--something went wrong---');
+    }
+ }
+
+function add() {
+pisses++;
+pisstxt = "Current: " + pisses;
+document.getElementById("current").innerHTML = pisstxt;
+}
+function take() {
+    if (pisses > 0) {
+    pisses --;
+    pisstxt = "Current: " + pisses;
+    document.getElementById("current").innerHTML = pisstxt;
+    }
+}
+function zero() {
+pisses = 0;
+pisstxt = "Current: " + pisses;
+document.getElementById("current").innerHTML = pisstxt;
+}
+function sab() {
+document.cookie = "mostpisses=" + pisses;
+pbtxt = "Best: " + pisses;
+document.getElementById("best").innerHTML = pbtxt;
+}
+function db() {
+document.cookie = "mostpisses= ;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+location.href = "";
+}
+</script>
+<h1 id="current">Current: 0</h1>
+<h1 id="best">Best: 0</h1>
+
+<button title="Add 1 to the 'Current'" onclick="add()">+</button>
+<button title="Remove 1 from the 'Current'"onclick="take()">-</button>
+<button title="Reset 'Current' to 0" onclick="zero()">0</button>
+<br/>
+<br/>
+<br/>
+<button title="Save your 'Current' as your new best" onclick="sab()">Save As Best</button>
+<button title="Delete your best" onclick="db()">Delete Best</button>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<p>This site uses cookies to save your best</p>
+
+</body>
+
+</html>
