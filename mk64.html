@@ -1,0 +1,148 @@
+<html>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://siontea.com/img/random/tea.ico" />
+<title>MK64</title>
+
+<style>
+    body {
+    background-color: black;
+    }
+    @font-face {
+    font-family: gothic;
+    src: url(https://siontea.com/gothic.ttf);
+    }
+    p, h1, h2, label {
+    color: white;
+    font-family: gothic;
+    }
+</style>
+
+<body>
+<select onchange="change();get3lap();getflap();" id="tracks" name="tracks">
+  <option value="Luigi Raceway">Luigi Raceway</option>
+  <option value="Moo Moo Farm">Moo Moo Farm</option>
+  <option value="Koopa Troopa Beach">Koopa Troopa Beach</option>
+  <option value="Kalimari Desert">Kalimari Desert</option>
+  
+  <option value="Toad's Turnpike">Toad's Turnpike</option>
+  <option value="Frappe Snowland">Frappe Snowland</option>
+  <option value="Choco Mountain">Choco Mountain</option>
+  <option value="Mario Raceway">Mario Raceway</option>
+  
+  <option value="Wario Stadium">Wario Stadium</option>
+  <option value="Sherbet Land">Sherbet Land</option>
+  <option value="Royal Raceway">Royal Raceway</option>
+  <option value="Bowser's Castle">Bowser's Castle</option>
+  
+  <option value="DK's Jungle Parkway">DK's Jungle Parkway</option>
+  <option value="Yoshi Valley">Yoshi Valley</option>
+  <option value="Banshee Boardwalk">Banshee Boardwalk</option>
+  <option value="Rainbow Road">Rainbow Road</option>
+</select>
+
+<select onchange="change();get3lap();getflap();" id="style" name="style">
+  <option value="No Shortcut">No Shortcut</option>
+  <option value="Shortcut">Shortcut</option>
+</select>
+
+
+
+<script>
+var tlap = "";
+var flap = "";
+var tlaptxt = "3lap: X\'YY\"ZZ\"";
+var flaptxt = "Flap: X\'YY\"ZZ\"";
+var track = "";
+var style = "";
+
+var A3lap = "";
+var Aflap = "";
+
+function change() {
+track = document.getElementById("tracks").value;
+style = document.getElementById("style").value;
+
+A3lap = track + " " + style + " " + "3lap";
+Aflap = track + " " + style + " " + "flap";
+
+document.getElementById("title").innerHTML = track + " | " + style;
+console.log('change work---');
+
+//alert('(^| )' + A3lap + '=([^;]+)' + "\n" + '(^| )' + Aflap + '=([^;]+)');
+
+}
+
+function get3lap(A3lap) {
+A3lap = track + " " + style + " " + "3lap";
+//alert(A3lap);
+var match3 = document.cookie.match(new RegExp('(^| )' + A3lap + '=([^;]+)'));
+if (match3) {
+console.log("3lap: " + match3[2]);
+tlap = match3[2];
+document.getElementById("3lap").innerHTML = "3lap: " + tlap;
+console.log(track + " " + style + " " + '3lap work---');
+
+} else {
+console.log(track + " " + style + " " + '3lap fail--');
+document.getElementById("3lap").innerHTML = "3lap: ";
+}
+}
+
+function getflap(Aflap) {
+Aflap = track + " " + style + " " + "flap";
+//alert(Aflap);
+var matchf = document.cookie.match(new RegExp('(^| )' + Aflap + '=([^;]+)'));
+if (matchf) {
+console.log("flap: " + matchf[2]);
+flap = matchf[2];
+
+document.getElementById("flap").innerHTML = "Flap: " + flap;
+console.log(track + " " + style + " " + 'flap work---');
+
+} else {
+console.log(track + " " + style + " " + 'flap fail---');
+document.getElementById("flap").innerHTML = "Flap: ";
+}
+}
+
+function Update_3lap() {
+tlap = document.getElementById("3lapbox").value;
+document.cookie = track + " " + style + " " + "3lap" + "=" + tlap;
+tlaptxt = "3lap: " + tlap;
+document.getElementById("3lap").innerHTML = tlaptxt;
+}
+
+function Update_Flap() {
+flap = document.getElementById("flapbox").value;
+document.cookie = track + " " + style + " " + "flap" + "=" + flap;
+flaptxt = "Flap: " + flap;
+document.getElementById("flap").innerHTML = flaptxt;
+}
+</script>
+
+<h1 id="title">X | Y</h1>
+
+<h2 id="3lap">3lap: X'YY"ZZ</h2>
+<h2 id="flap">Flap: X'YY"ZZ</h2>
+
+<input id="3lapbox" placeholder="3lap time" type="text"></input>
+<button title="Update your new best to the inputted time" onclick="Update_3lap()">Update</button>
+<br/>
+<input id="flapbox" placeholder="Flap time" type="text"></input>
+<button title="Update your new best to the inputted time" onclick="Update_Flap()">Update</button>
+<br/>
+<br/>
+<br/>
+
+<!--
+<button title="Save your 'Current' as your new best" onclick="sab()">Save As Best</button>
+<button title="Delete your best" onclick="db()">Delete Best</button>
+<button title="Delete your all time count" onclick="datc()">Delete All Time Count</button>
+-->
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<p>This site uses cookies.</p>
+
+</body>
+
+</html>
