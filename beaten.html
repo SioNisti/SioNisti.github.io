@@ -73,14 +73,14 @@ a {
 <h3 class="center" id="count"></h3> 
 	
 <script>
-var count = document.querySelectorAll('.game').length;
+var count =  $("#games img").length
 document.getElementById("count").innerHTML = "Games beaten: " + count;
 console.log(count);
 </script>
 	
 <br/>
 	
-<div class="games">  
+<div class="games" id="games">  
   
 <div title="All Boos (no video)" class="game"><a href="">
 <img class="center" src="https://www.speedrun.com/themes/lm/cover-256.png?version=">
