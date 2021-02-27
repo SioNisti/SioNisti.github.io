@@ -61,7 +61,7 @@ a {
 }
 </style>
 
-<body onload="gamecount()">
+<body>
 
 
 <div class="center">    
@@ -72,12 +72,13 @@ a {
 	
 <h3 class="center" id="count"></h3> 
 	
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript">
-function gamecount() {
-var count =  $("div#games img").length
-document.getElementById("count").innerHTML = "Games beaten: " + count;
-console.log(count);
-}
+<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+$( document ).ready(function() {
+	var count =  $("div#games img").length
+	document.getElementById("count").innerHTML = "Games beaten: " + count;
+	console.log(count);
+});
+ 
 </script>
 	
 <br/>
