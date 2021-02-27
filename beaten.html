@@ -73,12 +73,12 @@ a {
 <h3 class="center" id="count"></h3> 
 	
 <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-$( document ).ready(function() {
+  $(function() {
+	  alert("moi");
 	var count =  $("div#games img").length
 	document.getElementById("count").innerHTML = "Games beaten: " + count;
 	console.log(count);
-});
- 
+  });
 </script>
 	
 <br/>
