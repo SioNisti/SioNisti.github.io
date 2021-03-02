@@ -20,6 +20,9 @@ body {
   padding: 8px;
   text-align: center;
 }
+button:hover {
+  cursor: pointer;
+}
 .column {
     float: left;
     width: 50%;
