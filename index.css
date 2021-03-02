@@ -179,18 +179,15 @@ table {
   border-right: 1px solid White;
   border-left: 1px solid White;
   border-top: 1px solid White;
-  width: 99.915%;
 }
 .btnbox {
   background-color: rgba(0, 0, 0, 0.5);
   border-right: 1px solid White;
   border-left: 1px solid White;
   border-top: 1px solid White;
-  width: 99.915%;
 }
 .lowerbox {
-  width: 99.915%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid White;
+  flex: 1;
 }
