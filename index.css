@@ -7,7 +7,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-image: url("img/background/background.png");
-  margin: 0;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
 }
 .column {
     float: left;
