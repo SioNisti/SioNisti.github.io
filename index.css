@@ -7,6 +7,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-image: url("img/background/background.png");
+  margin: 0;
 }
 .column {
     float: left;
