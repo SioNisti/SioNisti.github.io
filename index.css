@@ -174,6 +174,8 @@ iframe {
 table {
   border-radius: 15px;
   align: center;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .seis {
