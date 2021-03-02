@@ -46,6 +46,28 @@ a {
   height: auto;
   margin: auto;
 }
+@media only screen and (max-device-width: 1000px) {
+#streami {
+  border-radius: 10px 0px 0px 10px;
+  max-width: 550px;
+  max-height: 480px;
+  padding: 0;
+  background-color: black;
+
+}
+#chatti {
+  border-radius: 0px 10px 10px 0px;
+  max-width: 450px;
+  max-height: 480px;
+}
+.twitch {
+  border: 1px solid white;
+  border-radius: 10px; 
+  max-width: 1005px;
+  height: auto;
+  margin: auto;
+}
+}
 </style>
 
 <body>
@@ -102,9 +124,10 @@ a {
 <!-- Chat embed -->
 
 <iframe
-	id="chatti"
+  id="chatti"
   id="chat_embed"
   src="https://www.twitch.tv/embed/sion_510n/chat?parent=siontea.com"
+  frameborder="0" 
   height="480px"
   width="400px">
 </iframe>
