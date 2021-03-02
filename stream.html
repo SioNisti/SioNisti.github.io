@@ -26,6 +26,16 @@
 a {
   text-decoration: none;
 }
+#streami {
+  border-radius: 10px 0px 0px 10px;
+}
+#chatti {
+  border-radius: 0px 10px 10px 0px;
+}
+.twitch {
+  border: 1px solid white;
+  border-radius: 10px; 
+}
 </style>
 
 <body>
@@ -66,10 +76,11 @@ a {
 
 <div class="lowerbox">
   <br/><br/>
-<div id="stream" class="center">
+<div id="stream" class="twitch center">
 <!-- Stream embed -->
 
 <iframe 
+	id="streami"
 	src="https://player.twitch.tv/?channel=sion_510n&parent=siontea.com"
 	frameborder="0" 
 	allowfullscreen="true" 
@@ -81,6 +92,7 @@ a {
 <!-- Chat embed -->
 
 <iframe
+	id="chatti"
   id="chat_embed"
   src="https://www.twitch.tv/embed/sion_510n/chat?parent=siontea.com"
   height="480px"
