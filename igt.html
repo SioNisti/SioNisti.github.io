@@ -31,32 +31,37 @@
         background-image: url("https://siontea.com/img/background/background.png");
         text-align: center;
     }  
-    body {
-        background-color: rgba(0, 0, 0, 0.5);
-        border: 1px solid white;
-        border-radius: 4px;
-        padding: 200px;
-        text-align: center;
+    .content {
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid white;
+      border-radius: 4px;
+      padding: 20px;
+      text-align: center;
+      height: 850px;
+      width: 850px;
     }
-    .inpt {
+    input {
       background-color: #ffffff;
       color: black;
-      padding: 16px 32px;
+      font-color: black;
       text-align: center;
       font-size: 16px;
       margin: 4px 2px;
       transition: 0.5s;
       border: 1px solid Black;
       border-radius: 4px;
-      width: 180px;
+      width: 94.47px;
+      height: 52px;
     }
 </style>
 
 <body>
+  <div class="content">
     <h1><i>SioN's IGT calculator</i></h1>
     <p>Why does this exist?  mainly for <a href="https://speedrun.com/drift86">Drift86</a> mods verifying fullgame runs</p>
     
-    <button class="btn" onclick="alert('Put the desired values into each box and hit the add button, then repeat as many times as needed.\n(note that for ms if you just put in 82 it will be input as 082 not 820)\nAnd if you made a mistake then just click the fuck, go back button to remove the inputted values from the total time')">How to</button>
+    <button class="btn" onclick="alert('Put the desired values into each box and hit the add button, then repeat as many times as needed.\n(note that for ms if you just put in 82 it will be input as 082 not 820)')">How to</button>
     
     <br>
     <br>
@@ -123,13 +128,13 @@ function fuck() {
     <input class="inpt" size="2" id="secput" type="number" placeholder="Seconds"></input>
     <input class="inpt" size="3" id="milput" type="number" placeholder="Milliseconds"></input>
     <button class="btn" onclick="addtime()">Add</button>
+    <!--<br>
     <br>
-    <br>
-    <button class="btn" onclick="fuck()" title="if you added the wrong numbers click this">Fuck, go back!</button>
+    <button class="btn" onclick="fuck()" title="if you added the wrong numbers click this">Fuck, go back!</button>-->
     
     <h2 id="totaltime">Final Time: 0:0:0.0</h2>
     <p>H:M:S:MS</p>
-    
+    </div>
     </body>
 
 </html>
