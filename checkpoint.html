@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<meta charset="UTF-8"><html>
+
+<head>
+<title> Checkpoint </title>
+</head>
+
+<style>
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0px;
+  padding 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+img {
+  display: block;
+  padding:0;
+  margin:0;
+}
+.loopscroll {
+  height:1920px;
+  width:2048px;
+  background-image:url(img/random/sky.png);
+  background-repeat:repeat-x;
+  background-position:0 0;
+  background-size:2048px auto;
+  animation-name:backgroundloop;
+  animation-iteration-count:infinite;
+  animation-duration:26s;
+  animation-timing-function:linear;
+}
+@keyframes backgroundloop {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position:-512px 0;
+  }
+}
+.div {
+	position: relative;
+}
+button {
+	width: 100%;
+	height: 100%;
+	font-size: 72px;
+	background-color: black;
+	color: white;
+	border: 0px none;
+}
+button:hover{
+	cursor: pointer;
+	background-color: rgba(5,5,5);
+}
+button {
+	position: absolute;
+	z-index: 10;
+}
+</style>
+
+
+<body class="loopscroll">
+
+<image id="brmbl" src="img/random/bramble.png">
+
+<div id="div">
+</div>
+<button onclick="play()" id="btn" width="600px" height="600px">Play</button>
+
+</body>
+<script>
+function play() {
+	var x = randomIntFromInterval(1, 2500);
+	var audio;
+	
+	if (x == 4){
+		audio = new Audio('img/random/DrambleBlasters.mp3');
+		document.title = "Dramble Blasters";
+		document.body.style.backgroundImage = "url('img/random/sky2.png')";
+		document.getElementById('brmbl').src='img/random/bramble2.png';
+		
+	}else{
+		audio = new Audio('img/random/taia777.mp3');
+		
+	}
+	
+	audio.loop = true;
+	audio.play();
+    var x = document.getElementById("btn");
+    x.style.display = "none";
+}
+
+function randomIntFromInterval(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+</script>
+</html>
