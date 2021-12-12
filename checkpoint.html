@@ -3,7 +3,7 @@
 <meta charset="UTF-8"><html>
 
 <head>
-<link rel="icon" type="image/gif" href="img/random/checkpointbarrel.gif" />  
+<link rel="icon" href="img/random/barrel.gif" type="image/gif" />
 <title> Checkpoint </title>
 </head>
 
@@ -68,7 +68,7 @@ button {
 </style>
 
 
-<body class="loopscroll">
+<body class="loopscroll" onload="load()">
 
 <image id="brmbl" src="img/random/bramble.png">
 
@@ -102,6 +102,5 @@ function play() {
 function randomIntFromInterval(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
 </script>
 </html>
