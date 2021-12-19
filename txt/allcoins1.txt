@@ -1,0 +1,227 @@
+APE ESCAPE
+ALL SPECTER COINS 
+ROUTE 1
+
+(this obviously isnt the best route and probably has some really dumb decisions but who cares this is all coins)
+
+"anyX" (x being a number) refers to that monkey caught in the any% route
+like (molten lava) any3 = egg monkey
+
+Fossil Fields:
+(1)
+any1
+Coin (tree)
+any2
+any3
+
+Primordial Ooze:
+(1)
+any1
+Coin (under starting platform)
+any2
+any3
+any4
+
+Molten Lava:
+(1)
+any1
+any2
+Coin (slope to eggs)
+any3
+any4
+
+Thick Jungle 1 no ufo/ufo:
+(4)
+cocoon1				/	cocoon1
+cocoon2				/	cocoon2
+hang				/	ufo
+pot					/	hang
+"island"			/	"island"
+Coin (before any4)	/	Coin (before any4)
+lightblue			/	lightblue
+
+Dark Ruins 1:
+(4)
+any1
+any2
+any3
+any4
+any5
+any6
+
+Cryptic Relics:
+(1)
+any1
+any2
+any3
+coin (inside before the first monkey)
+any4
+any5
+
+Jake 1
+(5)
+
+Crabby Beach:
+(1)
+any1
+any2
+any3
+any4
+coin (cave behind elevator)
+any5
+
+Thick Jungle 2:
+(3)
+coin (room1)
+coin (cave)
+coin (raft)
+
+Dark Ruins 2:
+(4)
+coin (underground)
+coin (slide)
+coin (tower)
+coin (windy)
+
+Coral Cave:
+(1)
+any1
+any2
+any3
+any4
+coin
+above turret
+
+Dexter's Island:
+(3)
+boat
+coin (boat)
+coin (under boat)
+coin (behind wall)
+any2
+any3
+any4
+any5
+any6
+
+Snuuie Muuntn:
+(1)
+any1
+any2
+any3
+any4
+any5
+coin (pole)
+any6
+
+Frosty Retreat:
+(3)
+any1
+any2
+coin (table)
+any3
+coin (at pond)
+any4
+coin (under ufo pad)
+any5
+any6
+
+Hot Springs:
+(2)
+cave
+coin (in cave)
+terminal
+//// exit and re enter ////
+any2
+any4
+any5
+coin (hot spring area)
+any6
+
+Jake 2:
+(5)
+
+Sushi Temple:
+(3)
+any1
+any2
+any3
+coin (behind bell)
+any4
+coin (well)
+coin(on statue)
+any5
+any6
+any7
+
+Wabi Sabi Wall:
+(3)
+coin (island)
+any1
+any2
+any3
+any4
+any5
+any6
+coin (gong)
+any7
+coin (island last room)
+spiderman/ufo [[[TIME THE DIFFERENCE]]]
+
+Crumbling Castle:
+(4)
+coin (window behind monkey lock)
+coin (behind castle)
+//// exit and re enter ////
+coin (button)
+coin (trampoline)
+
+City Park:
+(3)
+any1
+coin (waterfall)
+any3
+any4
+any2
+red after monkey lock
+yellow behind rc gate
+coin (rc coin)
+coin (barrel room)
+any7
+any6
+
+Specter's Factory:
+(2)
+any1
+any2
+green
+coin (moving platforms)
+any3
+any4
+any5
+coin (top of big pipe)
+any6
+
+TV Tower:
+(2)
+any1
+any2
+guy below coin
+coin (green pipe)
+//// exit and re enter ////
+any4
+any5
+any6
+
+Monkey Madness:
+(10)
+coin (western on sign)
+coin (coaster 1)
+coin (coaster 2)
+coin (before coffing room)
+coin (teleporter)
+coin (monkey cs room above hatch button)
+coin (near ufo pad)
+coin (cealing level ledge in the orange room with two floor buttons)
+coin (monkey face room)
+coin (outside after the rc car platform puzzle)
