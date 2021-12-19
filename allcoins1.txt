@@ -2,6 +2,8 @@ APE ESCAPE
 ALL SPECTER COINS 
 ROUTE 1
 
+(this obviously isnt the best route and probably has some really dumb decisions but who cares this is all coins)
+
 "anyX" (x being a number) refers to that monkey caught in the any% route
 like (molten lava) any3 = egg monkey
 
