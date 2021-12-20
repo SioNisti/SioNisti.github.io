@@ -1,5 +1,5 @@
 APE ESCAPE
-ALL SPECTER COINS 
+ALL SPECTER COINS
 ROUTE 2
 
 (this obviously isnt the best route and probably has some really dumb decisions but who cares this is all coins)
@@ -32,13 +32,14 @@ any4
 
 Thick Jungle 1 no ufo/ufo:
 (4)
-cocoon1			/	cocoon1
-cocoon2			/	cocoon2
-hang			/	ufo
-pot			/	hang
-"island"		/	"island"
-Coin (before any4)	/	Coin (before any4)
-lightblue		/	lightblue
+[if you get ufoless then replace pot monkey with the hanging one]
+cocoon1
+cocoon2
+hang
+pot
+"island"
+Coin (before any4)
+lightblue
 
 Dark Ruins 1:
 (4)
@@ -46,6 +47,7 @@ any1
 any2
 any3
 any4
+coin (windy)
 any5
 any6
 
@@ -71,12 +73,11 @@ coin (cave behind elevator)
 any5
 
 Dark Ruins 2:
-(4)
+(3)
 coin (underground)
 ////die////
 coin (slide)
 coin (tower)
-coin (windy)
 
 Thick Jungle 2:
 (3)
