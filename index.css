@@ -176,7 +176,6 @@ iframe {
 }
 table {
   border-radius: 15px;
-  align: center;
   margin-left: auto;
   margin-right: auto;
 
@@ -201,4 +200,8 @@ table {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid White;
   flex: 1;
+}
+iframe.bar {
+  border-radius: 0px;
+  border: 0px solid white;
 }
