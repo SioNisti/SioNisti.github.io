@@ -25,7 +25,7 @@ split {
 		return true;
 	}
 	
-	//split if current ruby amount is 9, no split is 9,  previous animation frame is 156 and current animation frame is 157
+	//split if current ruby amount is 9, nosplit is 9,  previous animation frame is 156 and current animation frame is 157
 	else if (current.RubCunt == 9 && vars.nosplit == 9 && old.AnimFrm == 156 && current.AnimFrm == 157) {
 		vars.Debug("loppu >:D " + vars.nosplit + " " + current.AnimFrm);
 		return true;
