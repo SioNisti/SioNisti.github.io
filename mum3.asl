@@ -1,3 +1,8 @@
+/*mömmölillukka
+Muumit Ja Taikurin hattu Auto splitter made by SioN.
+edit: 2/2/22
+siontea.com
+*/
 state("Moomin3") {
 	//pointer to ruby count
 	int RubCunt : 0x0012C834, 0xF88, 0x4, 0x0, 0x1C, 0x888, 0x8;
@@ -15,6 +20,8 @@ startup {
 init {
 	//the purpose of this variable is to make sure that the splitter doesn't split for a ruby piece after you got all 9
 	vars.nosplit = 0;
+	//testaa
+	refreshRate = 30;
 }
 
 split {
@@ -41,4 +48,15 @@ exit {
 	//reset the timer and set nosplit to 0 when the game closes
 	vars.timerModel.Reset();
 	vars.nosplit = 0;
+}
+
+start
+{
+	//starts the time when animfrm is 684.
+	//it will start the time no matter which of the three gems you click in the menu
+	//ce sucks
+	if (current.AnimFrm == 684) {
+		vars.Debug("alkaa " + current.AnimFrm);
+		return true;
+	}
 }
