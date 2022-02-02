@@ -13,7 +13,7 @@ startup {
 }
 
 init {
-	//the purpose of this variable is to make sure that the splitter doesnt make a wrong split after getting the 9th ruby piece
+	//the purpose of this variable is to make sure that the splitter doesn't split for a ruby piece after you got all 9
 	vars.nosplit = 0;
 }
 
