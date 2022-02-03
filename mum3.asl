@@ -42,10 +42,6 @@ start
 		vars.Debug("alkaa " + current.AnimFrm);
 		return true;
 	}
-	
-	//ce sucks.  
-	//it didnt update the values visually so i had no idea these values actually changed.
-	//wasted 4 hours on trying to find a value that did change when i could just reuse the AnimFrm.
 }
 
 split {
