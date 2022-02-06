@@ -1,7 +1,7 @@
 //mömmölillukka
 /*
 Muumit Ja Taikurin hattu Auto splitter made by SioN.
-edit: 3/2/22
+edit: 7/2/22
 siontea.com
 
 Tested to work on versions 6.0.2.32 and 6.5.0.0
@@ -25,8 +25,8 @@ startup {
 }
 
 init {
-	//the purpose of this variable is to make sure that the splitter doesn't split for a ruby piece after you got all 9
-	vars.nosplit = 0;
+	//variable thats set to 1 when the last split is done marking the run complete
+	vars.done = 0;
 	if (settings["60"]) {
 		refreshRate = 60;
 	} else { 
@@ -45,16 +45,17 @@ start
 }
 
 split {
-	//split if current ruby amount is greater than on the previous frame and that nosplit is less than 9
-	if (old.RubCunt < current.RubCunt && vars.nosplit < 9) {
-		vars.nosplit++; //add 1 to nosplit
-		vars.Debug("strupiini get " + vars.nosplit + " " + current.RubCunt);
+	//split if current ruby amount is greater than on the previous frame and that ruby count is less than 9
+	if (old.RubCunt < current.RubCunt && current.RubCunt < 10) {
+		vars.Debug("strupiini get " + current.RubCunt);
 		return true;
 	}
 	
-	//split if current ruby amount is 9, nosplit is 9,  previous animation frame is 157 and current animation frame is 158
-	else if (current.RubCunt == 9 && vars.nosplit == 9 && old.AnimFrm == 157 && current.AnimFrm == 158) {
-		vars.Debug("loppu >:D " + vars.nosplit + " " + current.AnimFrm);
+	//split if current ruby amount is 9, previous animation frame is 157 and current animation frame is 158
+	else if (current.RubCunt == 9 && old.AnimFrm == 157 && current.AnimFrm == 158) {
+		vars.Debug("loppu >:D " + current.RubCunt + " " + current.AnimFrm);
+		//set done to 1
+		vars.done = 1;
 		return true;
 	} 
 	
@@ -66,15 +67,15 @@ split {
 
 reset {
 	//reset if you have 0 ruby pieces and you are going from the map screen to the main menu screen
-	if (current.RubCunt == 0 && vars.nosplit == 0 && old.AnimFrm == 1048 && current.AnimFrm == 680) {
-		vars.nosplit = 0;
+	if (current.RubCunt == 0 && old.AnimFrm == 1048 && current.AnimFrm == 0 || current.RubCunt == 0 && old.AnimFrm == 1048 && current.AnimFrm == 1) {
 		return true;
 	}
 	return false;
 }
 
 exit {
-	//reset the timer and set nosplit to 0 when the game closes
-	vars.timerModel.Reset();
-	vars.nosplit = 0;
+	//reset the timer when the game closes if run is done
+	if (vars.done != 1) {
+		vars.timerModel.Reset();
+	}
 }
