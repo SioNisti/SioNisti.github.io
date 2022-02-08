@@ -1,7 +1,7 @@
 //mömmölillukka
 /*
 Muumit Ja Taikurin hattu Auto splitter made by SioN.
-edit: 7/2/22
+edit: 8/2/22
 siontea.com
 
 Tested to work on versions 6.0.2.32 and 6.5.0.0
@@ -38,7 +38,7 @@ start
 {
 	//starts the time when animfrm is 684.
 	//it will start the time no matter which of the three gems you click in the menu
-	if (current.AnimFrm == 684) {
+	if (old.AnimFrm == 665 && current.AnimFrm == 684) {
 		vars.Debug("alkaa " + current.AnimFrm);
 		return true;
 	}
